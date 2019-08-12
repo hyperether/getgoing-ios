@@ -1,0 +1,957 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05602C203EA33DF3264CB679E2AE214C /* FSPageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6B1593826E1533C79C6D6F6155CC /* FSPageViewLayout.swift */; };
+		0725F245714C32BC551405EF60218024 /* AbstractPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0FB1117A6BC08BE63A0A62E41170E5 /* AbstractPopover.storyboard */; };
+		1A849A93B3C176895F2FC1B4C342B03C /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47755DAA672A876BDEF8522D5C982AA3 /* FSPagerViewLayoutAttributes.swift */; };
+		1AEBDCFC40F3DA94C205020699315CAD /* FSPagerViewObjcCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3646C0FD02D380FF107EDF28BD55A6 /* FSPagerViewObjcCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25D9B37EADDF66F184B91D2EEC093103 /* AbstractPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265CAE2F766FB1F55DB1547158F8139 /* AbstractPopover.swift */; };
+		2F18D841B041A79D6055BD03988CFF44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		3AA8F1C9E48545763AEB711AE243467E /* CountdownPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B5F5D0FC0F6062A80449605ED565C /* CountdownPickerPopoverViewController.swift */; };
+		3B169B458F80C131024B0C611F554D8A /* FSPagerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354FFB73A007687F59AF8A2A5EE0E28 /* FSPagerCollectionView.swift */; };
+		4184966B9956A07736C4592C5AA0CBC5 /* FSPagerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89E097BC1BBA352B931C73AD5D33E38D /* FSPagerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46C105C9BF4C2A7793294FF4B6E657CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76275628EF343FE414973AB9C9FA9BE5 /* Localizable.strings */; };
+		4EFA847F463CF9BE2C9F183DD0755154 /* Pods-GetGoing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E21F7832B90D01954D087AEBF21D7D31 /* Pods-GetGoing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5115E0B6715DB22E94D90CC42270D20D /* StringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650DDF66E9ED5B5AA0401D0BAD00A00C /* StringPickerPopover.swift */; };
+		5715C5CE550C8DADAC4595BEA56774D8 /* StringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A6093B4A1775C16871584C870A340B /* StringPickerPopover.storyboard */; };
+		5C37A6995934A3135C9C1FD3F86A02DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		604A2BC7DBDA0A7A64838D59622F72EC /* DatePickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2DF2F86E8B54C64944D103629D591 /* DatePickerPopover.storyboard */; };
+		617F4161A5F46A2A4F16863FD6DB5F1A /* SwiftyPickerPopover-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA6862B95941DDF2D6A912A9A08773F /* SwiftyPickerPopover-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F9BF19DA18FD099D05B2377FAB8F6A /* CountdownPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45723295C30D6D65D8BC616BEAA4FAA1 /* CountdownPickerPopover.storyboard */; };
+		7B49221F9AB71D68E1F6DF00F50EEB61 /* FSPagerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9870B96BAD9686116C94C6184B0627 /* FSPagerView-dummy.m */; };
+		85BEB836ECCAC7A85C96D223D426E59B /* FSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9433ABD336E210BF610F83EABCF071DE /* FSPagerViewCell.swift */; };
+		95414360B2027351B1AF55511DAA911B /* CollectionType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D1BFC7D6C0A1729E73FC6C9114E1C /* CollectionType+Extension.swift */; };
+		99798EAF1D6C443C735C5FDD7FE0DE99 /* ColumnStringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995139CC29CF02247F8B80D56CFE94A1 /* ColumnStringPickerPopover.storyboard */; };
+		9DD3CF3CDD902725965FE8C89321014C /* ColumnStringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC87E9F420DD1B995B20E9026ED259C7 /* ColumnStringPickerPopover.swift */; };
+		AAB29170870504BC19EC7C3B23A8B9D6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996BA8D5FCC7528FEBD5A01A201434F5 /* String+Extension.swift */; };
+		AD02C083B6CDDC182F6279BB99AB9C97 /* AbstractPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5809C9912F7550C68311BD0C9ED878D6 /* AbstractPickerPopoverViewController.swift */; };
+		B070920C3C31BD6EFBBC2FF7CC38BD55 /* FSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CDC6BEF8906FF51E18040803D8F6E6 /* FSPageControl.swift */; };
+		B19657EBDC8403DFBFA17724DCB4B1DD /* FSPageViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C123F761A4F88DF3D88177E36C035278 /* FSPageViewTransformer.swift */; };
+		B3C9F1153E56A8D029114ED80780CAE0 /* SwiftyPickerPopover-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5326539772EB9AC752881397BD605C0C /* SwiftyPickerPopover-dummy.m */; };
+		B4EA182BB335D592DA4809AC8B53F9D5 /* FSPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804DEFE2F23F3D0FA5DAB63EF003A10D /* FSPagerView.swift */; };
+		C765C31D85836D5A607617C1EDDF0F98 /* FSPagerViewObjcCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D2AA45056E9BA53D06A472FD845A5 /* FSPagerViewObjcCompat.m */; };
+		CF116930EB6CDFC178D1F9C545CC1FA4 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96F322C20200FC6406DDE1C10EBF2A /* DispatchQueue+Extension.swift */; };
+		D59D6589FE1259F34517BD5A1F70159E /* DatePickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B8EE4895E361A6AAD596A2AF24E7E /* DatePickerPopoverViewController.swift */; };
+		D5DD40E0B475A275E077B1F4FEB6F081 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		D7E5C62426AF298BB5C6A6B79E62000D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		DA4DDBD35C1277CFC5D313F8F6FB9096 /* DatePickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7168F169092785E7343EBB56292729D /* DatePickerPopover.swift */; };
+		DA5702CBE7450137458FF5E20A9C5DCC /* CountdownPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF250A9E51E7638CB9C53038D024678 /* CountdownPickerPopover.swift */; };
+		EE0AFEB52B7E480BE728DB901FB929EE /* Pods-GetGoing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AC1F46ACB752DC3A0AA5192C54498 /* Pods-GetGoing-dummy.m */; };
+		F9F6EF076A8A4C9E9EA92074904AB2CB /* ColumnStringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11041567AD0734B4FA8BDBF12FAB51 /* ColumnStringPickerPopoverViewController.swift */; };
+		FDD2454D1A94555875F14C0DB655495C /* StringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9323B14D7001FF478C08749B9CF5274 /* StringPickerPopoverViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03A04543902B55EF1C758091117B6FBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DA7230ACC15282BD3E59B9E1E1001C6;
+			remoteInfo = SwiftyPickerPopover;
+		};
+		9921D6142D2A0833B5F3202AA6E19B12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CCDAA0C5689BA68365335D3086C30F1;
+			remoteInfo = FSPagerView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0072ECD78CC52A7ADBD6C50892E80BA7 /* FSPagerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-prefix.pch"; sourceTree = "<group>"; };
+		04270887AC9A498F983FBED7F957B873 /* Pods-GetGoing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetGoing.debug.xcconfig"; sourceTree = "<group>"; };
+		05244893E4BCF02B4808973DF745FE89 /* SwiftyPickerPopover.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyPickerPopover.xcconfig; sourceTree = "<group>"; };
+		05F9D39B01D12B9437B8BEA42A239BEA /* Pods-GetGoing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GetGoing.modulemap"; sourceTree = "<group>"; };
+		0B96F322C20200FC6406DDE1C10EBF2A /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extension.swift"; path = "SwiftyPickerPopover/DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		0E5B5F5D0FC0F6062A80449605ED565C /* CountdownPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopoverViewController.swift; path = SwiftyPickerPopover/CountdownPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		1E993F9899CD2F1320CCF119936C7830 /* FSPagerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2D2AA45056E9BA53D06A472FD845A5 /* FSPagerViewObjcCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSPagerViewObjcCompat.m; path = Sources/FSPagerViewObjcCompat.m; sourceTree = "<group>"; };
+		2FF3191ED2FF4DCFA68138139BA9A29E /* Pods-GetGoing-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetGoing-Info.plist"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		409D1BFC7D6C0A1729E73FC6C9114E1C /* CollectionType+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionType+Extension.swift"; path = "SwiftyPickerPopover/CollectionType+Extension.swift"; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		46CD100F7C8326983E9697E8089E827C /* SwiftyPickerPopover-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-prefix.pch"; sourceTree = "<group>"; };
+		47755DAA672A876BDEF8522D5C982AA3 /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewLayoutAttributes.swift; path = Sources/FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		4D081113645D84E21BC267453118E3D2 /* Pods_GetGoing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetGoing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		510181077D209FA270AB216301421434 /* FSPagerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSPagerView.modulemap; sourceTree = "<group>"; };
+		5326539772EB9AC752881397BD605C0C /* SwiftyPickerPopover-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyPickerPopover-dummy.m"; sourceTree = "<group>"; };
+		5809C9912F7550C68311BD0C9ED878D6 /* AbstractPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractPickerPopoverViewController.swift; path = SwiftyPickerPopover/AbstractPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		5EF250A9E51E7638CB9C53038D024678 /* CountdownPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopover.swift; path = SwiftyPickerPopover/CountdownPickerPopover.swift; sourceTree = "<group>"; };
+		650DDF66E9ED5B5AA0401D0BAD00A00C /* StringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopover.swift; path = SwiftyPickerPopover/StringPickerPopover.swift; sourceTree = "<group>"; };
+		6C2655D48B4950311F4C8A52021783AA /* CountdownPickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CountdownPickerPopover.strings; path = ja.lproj/CountdownPickerPopover.strings; sourceTree = "<group>"; };
+		73C4344A18D3A8A788B29982AAE4C605 /* SwiftyPickerPopover-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyPickerPopover-Info.plist"; sourceTree = "<group>"; };
+		7E7B8EE4895E361A6AAD596A2AF24E7E /* DatePickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopoverViewController.swift; path = SwiftyPickerPopover/DatePickerPopoverViewController.swift; sourceTree = "<group>"; };
+		7EA6862B95941DDF2D6A912A9A08773F /* SwiftyPickerPopover-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-umbrella.h"; sourceTree = "<group>"; };
+		804DEFE2F23F3D0FA5DAB63EF003A10D /* FSPagerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerView.swift; path = Sources/FSPagerView.swift; sourceTree = "<group>"; };
+		81AA854E5064754DE288370AC36AEDFB /* Pods-GetGoing-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetGoing-acknowledgements.plist"; sourceTree = "<group>"; };
+		849AC1F46ACB752DC3A0AA5192C54498 /* Pods-GetGoing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GetGoing-dummy.m"; sourceTree = "<group>"; };
+		8736089E259E7D149B9EFC199286A3F1 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		89E097BC1BBA352B931C73AD5D33E38D /* FSPagerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-umbrella.h"; sourceTree = "<group>"; };
+		8E9870B96BAD9686116C94C6184B0627 /* FSPagerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSPagerView-dummy.m"; sourceTree = "<group>"; };
+		90CDC6BEF8906FF51E18040803D8F6E6 /* FSPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageControl.swift; path = Sources/FSPageControl.swift; sourceTree = "<group>"; };
+		92F58ABDAB5E74FBB97043C14FDB5F65 /* DatePickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = DatePickerPopover.storyboard; path = Base.lproj/DatePickerPopover.storyboard; sourceTree = "<group>"; };
+		9433ABD336E210BF610F83EABCF071DE /* FSPagerViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewCell.swift; path = Sources/FSPagerViewCell.swift; sourceTree = "<group>"; };
+		94DAD6A2C16F5A7B22496445B61C71B7 /* FSPagerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FSPagerView-Info.plist"; sourceTree = "<group>"; };
+		995139CC29CF02247F8B80D56CFE94A1 /* ColumnStringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = ColumnStringPickerPopover.storyboard; path = SwiftyPickerPopover/ColumnStringPickerPopover.storyboard; sourceTree = "<group>"; };
+		996BA8D5FCC7528FEBD5A01A201434F5 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "SwiftyPickerPopover/String+Extension.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FB6E6813066ED7473ACDD331C08D8E8 /* Pods-GetGoing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetGoing.release.xcconfig"; sourceTree = "<group>"; };
+		A7168F169092785E7343EBB56292729D /* DatePickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopover.swift; path = SwiftyPickerPopover/DatePickerPopover.swift; sourceTree = "<group>"; };
+		AB3646C0FD02D380FF107EDF28BD55A6 /* FSPagerViewObjcCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSPagerViewObjcCompat.h; path = Sources/FSPagerViewObjcCompat.h; sourceTree = "<group>"; };
+		AD0FB1117A6BC08BE63A0A62E41170E5 /* AbstractPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = AbstractPopover.storyboard; path = SwiftyPickerPopover/AbstractPopover.storyboard; sourceTree = "<group>"; };
+		B1518654798BD7573EDDA92F3DD5F79A /* SwiftyPickerPopover.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyPickerPopover.modulemap; sourceTree = "<group>"; };
+		B265CAE2F766FB1F55DB1547158F8139 /* AbstractPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractPopover.swift; path = SwiftyPickerPopover/AbstractPopover.swift; sourceTree = "<group>"; };
+		BC87E9F420DD1B995B20E9026ED259C7 /* ColumnStringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopover.swift; path = SwiftyPickerPopover/ColumnStringPickerPopover.swift; sourceTree = "<group>"; };
+		BDB1C65103AFA7B6986BCEF7EC261A4A /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFBC6B1593826E1533C79C6D6F6155CC /* FSPageViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewLayout.swift; path = Sources/FSPageViewLayout.swift; sourceTree = "<group>"; };
+		C123F761A4F88DF3D88177E36C035278 /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewTransformer.swift; path = Sources/FSPageViewTransformer.swift; sourceTree = "<group>"; };
+		C8FE7348EDC25BDEEBE7D7F01AC0BF0F /* CountdownPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = CountdownPickerPopover.storyboard; path = Base.lproj/CountdownPickerPopover.storyboard; sourceTree = "<group>"; };
+		C9323B14D7001FF478C08749B9CF5274 /* StringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopoverViewController.swift; path = SwiftyPickerPopover/StringPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		CB4FB6DD427E9AD5A3D7ACB234A1A2A7 /* DatePickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = DatePickerPopover.strings; path = ja.lproj/DatePickerPopover.strings; sourceTree = "<group>"; };
+		D0569F5B4695172636525A48BB7AE803 /* StringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = StringPickerPopover.storyboard; path = Base.lproj/StringPickerPopover.storyboard; sourceTree = "<group>"; };
+		DD11041567AD0734B4FA8BDBF12FAB51 /* ColumnStringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopoverViewController.swift; path = SwiftyPickerPopover/ColumnStringPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		E21F7832B90D01954D087AEBF21D7D31 /* Pods-GetGoing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GetGoing-umbrella.h"; sourceTree = "<group>"; };
+		EBB65CE1DE86DED619D25239AC4BDFFD /* Pods-GetGoing-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GetGoing-frameworks.sh"; sourceTree = "<group>"; };
+		F354FFB73A007687F59AF8A2A5EE0E28 /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerCollectionView.swift; path = Sources/FSPagerCollectionView.swift; sourceTree = "<group>"; };
+		F55B2FEA75628A3E7C02B2D99948E740 /* SwiftyPickerPopover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyPickerPopover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF4702CBC70736C1F7825C00BA96AD7A /* Pods-GetGoing-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GetGoing-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FFC5FE36B43C293B262DECC1002AF5F4 /* FSPagerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACF19306AFCD6982766AD1502D855597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DD40E0B475A275E077B1F4FEB6F081 /* Foundation.framework in Frameworks */,
+				2F18D841B041A79D6055BD03988CFF44 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B853C1B5AFFC2768312C004787F06B26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E5C62426AF298BB5C6A6B79E62000D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3DC2357377D15D6929AA206A63AF361 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C37A6995934A3135C9C1FD3F86A02DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		274D65BF19312C3FCF6F0C28763BB277 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7F843BA931B76FF4E1E08CBCAE20B4F /* FSPagerView */,
+				BDC8C80AAE7E37527E96F5BCAD0DEC1E /* SwiftyPickerPopover */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D3FF182B2CBD6AE8D8BD7BFB52F3331 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1518654798BD7573EDDA92F3DD5F79A /* SwiftyPickerPopover.modulemap */,
+				05244893E4BCF02B4808973DF745FE89 /* SwiftyPickerPopover.xcconfig */,
+				5326539772EB9AC752881397BD605C0C /* SwiftyPickerPopover-dummy.m */,
+				73C4344A18D3A8A788B29982AAE4C605 /* SwiftyPickerPopover-Info.plist */,
+				46CD100F7C8326983E9697E8089E827C /* SwiftyPickerPopover-prefix.pch */,
+				7EA6862B95941DDF2D6A912A9A08773F /* SwiftyPickerPopover-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyPickerPopover";
+			sourceTree = "<group>";
+		};
+		57073EF1CB0BD3480E664A4B1F8AF2FD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C80F506BC07170E61A84E3D0C99D9CF2 /* Pods-GetGoing */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AEBFBD231C29F45F885ADD77B598A929 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				510181077D209FA270AB216301421434 /* FSPagerView.modulemap */,
+				FFC5FE36B43C293B262DECC1002AF5F4 /* FSPagerView.xcconfig */,
+				8E9870B96BAD9686116C94C6184B0627 /* FSPagerView-dummy.m */,
+				94DAD6A2C16F5A7B22496445B61C71B7 /* FSPagerView-Info.plist */,
+				0072ECD78CC52A7ADBD6C50892E80BA7 /* FSPagerView-prefix.pch */,
+				89E097BC1BBA352B931C73AD5D33E38D /* FSPagerView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FSPagerView";
+			sourceTree = "<group>";
+		};
+		BDC8C80AAE7E37527E96F5BCAD0DEC1E /* SwiftyPickerPopover */ = {
+			isa = PBXGroup;
+			children = (
+				5809C9912F7550C68311BD0C9ED878D6 /* AbstractPickerPopoverViewController.swift */,
+				B265CAE2F766FB1F55DB1547158F8139 /* AbstractPopover.swift */,
+				409D1BFC7D6C0A1729E73FC6C9114E1C /* CollectionType+Extension.swift */,
+				BC87E9F420DD1B995B20E9026ED259C7 /* ColumnStringPickerPopover.swift */,
+				DD11041567AD0734B4FA8BDBF12FAB51 /* ColumnStringPickerPopoverViewController.swift */,
+				5EF250A9E51E7638CB9C53038D024678 /* CountdownPickerPopover.swift */,
+				0E5B5F5D0FC0F6062A80449605ED565C /* CountdownPickerPopoverViewController.swift */,
+				A7168F169092785E7343EBB56292729D /* DatePickerPopover.swift */,
+				7E7B8EE4895E361A6AAD596A2AF24E7E /* DatePickerPopoverViewController.swift */,
+				0B96F322C20200FC6406DDE1C10EBF2A /* DispatchQueue+Extension.swift */,
+				996BA8D5FCC7528FEBD5A01A201434F5 /* String+Extension.swift */,
+				650DDF66E9ED5B5AA0401D0BAD00A00C /* StringPickerPopover.swift */,
+				C9323B14D7001FF478C08749B9CF5274 /* StringPickerPopoverViewController.swift */,
+				EB5F7E5449BE766E967C1AD5BBA02CAB /* Resources */,
+				3D3FF182B2CBD6AE8D8BD7BFB52F3331 /* Support Files */,
+			);
+			path = SwiftyPickerPopover;
+			sourceTree = "<group>";
+		};
+		C80F506BC07170E61A84E3D0C99D9CF2 /* Pods-GetGoing */ = {
+			isa = PBXGroup;
+			children = (
+				05F9D39B01D12B9437B8BEA42A239BEA /* Pods-GetGoing.modulemap */,
+				FF4702CBC70736C1F7825C00BA96AD7A /* Pods-GetGoing-acknowledgements.markdown */,
+				81AA854E5064754DE288370AC36AEDFB /* Pods-GetGoing-acknowledgements.plist */,
+				849AC1F46ACB752DC3A0AA5192C54498 /* Pods-GetGoing-dummy.m */,
+				EBB65CE1DE86DED619D25239AC4BDFFD /* Pods-GetGoing-frameworks.sh */,
+				2FF3191ED2FF4DCFA68138139BA9A29E /* Pods-GetGoing-Info.plist */,
+				E21F7832B90D01954D087AEBF21D7D31 /* Pods-GetGoing-umbrella.h */,
+				04270887AC9A498F983FBED7F957B873 /* Pods-GetGoing.debug.xcconfig */,
+				9FB6E6813066ED7473ACDD331C08D8E8 /* Pods-GetGoing.release.xcconfig */,
+			);
+			name = "Pods-GetGoing";
+			path = "Target Support Files/Pods-GetGoing";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				274D65BF19312C3FCF6F0C28763BB277 /* Pods */,
+				FACCD939F8222DAD6CE0441611F12BE8 /* Products */,
+				57073EF1CB0BD3480E664A4B1F8AF2FD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EB5F7E5449BE766E967C1AD5BBA02CAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD0FB1117A6BC08BE63A0A62E41170E5 /* AbstractPopover.storyboard */,
+				995139CC29CF02247F8B80D56CFE94A1 /* ColumnStringPickerPopover.storyboard */,
+				45723295C30D6D65D8BC616BEAA4FAA1 /* CountdownPickerPopover.storyboard */,
+				FAA2DF2F86E8B54C64944D103629D591 /* DatePickerPopover.storyboard */,
+				76275628EF343FE414973AB9C9FA9BE5 /* Localizable.strings */,
+				B6A6093B4A1775C16871584C870A340B /* StringPickerPopover.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F7F843BA931B76FF4E1E08CBCAE20B4F /* FSPagerView */ = {
+			isa = PBXGroup;
+			children = (
+				90CDC6BEF8906FF51E18040803D8F6E6 /* FSPageControl.swift */,
+				F354FFB73A007687F59AF8A2A5EE0E28 /* FSPagerCollectionView.swift */,
+				804DEFE2F23F3D0FA5DAB63EF003A10D /* FSPagerView.swift */,
+				9433ABD336E210BF610F83EABCF071DE /* FSPagerViewCell.swift */,
+				47755DAA672A876BDEF8522D5C982AA3 /* FSPagerViewLayoutAttributes.swift */,
+				AB3646C0FD02D380FF107EDF28BD55A6 /* FSPagerViewObjcCompat.h */,
+				2B2D2AA45056E9BA53D06A472FD845A5 /* FSPagerViewObjcCompat.m */,
+				BFBC6B1593826E1533C79C6D6F6155CC /* FSPageViewLayout.swift */,
+				C123F761A4F88DF3D88177E36C035278 /* FSPageViewTransformer.swift */,
+				AEBFBD231C29F45F885ADD77B598A929 /* Support Files */,
+			);
+			path = FSPagerView;
+			sourceTree = "<group>";
+		};
+		FACCD939F8222DAD6CE0441611F12BE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E993F9899CD2F1320CCF119936C7830 /* FSPagerView.framework */,
+				4D081113645D84E21BC267453118E3D2 /* Pods_GetGoing.framework */,
+				F55B2FEA75628A3E7C02B2D99948E740 /* SwiftyPickerPopover.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A9B8019999EBBD469CB6FD285CCDDA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				617F4161A5F46A2A4F16863FD6DB5F1A /* SwiftyPickerPopover-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F311B6316E59418BF04B2D0AC324170 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EFA847F463CF9BE2C9F183DD0755154 /* Pods-GetGoing-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3666F1434EA72823514B2B0B5A2C4BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4184966B9956A07736C4592C5AA0CBC5 /* FSPagerView-umbrella.h in Headers */,
+				1AEBDCFC40F3DA94C205020699315CAD /* FSPagerViewObjcCompat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		218032EB47A79FF97283A8CBE0E4EE26 /* Pods-GetGoing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AF1941B584813FCE7E69127FD330EF0 /* Build configuration list for PBXNativeTarget "Pods-GetGoing" */;
+			buildPhases = (
+				7F311B6316E59418BF04B2D0AC324170 /* Headers */,
+				9BA84D96B7FCE63824C7F9728095A54D /* Sources */,
+				D3DC2357377D15D6929AA206A63AF361 /* Frameworks */,
+				9A05EC617034A4FF1330ACBB4525F4BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A1A42B87E01F1C87BAE1FBC3F6FCAAB /* PBXTargetDependency */,
+				C1F28B5F3826EB4FB5B91045FEE61D19 /* PBXTargetDependency */,
+			);
+			name = "Pods-GetGoing";
+			productName = "Pods-GetGoing";
+			productReference = 4D081113645D84E21BC267453118E3D2 /* Pods_GetGoing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2DA7230ACC15282BD3E59B9E1E1001C6 /* SwiftyPickerPopover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF5D7AE2771ADC7F9787446942F704A /* Build configuration list for PBXNativeTarget "SwiftyPickerPopover" */;
+			buildPhases = (
+				0A9B8019999EBBD469CB6FD285CCDDA1 /* Headers */,
+				5CCD4349CEEBF3A5ACB9D17EB7620721 /* Sources */,
+				B853C1B5AFFC2768312C004787F06B26 /* Frameworks */,
+				52E7D6B0004DAD665FED9DEE7982B505 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyPickerPopover;
+			productName = SwiftyPickerPopover;
+			productReference = F55B2FEA75628A3E7C02B2D99948E740 /* SwiftyPickerPopover.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5CCDAA0C5689BA68365335D3086C30F1 /* FSPagerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1423927F428951A47295BA7F353F0715 /* Build configuration list for PBXNativeTarget "FSPagerView" */;
+			buildPhases = (
+				F3666F1434EA72823514B2B0B5A2C4BE /* Headers */,
+				93A3830FAB2D2F5C6BB00E25ABB300CF /* Sources */,
+				ACF19306AFCD6982766AD1502D855597 /* Frameworks */,
+				B45DA452E3BA1377445ACE9609F0D1A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSPagerView;
+			productName = FSPagerView;
+			productReference = 1E993F9899CD2F1320CCF119936C7830 /* FSPagerView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1030;
+				TargetAttributes = {
+					2DA7230ACC15282BD3E59B9E1E1001C6 = {
+						LastSwiftMigration = 1030;
+					};
+					5CCDAA0C5689BA68365335D3086C30F1 = {
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = FACCD939F8222DAD6CE0441611F12BE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CCDAA0C5689BA68365335D3086C30F1 /* FSPagerView */,
+				218032EB47A79FF97283A8CBE0E4EE26 /* Pods-GetGoing */,
+				2DA7230ACC15282BD3E59B9E1E1001C6 /* SwiftyPickerPopover */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52E7D6B0004DAD665FED9DEE7982B505 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0725F245714C32BC551405EF60218024 /* AbstractPopover.storyboard in Resources */,
+				99798EAF1D6C443C735C5FDD7FE0DE99 /* ColumnStringPickerPopover.storyboard in Resources */,
+				61F9BF19DA18FD099D05B2377FAB8F6A /* CountdownPickerPopover.storyboard in Resources */,
+				604A2BC7DBDA0A7A64838D59622F72EC /* DatePickerPopover.storyboard in Resources */,
+				46C105C9BF4C2A7793294FF4B6E657CE /* Localizable.strings in Resources */,
+				5715C5CE550C8DADAC4595BEA56774D8 /* StringPickerPopover.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A05EC617034A4FF1330ACBB4525F4BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45DA452E3BA1377445ACE9609F0D1A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CCD4349CEEBF3A5ACB9D17EB7620721 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD02C083B6CDDC182F6279BB99AB9C97 /* AbstractPickerPopoverViewController.swift in Sources */,
+				25D9B37EADDF66F184B91D2EEC093103 /* AbstractPopover.swift in Sources */,
+				95414360B2027351B1AF55511DAA911B /* CollectionType+Extension.swift in Sources */,
+				9DD3CF3CDD902725965FE8C89321014C /* ColumnStringPickerPopover.swift in Sources */,
+				F9F6EF076A8A4C9E9EA92074904AB2CB /* ColumnStringPickerPopoverViewController.swift in Sources */,
+				DA5702CBE7450137458FF5E20A9C5DCC /* CountdownPickerPopover.swift in Sources */,
+				3AA8F1C9E48545763AEB711AE243467E /* CountdownPickerPopoverViewController.swift in Sources */,
+				DA4DDBD35C1277CFC5D313F8F6FB9096 /* DatePickerPopover.swift in Sources */,
+				D59D6589FE1259F34517BD5A1F70159E /* DatePickerPopoverViewController.swift in Sources */,
+				CF116930EB6CDFC178D1F9C545CC1FA4 /* DispatchQueue+Extension.swift in Sources */,
+				AAB29170870504BC19EC7C3B23A8B9D6 /* String+Extension.swift in Sources */,
+				5115E0B6715DB22E94D90CC42270D20D /* StringPickerPopover.swift in Sources */,
+				FDD2454D1A94555875F14C0DB655495C /* StringPickerPopoverViewController.swift in Sources */,
+				B3C9F1153E56A8D029114ED80780CAE0 /* SwiftyPickerPopover-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93A3830FAB2D2F5C6BB00E25ABB300CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B070920C3C31BD6EFBBC2FF7CC38BD55 /* FSPageControl.swift in Sources */,
+				3B169B458F80C131024B0C611F554D8A /* FSPagerCollectionView.swift in Sources */,
+				7B49221F9AB71D68E1F6DF00F50EEB61 /* FSPagerView-dummy.m in Sources */,
+				B4EA182BB335D592DA4809AC8B53F9D5 /* FSPagerView.swift in Sources */,
+				85BEB836ECCAC7A85C96D223D426E59B /* FSPagerViewCell.swift in Sources */,
+				1A849A93B3C176895F2FC1B4C342B03C /* FSPagerViewLayoutAttributes.swift in Sources */,
+				C765C31D85836D5A607617C1EDDF0F98 /* FSPagerViewObjcCompat.m in Sources */,
+				05602C203EA33DF3264CB679E2AE214C /* FSPageViewLayout.swift in Sources */,
+				B19657EBDC8403DFBFA17724DCB4B1DD /* FSPageViewTransformer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA84D96B7FCE63824C7F9728095A54D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0AFEB52B7E480BE728DB901FB929EE /* Pods-GetGoing-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A1A42B87E01F1C87BAE1FBC3F6FCAAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FSPagerView;
+			target = 5CCDAA0C5689BA68365335D3086C30F1 /* FSPagerView */;
+			targetProxy = 9921D6142D2A0833B5F3202AA6E19B12 /* PBXContainerItemProxy */;
+		};
+		C1F28B5F3826EB4FB5B91045FEE61D19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyPickerPopover;
+			target = 2DA7230ACC15282BD3E59B9E1E1001C6 /* SwiftyPickerPopover */;
+			targetProxy = 03A04543902B55EF1C758091117B6FBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45723295C30D6D65D8BC616BEAA4FAA1 /* CountdownPickerPopover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8FE7348EDC25BDEEBE7D7F01AC0BF0F /* CountdownPickerPopover.storyboard */,
+				6C2655D48B4950311F4C8A52021783AA /* CountdownPickerPopover.strings */,
+			);
+			name = CountdownPickerPopover.storyboard;
+			path = SwiftyPickerPopover;
+			sourceTree = "<group>";
+		};
+		76275628EF343FE414973AB9C9FA9BE5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8736089E259E7D149B9EFC199286A3F1 /* Localizable.strings */,
+				BDB1C65103AFA7B6986BCEF7EC261A4A /* Localizable.strings */,
+			);
+			name = Localizable.strings;
+			path = SwiftyPickerPopover;
+			sourceTree = "<group>";
+		};
+		B6A6093B4A1775C16871584C870A340B /* StringPickerPopover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0569F5B4695172636525A48BB7AE803 /* StringPickerPopover.storyboard */,
+			);
+			name = StringPickerPopover.storyboard;
+			path = SwiftyPickerPopover;
+			sourceTree = "<group>";
+		};
+		FAA2DF2F86E8B54C64944D103629D591 /* DatePickerPopover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92F58ABDAB5E74FBB97043C14FDB5F65 /* DatePickerPopover.storyboard */,
+				CB4FB6DD427E9AD5A3D7ACB234A1A2A7 /* DatePickerPopover.strings */,
+			);
+			name = DatePickerPopover.storyboard;
+			path = SwiftyPickerPopover;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3171F7D7E02ECBA0CBB82D7F8A9B8C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC5FE36B43C293B262DECC1002AF5F4 /* FSPagerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FSPagerView/FSPagerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FSPagerView/FSPagerView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FSPagerView/FSPagerView.modulemap";
+				PRODUCT_MODULE_NAME = FSPagerView;
+				PRODUCT_NAME = FSPagerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4C2B7A05D844E267385E85F04E13B122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB6E6813066ED7473ACDD331C08D8E8 /* Pods-GetGoing.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetGoing/Pods-GetGoing-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetGoing/Pods-GetGoing.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5C5B0F5F6B724DA19A41D96E15C9205C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04270887AC9A498F983FBED7F957B873 /* Pods-GetGoing.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetGoing/Pods-GetGoing-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetGoing/Pods-GetGoing.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		79F1D6B6E3EC0C4CA8E84F982AEAF300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC5FE36B43C293B262DECC1002AF5F4 /* FSPagerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FSPagerView/FSPagerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FSPagerView/FSPagerView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FSPagerView/FSPagerView.modulemap";
+				PRODUCT_MODULE_NAME = FSPagerView;
+				PRODUCT_NAME = FSPagerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		82211C33A579092BE8A3264180C61A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05244893E4BCF02B4808973DF745FE89 /* SwiftyPickerPopover.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyPickerPopover;
+				PRODUCT_NAME = SwiftyPickerPopover;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A27713CB74E99AF202AADC23200A32F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B3374DBEF37B57809B4C42C29F3C22B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05244893E4BCF02B4808973DF745FE89 /* SwiftyPickerPopover.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyPickerPopover;
+				PRODUCT_NAME = SwiftyPickerPopover;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1423927F428951A47295BA7F353F0715 /* Build configuration list for PBXNativeTarget "FSPagerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3171F7D7E02ECBA0CBB82D7F8A9B8C10 /* Debug */,
+				79F1D6B6E3EC0C4CA8E84F982AEAF300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */,
+				A27713CB74E99AF202AADC23200A32F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AF1941B584813FCE7E69127FD330EF0 /* Build configuration list for PBXNativeTarget "Pods-GetGoing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C5B0F5F6B724DA19A41D96E15C9205C /* Debug */,
+				4C2B7A05D844E267385E85F04E13B122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF5D7AE2771ADC7F9787446942F704A /* Build configuration list for PBXNativeTarget "SwiftyPickerPopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82211C33A579092BE8A3264180C61A2E /* Debug */,
+				B3374DBEF37B57809B4C42C29F3C22B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

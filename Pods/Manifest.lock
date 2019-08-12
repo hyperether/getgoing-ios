@@ -1,0 +1,20 @@
+PODS:
+  - FSPagerView (0.8.2)
+  - SwiftyPickerPopover (6.6.5)
+
+DEPENDENCIES:
+  - FSPagerView
+  - SwiftyPickerPopover
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FSPagerView
+    - SwiftyPickerPopover
+
+SPEC CHECKSUMS:
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
+  SwiftyPickerPopover: f2975fd0233d04c0a8f8d52d09b6f24b882de6fb
+
+PODFILE CHECKSUM: 9c65a628e42e6231cd199fb1a15427ba82674927
+
+COCOAPODS: 1.6.2
