@@ -12,10 +12,10 @@ class Activities : NSObject {
     
     static var shared = Activities.init()
     var listOfRuns : [Run] = []
-    var walkingDistance : Float?
-    var runningDistance : Float?
-    var bicyclingDistance : Float?
     var currentGoal : Goal?
+    var walkingDataEntries : [DataEntry] = []
+    var runningDataEntries : [DataEntry] = []
+    var bicyclingDataEntries : [DataEntry] = []
     
     private override init() {
         super.init()

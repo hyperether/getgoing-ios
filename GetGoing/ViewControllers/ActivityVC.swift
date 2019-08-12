@@ -61,9 +61,7 @@ class ActivityVC : UIViewController {
             updateDisplay()
         }
         
-        let dataEntries = generateRandomDataEntries()
-        basicBarChart.updateDataEntries(dataEntries: dataEntries, animated: true)
-    
+        loadDataEntries()
         
         
     }
@@ -83,8 +81,6 @@ class ActivityVC : UIViewController {
         }
         return result
     }
-    
-
     
     func updateDisplay(){
         
@@ -117,8 +113,50 @@ class ActivityVC : UIViewController {
             }
         }
         
+        saveDataEntries(today)
+        
         for route in listOfRoutes {
             configureMap(route)
+        }
+        
+        
+    }
+    
+    func saveDataEntries(_ title: String){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d.MM"
+        let todayDateString = dateFormatter.string(from: Date())
+        switch style {
+        case "walking":
+            if (title.elementsEqual(todayDateString) && (Activities.shared.walkingDataEntries.count > 0)){
+                Activities.shared.walkingDataEntries.removeLast()
+            }
+            Activities.shared.walkingDataEntries.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: Float(roundProgress.progress), textValue: "", title: title))
+        case "running":
+            if (title.elementsEqual(todayDateString) && (Activities.shared.runningDataEntries.count > 0)){
+                Activities.shared.runningDataEntries.removeLast()
+            }
+            Activities.shared.runningDataEntries.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: Float(roundProgress.progress), textValue: "", title: title))
+        case "bicycling":
+            if (title.elementsEqual(todayDateString) && (Activities.shared.bicyclingDataEntries.count > 0)){
+                Activities.shared.bicyclingDataEntries.removeLast()
+            }
+            Activities.shared.bicyclingDataEntries.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: Float(roundProgress.progress), textValue: "", title: title))
+        default:
+            break
+        }
+    }
+    
+    func loadDataEntries(){
+        switch style {
+        case "walking":
+            basicBarChart.updateDataEntries(dataEntries: Activities.shared.walkingDataEntries, animated: true)
+        case "running":
+            basicBarChart.updateDataEntries(dataEntries: Activities.shared.runningDataEntries, animated: true)
+        case "bicycling":
+            basicBarChart.updateDataEntries(dataEntries: Activities.shared.bicyclingDataEntries, animated: true)
+        default:
+            break
         }
     }
     

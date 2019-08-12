@@ -180,6 +180,15 @@ class ActivitiesVC : UIViewController {
             delegate!.activitiesVCDidSaveGoal()
             navigationController?.popViewController(animated: true)
         }
+        
+        for todayRun in Activities.shared.listOfRuns {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "d.MM"
+            let todayDate = dateFormatter.string(from: Date())
+            if (todayDate.elementsEqual(dateFormatter.string(from: todayRun.date!))) {
+                todayRun.goal = Activities.shared.currentGoal
+            }
+        }
         updateProgressBars()
         
     }

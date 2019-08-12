@@ -98,17 +98,9 @@ class MainVC : UIViewController {
             circularProgress.setProgress(progress: 0.5)
         }
         
-        //making view shadow
-//        shapedView.layer.shadowColor = UIColor.black.cgColor
-//        shapedView.layer.shadowOpacity = 0.1
-//        shapedView.layer.shadowOffset = CGSize.zero
-//        shapedView.layer.shadowRadius = 10
         
     }
     
-//    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
-//        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
-//    }
     
     func changeLastRunImage(_ style : String) {
         switch style {

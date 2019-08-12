@@ -278,7 +278,7 @@
                                     <action selector="onLocateButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Jp-yd-c8h"/>
                                 </connections>
                             </button>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Js-Zq-n4l">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Js-Zq-n4l">
                                 <rect key="frame" x="70" y="686" width="274" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9RF-GX-jfn">

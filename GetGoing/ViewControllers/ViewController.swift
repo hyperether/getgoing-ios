@@ -160,37 +160,10 @@ class ViewController: UIViewController{
         self.routeOverlay = self.mapView.overlays
         let runToSave = Run(Date.init(), Float(distanceCovered), routeOverlay!, chosenStyle, Int(counter), calories, Float(distanceCovered/counter), goal)
         Activities.shared.listOfRuns.append(runToSave)
-        updateStyleDistance()
-     
-
+    
     }
     
-    func updateStyleDistance(){
-        switch chosenStyle {
-        case "walking":
-            if (Activities.shared.walkingDistance != nil){
-                Activities.shared.walkingDistance = Activities.shared.walkingDistance! + Float(distanceCovered)
-            } else {
-                Activities.shared.walkingDistance = Float(distanceCovered)
-            }
-        case "running":
-            if (Activities.shared.runningDistance != nil){
-                Activities.shared.runningDistance = Activities.shared.runningDistance! + Float(distanceCovered)
-            } else {
-                Activities.shared.runningDistance = Float(distanceCovered)
-            }
-        case "bicycling":
-            if (Activities.shared.bicyclingDistance != nil){
-                Activities.shared.bicyclingDistance = Activities.shared.bicyclingDistance! + Float(distanceCovered)
-            } else {
-                Activities.shared.bicyclingDistance = Float(distanceCovered)
-            }
-        default:
-            break
-        }
-    }
 
-    
 }
 
 extension ViewController : MKMapViewDelegate {
