@@ -26,11 +26,20 @@ class ProfileVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user.loadFromDB()
+        
         configureLabelGestures()
         configureNavigationBar()
         updateUser()
         updateDisplay()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        user.saveToDB()
+    }
+    
+    
     
     func updateUser(){
         for run in Activities.shared.listOfRuns {
@@ -70,7 +79,7 @@ class ProfileVC : UIViewController {
         let _ = datePicker.setDoneButton(action: { _, selectedDate in
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd.MM.YYYY"
-            
+            self.user.dateOfBirth = selectedDate
             self.ageLabel.text = dateFormatter.string(from: selectedDate)
             
         })
@@ -87,6 +96,7 @@ class ProfileVC : UIViewController {
         .setSelectedRow((ages.count - 1)/2)
         .setDoneButton(action: {(popover, selectedRow, selectedString) in
             self.heightLabel.text = selectedString + "cm"
+            self.user.height = Int(selectedString)
         })
         stringsPicker.appear(originView: heightLabel! as UIView, baseViewController: self)
     }
@@ -100,6 +110,7 @@ class ProfileVC : UIViewController {
             .setSelectedRow((weights.count - 1)/2)
             .setDoneButton(action: {(popover, selectedRow, selectedString) in
                 self.weightLabel.text = selectedString + "kg"
+                self.user.weight = Int(selectedString)
             })
         stringsPicker.appear(originView: weightLabel! as UIView, baseViewController: self)
     }

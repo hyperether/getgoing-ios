@@ -7,55 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05602C203EA33DF3264CB679E2AE214C /* FSPageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6B1593826E1533C79C6D6F6155CC /* FSPageViewLayout.swift */; };
-		0725F245714C32BC551405EF60218024 /* AbstractPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0FB1117A6BC08BE63A0A62E41170E5 /* AbstractPopover.storyboard */; };
-		1A849A93B3C176895F2FC1B4C342B03C /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47755DAA672A876BDEF8522D5C982AA3 /* FSPagerViewLayoutAttributes.swift */; };
-		1AEBDCFC40F3DA94C205020699315CAD /* FSPagerViewObjcCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3646C0FD02D380FF107EDF28BD55A6 /* FSPagerViewObjcCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25D9B37EADDF66F184B91D2EEC093103 /* AbstractPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265CAE2F766FB1F55DB1547158F8139 /* AbstractPopover.swift */; };
+		021EBF3C2DCCD44A696210D376878560 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = D864975CE6E2D8A56CBD19A5A2348E42 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05602C203EA33DF3264CB679E2AE214C /* FSPageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D10DA96429925BAAD81582E2A3ED4 /* FSPageViewLayout.swift */; };
+		0E61EA7FD887825C52279D91DFE68AAE /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52594D13E3A87236E2A7E4A51796285 /* DispatchQueue+Extension.swift */; };
+		14E5C9B852D224EAB869C05F5671F34C /* CountdownPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6590E823CCAB6B9A85FFC637D3AE0 /* CountdownPickerPopover.swift */; };
+		1A849A93B3C176895F2FC1B4C342B03C /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C836D0FB6FCD3ACD62117D7E011008 /* FSPagerViewLayoutAttributes.swift */; };
+		1AEBDCFC40F3DA94C205020699315CAD /* FSPagerViewObjcCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 0440E23F604C6B25C83D8973776FE6A9 /* FSPagerViewObjcCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF9BF7C2E92327143422BB88A9E204F /* AbstractPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989A5A5C2651BEC3FC2AD059D1480A6 /* AbstractPopover.swift */; };
+		1DCC9CF7A8B6E70A6A09F140ADCD1E71 /* SwiftyPickerPopover-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEC210FF602E8C89D477F035DF97638 /* SwiftyPickerPopover-dummy.m */; };
+		1F3EDB077BE904268DF72EE6BD154091 /* ColumnStringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15868E6F152AF29CF8D48E7C17EDF9 /* ColumnStringPickerPopover.swift */; };
+		1F55C24E94093395C56877C3BD07BD59 /* DatePickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4618692B7F4BDA4B51A57EB1CE1C3 /* DatePickerPopoverViewController.swift */; };
+		21228F0E9BC45732ADF33BE86751DE07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		24C058A87968598AD791BBBF8FD211BA /* SQLite.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEB47431E91ADA84B29AE0C605C296C /* SQLite.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26CEC9246685DA78407A9DF7754E0573 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0E73B2477307FA28A9615FC885ED6D /* CustomFunctions.swift */; };
+		275D2C944908D0E146906B2ADBF26A52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		2A2CDB2026A70C8AEAC723B4D85CF67A /* Pods-GetGoing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E21F7832B90D01954D087AEBF21D7D31 /* Pods-GetGoing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F18D841B041A79D6055BD03988CFF44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		3AA8F1C9E48545763AEB711AE243467E /* CountdownPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B5F5D0FC0F6062A80449605ED565C /* CountdownPickerPopoverViewController.swift */; };
-		3B169B458F80C131024B0C611F554D8A /* FSPagerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354FFB73A007687F59AF8A2A5EE0E28 /* FSPagerCollectionView.swift */; };
-		4184966B9956A07736C4592C5AA0CBC5 /* FSPagerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89E097BC1BBA352B931C73AD5D33E38D /* FSPagerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46C105C9BF4C2A7793294FF4B6E657CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76275628EF343FE414973AB9C9FA9BE5 /* Localizable.strings */; };
-		4EFA847F463CF9BE2C9F183DD0755154 /* Pods-GetGoing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E21F7832B90D01954D087AEBF21D7D31 /* Pods-GetGoing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5115E0B6715DB22E94D90CC42270D20D /* StringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650DDF66E9ED5B5AA0401D0BAD00A00C /* StringPickerPopover.swift */; };
-		5715C5CE550C8DADAC4595BEA56774D8 /* StringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A6093B4A1775C16871584C870A340B /* StringPickerPopover.storyboard */; };
-		5C37A6995934A3135C9C1FD3F86A02DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		604A2BC7DBDA0A7A64838D59622F72EC /* DatePickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2DF2F86E8B54C64944D103629D591 /* DatePickerPopover.storyboard */; };
-		617F4161A5F46A2A4F16863FD6DB5F1A /* SwiftyPickerPopover-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA6862B95941DDF2D6A912A9A08773F /* SwiftyPickerPopover-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61F9BF19DA18FD099D05B2377FAB8F6A /* CountdownPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45723295C30D6D65D8BC616BEAA4FAA1 /* CountdownPickerPopover.storyboard */; };
-		7B49221F9AB71D68E1F6DF00F50EEB61 /* FSPagerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9870B96BAD9686116C94C6184B0627 /* FSPagerView-dummy.m */; };
-		85BEB836ECCAC7A85C96D223D426E59B /* FSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9433ABD336E210BF610F83EABCF071DE /* FSPagerViewCell.swift */; };
-		95414360B2027351B1AF55511DAA911B /* CollectionType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D1BFC7D6C0A1729E73FC6C9114E1C /* CollectionType+Extension.swift */; };
-		99798EAF1D6C443C735C5FDD7FE0DE99 /* ColumnStringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995139CC29CF02247F8B80D56CFE94A1 /* ColumnStringPickerPopover.storyboard */; };
-		9DD3CF3CDD902725965FE8C89321014C /* ColumnStringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC87E9F420DD1B995B20E9026ED259C7 /* ColumnStringPickerPopover.swift */; };
-		AAB29170870504BC19EC7C3B23A8B9D6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996BA8D5FCC7528FEBD5A01A201434F5 /* String+Extension.swift */; };
-		AD02C083B6CDDC182F6279BB99AB9C97 /* AbstractPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5809C9912F7550C68311BD0C9ED878D6 /* AbstractPickerPopoverViewController.swift */; };
-		B070920C3C31BD6EFBBC2FF7CC38BD55 /* FSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CDC6BEF8906FF51E18040803D8F6E6 /* FSPageControl.swift */; };
-		B19657EBDC8403DFBFA17724DCB4B1DD /* FSPageViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C123F761A4F88DF3D88177E36C035278 /* FSPageViewTransformer.swift */; };
-		B3C9F1153E56A8D029114ED80780CAE0 /* SwiftyPickerPopover-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5326539772EB9AC752881397BD605C0C /* SwiftyPickerPopover-dummy.m */; };
-		B4EA182BB335D592DA4809AC8B53F9D5 /* FSPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804DEFE2F23F3D0FA5DAB63EF003A10D /* FSPagerView.swift */; };
-		C765C31D85836D5A607617C1EDDF0F98 /* FSPagerViewObjcCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D2AA45056E9BA53D06A472FD845A5 /* FSPagerViewObjcCompat.m */; };
-		CF116930EB6CDFC178D1F9C545CC1FA4 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96F322C20200FC6406DDE1C10EBF2A /* DispatchQueue+Extension.swift */; };
-		D59D6589FE1259F34517BD5A1F70159E /* DatePickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B8EE4895E361A6AAD596A2AF24E7E /* DatePickerPopoverViewController.swift */; };
+		2FEE471BCDE8D62C55C095F3FAA40C8A /* AbstractPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCD6692B4B9AF1765794A52DD537DDD /* AbstractPickerPopoverViewController.swift */; };
+		300C69B0194AA13EC584698DD6970536 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FADA4D8218035709E914E7B807A2D4 /* Blob.swift */; };
+		306837AA5FF951C4B0081FBC8871669F /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DFA45C3F12628D928FBB478FC2C2C /* Coding.swift */; };
+		342FB54209E2D45A04CD74638F66EB39 /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B976B454BDFD11FBEC968E61B3C601 /* SQLite-Bridging.m */; };
+		35AAF80F2770E719C28E3589264FF06B /* ColumnStringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57E12FDB8D5ADF7214B18EE2C97E4FB /* ColumnStringPickerPopover.storyboard */; };
+		38ABB7AA41CBC1AD72170F01BE1CE2EC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC4C18ABAAB49E5D43A9E272C6391EE /* String+Extension.swift */; };
+		3ACEFAF668886DA7D58831111F2FC9E0 /* Pods-GetGoing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AC1F46ACB752DC3A0AA5192C54498 /* Pods-GetGoing-dummy.m */; };
+		3B169B458F80C131024B0C611F554D8A /* FSPagerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BE2EDF20FB374B090E75DDBEC1F1B /* FSPagerCollectionView.swift */; };
+		3F9EE1EC5E940FDCC467DFE9CE2AB853 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F18F443006E1A7098491B672FFD11A /* Collation.swift */; };
+		4184966B9956A07736C4592C5AA0CBC5 /* FSPagerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33110CCD5509BE701D8390A7EF1051B5 /* FSPagerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41E935039EFFDBAD0F12D0546E73A362 /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF460576DFE6C2FF2F15B1EF5B48A06 /* AggregateFunctions.swift */; };
+		4B38BFE9B069B6A8F2BC9DD5358B4479 /* ColumnStringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C6CD6D3E2A9CFBAAC1E67A1600A80 /* ColumnStringPickerPopoverViewController.swift */; };
+		53A63ACD607E37BC56A35FD03D9149F3 /* SwiftyPickerPopover-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E90AD76F0B0DC67D2C115F720353583E /* SwiftyPickerPopover-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		543153087D1191A6E06801767A967B2C /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E709C6023786BAAF3C8ACB4B26A76 /* Schema.swift */; };
+		54AE271A381FEFD7B81ECC3186FB5075 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947893E96D9C4B20B2435797050B98D /* Setter.swift */; };
+		565AC37748CC265EE16D999110503A18 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070AFC7E6516097C93B7C9377EE700CA /* FTS4.swift */; };
+		606C90F8AB5BD7910D5E892300DA4ABF /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA60F3D8EA5D2F74341489476D0EF63 /* SQLite.swift-dummy.m */; };
+		67CF3C33CB361FC0C60D1BC1688C21BD /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE726F91C185912BBB40DD7CE56ABD /* Connection.swift */; };
+		68CA3850E3FDBE8656234243285BA1A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		6F1B2B44FDD48B2BD869CFAD92E50003 /* StringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9DAC53E912586F0EDD316E8F054FF /* StringPickerPopover.swift */; };
+		7B49221F9AB71D68E1F6DF00F50EEB61 /* FSPagerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8007D65ED6B8D4EB522CFC2B8BA6A7 /* FSPagerView-dummy.m */; };
+		7EEA90100BF1CCD919B7C5004CF8E21F /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39829101F8156FCB11172D1271B3DD16 /* Query.swift */; };
+		80BE83BEC5BEE5894D65B369AD2A859C /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC0DBE8FD62B728A9DA48F810FE948 /* Value.swift */; };
+		84BFCDB108D1ECCE98C993F28D59D628 /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775FCD4C427F37BAFA09155A687FB56 /* FTS5.swift */; };
+		85BEB836ECCAC7A85C96D223D426E59B /* FSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD69B2ADEE7DAFDFA0E735D1608683 /* FSPagerViewCell.swift */; };
+		88D0C42FB890F973D597F6EFC29C9CF7 /* StringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70108E2F3B5B3EC0A23A484C906AE949 /* StringPickerPopover.storyboard */; };
+		8A7B7AFBA82063523F28F42008606038 /* CountdownPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C62540D219A1B83D5BFDF9A7CA2E02B /* CountdownPickerPopover.storyboard */; };
+		959231F9C2C96531D4D46BB5BD351089 /* CollectionType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E64351FD47C3B48763CF3C750AE4D /* CollectionType+Extension.swift */; };
+		985652A21DA0ABB6EE16AF30FF9996FC /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 085632C48E01B2F27F06AB5F945C6581 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9897666489AA067216298AA87F635623 /* DateAndTimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211006761FD8684F3E07AA1E7FCC62F /* DateAndTimeFunctions.swift */; };
+		9E3878900C9A654B9A5A6AD983C55BED /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA2D2B0739117FD6B4D0990A47D7E /* Foundation.swift */; };
+		A983FC504CC7248170C625F460FFDFCB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239D65BB88D96359D493941602C7939 /* Errors.swift */; };
+		B070920C3C31BD6EFBBC2FF7CC38BD55 /* FSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18A1A81F495BBBFA25D458923635A64 /* FSPageControl.swift */; };
+		B19657EBDC8403DFBFA17724DCB4B1DD /* FSPageViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E323D4DC75232538F1C33EDD5706CE /* FSPageViewTransformer.swift */; };
+		B4EA182BB335D592DA4809AC8B53F9D5 /* FSPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1027CF9DAEBE653463B67612AF94F4 /* FSPagerView.swift */; };
+		BDB01DDDD0AF226DF8E350576C386658 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44057715D35308E45C5B6C91C6A6251 /* Expression.swift */; };
+		C476EB5010176255E43640B3BAB0BB96 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825F4F2B58A8A3B5B86BB58DFC4C9EE /* Operators.swift */; };
+		C765C31D85836D5A607617C1EDDF0F98 /* FSPagerViewObjcCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 404584255D29299D60704D71D730F3DF /* FSPagerViewObjcCompat.m */; };
+		C790FC9E5F2CE3F3761685A36DB5AFD0 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C70DA9D5C912188A8215147F2A44F7 /* Statement.swift */; };
+		C7EF6A96B53250D60B0646E9F03DC7CE /* AbstractPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0771D996B9F59FE9164AF828DB9E1F2 /* AbstractPopover.storyboard */; };
+		CB4429536A4EC12C33981FF386DEB55A /* CountdownPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C091E753743349E6572CE876E5EBA0 /* CountdownPickerPopoverViewController.swift */; };
+		D398F6CCFBBA85C25AB2473877868FA3 /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39CEFB2A0FA1FDD671980446E2BEFA0 /* RTree.swift */; };
 		D5DD40E0B475A275E077B1F4FEB6F081 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		D7E5C62426AF298BB5C6A6B79E62000D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		DA4DDBD35C1277CFC5D313F8F6FB9096 /* DatePickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7168F169092785E7343EBB56292729D /* DatePickerPopover.swift */; };
-		DA5702CBE7450137458FF5E20A9C5DCC /* CountdownPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF250A9E51E7638CB9C53038D024678 /* CountdownPickerPopover.swift */; };
-		EE0AFEB52B7E480BE728DB901FB929EE /* Pods-GetGoing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 849AC1F46ACB752DC3A0AA5192C54498 /* Pods-GetGoing-dummy.m */; };
-		F9F6EF076A8A4C9E9EA92074904AB2CB /* ColumnStringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11041567AD0734B4FA8BDBF12FAB51 /* ColumnStringPickerPopoverViewController.swift */; };
-		FDD2454D1A94555875F14C0DB655495C /* StringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9323B14D7001FF478C08749B9CF5274 /* StringPickerPopoverViewController.swift */; };
+		D6C4E97937E1E7AFF5D20517D74F8233 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C061D1388C4E09370D731EE8176A13 /* CoreFunctions.swift */; };
+		E29A1AA9D4A68D72FE8626E5720CCBA6 /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = AB14CBD3544813F56620C375CCBCD1EF /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E480B7D90B7DDB6D2A2DC7E2F84381EC /* DatePickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A27328B4EBEFE3DD708C0B08C297DB1 /* DatePickerPopover.swift */; };
+		E69B32B6064913E5A9FD0029E0BC6EFD /* DatePickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F480B728058E2D2379723F153124DB5A /* DatePickerPopover.storyboard */; };
+		E6C4BC2C653B7B0345CDAF1AD3AE09E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBF02508C9923938608682E9283CAE39 /* Localizable.strings */; };
+		E9A0D00584664A54B0729B6145BF1877 /* StringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0535E0947122100CF24DBE3CC34C7F /* StringPickerPopoverViewController.swift */; };
+		F477CCD9280FC44F4CD16F22DC157DCA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEEE3F054D28C1560AFA19515E15686 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		03A04543902B55EF1C758091117B6FBC /* PBXContainerItemProxy */ = {
+		06FC6CB536E7697DD52681F5A591BFC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2DA7230ACC15282BD3E59B9E1E1001C6;
+			remoteGlobalIDString = 6A976B3804D7A6002EA986D0B6B4AEA7;
+			remoteInfo = SQLite.swift;
+		};
+		B432F9064F9D0EC20843EAD5DD698368 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90A9B8AA42082B0800FFEC00C803234A;
 			remoteInfo = SwiftyPickerPopover;
 		};
-		9921D6142D2A0833B5F3202AA6E19B12 /* PBXContainerItemProxy */ = {
+		DA958CA6E450D370D2BE8CDAE523BC90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -65,67 +100,115 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0072ECD78CC52A7ADBD6C50892E80BA7 /* FSPagerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-prefix.pch"; sourceTree = "<group>"; };
+		0211006761FD8684F3E07AA1E7FCC62F /* DateAndTimeFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateAndTimeFunctions.swift; path = Sources/SQLite/Typed/DateAndTimeFunctions.swift; sourceTree = "<group>"; };
+		0255FB2E0C415F142283FCC4FB5AD1AC /* DatePickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = DatePickerPopover.strings; path = ja.lproj/DatePickerPopover.strings; sourceTree = "<group>"; };
+		027E709C6023786BAAF3C8ACB4B26A76 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Sources/SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
 		04270887AC9A498F983FBED7F957B873 /* Pods-GetGoing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetGoing.debug.xcconfig"; sourceTree = "<group>"; };
-		05244893E4BCF02B4808973DF745FE89 /* SwiftyPickerPopover.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyPickerPopover.xcconfig; sourceTree = "<group>"; };
+		0440E23F604C6B25C83D8973776FE6A9 /* FSPagerViewObjcCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSPagerViewObjcCompat.h; path = Sources/FSPagerViewObjcCompat.h; sourceTree = "<group>"; };
 		05F9D39B01D12B9437B8BEA42A239BEA /* Pods-GetGoing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GetGoing.modulemap"; sourceTree = "<group>"; };
-		0B96F322C20200FC6406DDE1C10EBF2A /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extension.swift"; path = "SwiftyPickerPopover/DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
-		0E5B5F5D0FC0F6062A80449605ED565C /* CountdownPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopoverViewController.swift; path = SwiftyPickerPopover/CountdownPickerPopoverViewController.swift; sourceTree = "<group>"; };
-		1E993F9899CD2F1320CCF119936C7830 /* FSPagerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B2D2AA45056E9BA53D06A472FD845A5 /* FSPagerViewObjcCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSPagerViewObjcCompat.m; path = Sources/FSPagerViewObjcCompat.m; sourceTree = "<group>"; };
+		070AFC7E6516097C93B7C9377EE700CA /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = Sources/SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
+		07C6590E823CCAB6B9A85FFC637D3AE0 /* CountdownPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopover.swift; path = SwiftyPickerPopover/CountdownPickerPopover.swift; sourceTree = "<group>"; };
+		085632C48E01B2F27F06AB5F945C6581 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Sources/SQLiteObjc/fts3_tokenizer.h; sourceTree = "<group>"; };
+		08C091E753743349E6572CE876E5EBA0 /* CountdownPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopoverViewController.swift; path = SwiftyPickerPopover/CountdownPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		0F9BE2EDF20FB374B090E75DDBEC1F1B /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerCollectionView.swift; path = Sources/FSPagerCollectionView.swift; sourceTree = "<group>"; };
+		0FBE726F91C185912BBB40DD7CE56ABD /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/SQLite/Core/Connection.swift; sourceTree = "<group>"; };
+		188D10DA96429925BAAD81582E2A3ED4 /* FSPageViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewLayout.swift; path = Sources/FSPageViewLayout.swift; sourceTree = "<group>"; };
+		19748A602AB43C9DB1AD973BC1858F14 /* FSPagerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-prefix.pch"; sourceTree = "<group>"; };
+		1A87359478A97B75ED0C0BF697C992A0 /* Pods_GetGoing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetGoing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B93DAE8944C3C11AB22F978735BD847 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1C8007D65ED6B8D4EB522CFC2B8BA6A7 /* FSPagerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSPagerView-dummy.m"; sourceTree = "<group>"; };
+		1CEA884662D1C1353FE48B6F7F7BA0C9 /* FSPagerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2278B3B713C3DF7943AE77DE87342456 /* SQLite.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SQLite.swift-Info.plist"; sourceTree = "<group>"; };
+		27276FC93C931157DEE76207F1A5164D /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D0535E0947122100CF24DBE3CC34C7F /* StringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopoverViewController.swift; path = SwiftyPickerPopover/StringPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		2D5FEE98ED564E05216D7F9179DE8451 /* StringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = StringPickerPopover.storyboard; path = Base.lproj/StringPickerPopover.storyboard; sourceTree = "<group>"; };
 		2FF3191ED2FF4DCFA68138139BA9A29E /* Pods-GetGoing-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetGoing-Info.plist"; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		409D1BFC7D6C0A1729E73FC6C9114E1C /* CollectionType+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionType+Extension.swift"; path = "SwiftyPickerPopover/CollectionType+Extension.swift"; sourceTree = "<group>"; };
+		31F18F443006E1A7098491B672FFD11A /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = Sources/SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
+		33110CCD5509BE701D8390A7EF1051B5 /* FSPagerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-umbrella.h"; sourceTree = "<group>"; };
+		338DFA45C3F12628D928FBB478FC2C2C /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = Sources/SQLite/Typed/Coding.swift; sourceTree = "<group>"; };
+		39829101F8156FCB11172D1271B3DD16 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/SQLite/Typed/Query.swift; sourceTree = "<group>"; };
+		3B15868E6F152AF29CF8D48E7C17EDF9 /* ColumnStringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopover.swift; path = SwiftyPickerPopover/ColumnStringPickerPopover.swift; sourceTree = "<group>"; };
+		3EEC210FF602E8C89D477F035DF97638 /* SwiftyPickerPopover-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyPickerPopover-dummy.m"; sourceTree = "<group>"; };
+		404584255D29299D60704D71D730F3DF /* FSPagerViewObjcCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSPagerViewObjcCompat.m; path = Sources/FSPagerViewObjcCompat.m; sourceTree = "<group>"; };
+		4239D65BB88D96359D493941602C7939 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/SQLite/Core/Errors.swift; sourceTree = "<group>"; };
+		42B976B454BDFD11FBEC968E61B3C601 /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "Sources/SQLiteObjc/SQLite-Bridging.m"; sourceTree = "<group>"; };
+		43122723209E43C1CC360D4D6DF0524F /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46CD100F7C8326983E9697E8089E827C /* SwiftyPickerPopover-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-prefix.pch"; sourceTree = "<group>"; };
-		47755DAA672A876BDEF8522D5C982AA3 /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewLayoutAttributes.swift; path = Sources/FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
-		4D081113645D84E21BC267453118E3D2 /* Pods_GetGoing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetGoing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		510181077D209FA270AB216301421434 /* FSPagerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSPagerView.modulemap; sourceTree = "<group>"; };
-		5326539772EB9AC752881397BD605C0C /* SwiftyPickerPopover-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyPickerPopover-dummy.m"; sourceTree = "<group>"; };
-		5809C9912F7550C68311BD0C9ED878D6 /* AbstractPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractPickerPopoverViewController.swift; path = SwiftyPickerPopover/AbstractPickerPopoverViewController.swift; sourceTree = "<group>"; };
-		5EF250A9E51E7638CB9C53038D024678 /* CountdownPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopover.swift; path = SwiftyPickerPopover/CountdownPickerPopover.swift; sourceTree = "<group>"; };
-		650DDF66E9ED5B5AA0401D0BAD00A00C /* StringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopover.swift; path = SwiftyPickerPopover/StringPickerPopover.swift; sourceTree = "<group>"; };
-		6C2655D48B4950311F4C8A52021783AA /* CountdownPickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CountdownPickerPopover.strings; path = ja.lproj/CountdownPickerPopover.strings; sourceTree = "<group>"; };
-		73C4344A18D3A8A788B29982AAE4C605 /* SwiftyPickerPopover-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyPickerPopover-Info.plist"; sourceTree = "<group>"; };
-		7E7B8EE4895E361A6AAD596A2AF24E7E /* DatePickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopoverViewController.swift; path = SwiftyPickerPopover/DatePickerPopoverViewController.swift; sourceTree = "<group>"; };
-		7EA6862B95941DDF2D6A912A9A08773F /* SwiftyPickerPopover-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-umbrella.h"; sourceTree = "<group>"; };
-		804DEFE2F23F3D0FA5DAB63EF003A10D /* FSPagerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerView.swift; path = Sources/FSPagerView.swift; sourceTree = "<group>"; };
+		4934A598AFF06B06D528E60AE513CEBD /* CountdownPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = CountdownPickerPopover.storyboard; path = Base.lproj/CountdownPickerPopover.storyboard; sourceTree = "<group>"; };
+		5F947F7A9EE500C4670494B6EFD4F013 /* DatePickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = DatePickerPopover.storyboard; path = Base.lproj/DatePickerPopover.storyboard; sourceTree = "<group>"; };
+		6AAC0DBE8FD62B728A9DA48F810FE948 /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Sources/SQLite/Core/Value.swift; sourceTree = "<group>"; };
+		70F9E0ED0F6C4B22440E3ADFCF24C30B /* FSPagerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FSPagerView-Info.plist"; sourceTree = "<group>"; };
+		711D3F8F60C04A927296C7C50840DAE1 /* CountdownPickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = CountdownPickerPopover.strings; path = ja.lproj/CountdownPickerPopover.strings; sourceTree = "<group>"; };
+		7598D347FBFD6EE52FED2BDBCE029873 /* FSPagerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.xcconfig; sourceTree = "<group>"; };
+		769F9BE651F0A244CDDD09D435AB9BFA /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
+		7825F4F2B58A8A3B5B86BB58DFC4C9EE /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
+		7A27328B4EBEFE3DD708C0B08C297DB1 /* DatePickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopover.swift; path = SwiftyPickerPopover/DatePickerPopover.swift; sourceTree = "<group>"; };
+		7DEB47431E91ADA84B29AE0C605C296C /* SQLite.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-umbrella.h"; sourceTree = "<group>"; };
+		7FF460576DFE6C2FF2F15B1EF5B48A06 /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = Sources/SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
 		81AA854E5064754DE288370AC36AEDFB /* Pods-GetGoing-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetGoing-acknowledgements.plist"; sourceTree = "<group>"; };
+		81FD69B2ADEE7DAFDFA0E735D1608683 /* FSPagerViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewCell.swift; path = Sources/FSPagerViewCell.swift; sourceTree = "<group>"; };
 		849AC1F46ACB752DC3A0AA5192C54498 /* Pods-GetGoing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GetGoing-dummy.m"; sourceTree = "<group>"; };
-		8736089E259E7D149B9EFC199286A3F1 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		89E097BC1BBA352B931C73AD5D33E38D /* FSPagerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-umbrella.h"; sourceTree = "<group>"; };
-		8E9870B96BAD9686116C94C6184B0627 /* FSPagerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSPagerView-dummy.m"; sourceTree = "<group>"; };
-		90CDC6BEF8906FF51E18040803D8F6E6 /* FSPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageControl.swift; path = Sources/FSPageControl.swift; sourceTree = "<group>"; };
-		92F58ABDAB5E74FBB97043C14FDB5F65 /* DatePickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = DatePickerPopover.storyboard; path = Base.lproj/DatePickerPopover.storyboard; sourceTree = "<group>"; };
-		9433ABD336E210BF610F83EABCF071DE /* FSPagerViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewCell.swift; path = Sources/FSPagerViewCell.swift; sourceTree = "<group>"; };
-		94DAD6A2C16F5A7B22496445B61C71B7 /* FSPagerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FSPagerView-Info.plist"; sourceTree = "<group>"; };
-		995139CC29CF02247F8B80D56CFE94A1 /* ColumnStringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = ColumnStringPickerPopover.storyboard; path = SwiftyPickerPopover/ColumnStringPickerPopover.storyboard; sourceTree = "<group>"; };
-		996BA8D5FCC7528FEBD5A01A201434F5 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "SwiftyPickerPopover/String+Extension.swift"; sourceTree = "<group>"; };
+		85EC02E308760BC7A9D0E80BD39A05A5 /* SwiftyPickerPopover.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyPickerPopover.xcconfig; sourceTree = "<group>"; };
+		8D1027CF9DAEBE653463B67612AF94F4 /* FSPagerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerView.swift; path = Sources/FSPagerView.swift; sourceTree = "<group>"; };
+		9947893E96D9C4B20B2435797050B98D /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Sources/SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
+		99F7B007740A5BBEAD0567E56E803851 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FB6E6813066ED7473ACDD331C08D8E8 /* Pods-GetGoing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetGoing.release.xcconfig"; sourceTree = "<group>"; };
-		A7168F169092785E7343EBB56292729D /* DatePickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopover.swift; path = SwiftyPickerPopover/DatePickerPopover.swift; sourceTree = "<group>"; };
-		AB3646C0FD02D380FF107EDF28BD55A6 /* FSPagerViewObjcCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSPagerViewObjcCompat.h; path = Sources/FSPagerViewObjcCompat.h; sourceTree = "<group>"; };
-		AD0FB1117A6BC08BE63A0A62E41170E5 /* AbstractPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = AbstractPopover.storyboard; path = SwiftyPickerPopover/AbstractPopover.storyboard; sourceTree = "<group>"; };
-		B1518654798BD7573EDDA92F3DD5F79A /* SwiftyPickerPopover.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyPickerPopover.modulemap; sourceTree = "<group>"; };
-		B265CAE2F766FB1F55DB1547158F8139 /* AbstractPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractPopover.swift; path = SwiftyPickerPopover/AbstractPopover.swift; sourceTree = "<group>"; };
-		BC87E9F420DD1B995B20E9026ED259C7 /* ColumnStringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopover.swift; path = SwiftyPickerPopover/ColumnStringPickerPopover.swift; sourceTree = "<group>"; };
-		BDB1C65103AFA7B6986BCEF7EC261A4A /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BFBC6B1593826E1533C79C6D6F6155CC /* FSPageViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewLayout.swift; path = Sources/FSPageViewLayout.swift; sourceTree = "<group>"; };
-		C123F761A4F88DF3D88177E36C035278 /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewTransformer.swift; path = Sources/FSPageViewTransformer.swift; sourceTree = "<group>"; };
-		C8FE7348EDC25BDEEBE7D7F01AC0BF0F /* CountdownPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = CountdownPickerPopover.storyboard; path = Base.lproj/CountdownPickerPopover.storyboard; sourceTree = "<group>"; };
-		C9323B14D7001FF478C08749B9CF5274 /* StringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopoverViewController.swift; path = SwiftyPickerPopover/StringPickerPopoverViewController.swift; sourceTree = "<group>"; };
-		CB4FB6DD427E9AD5A3D7ACB234A1A2A7 /* DatePickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = DatePickerPopover.strings; path = ja.lproj/DatePickerPopover.strings; sourceTree = "<group>"; };
-		D0569F5B4695172636525A48BB7AE803 /* StringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = StringPickerPopover.storyboard; path = Base.lproj/StringPickerPopover.storyboard; sourceTree = "<group>"; };
-		DD11041567AD0734B4FA8BDBF12FAB51 /* ColumnStringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopoverViewController.swift; path = SwiftyPickerPopover/ColumnStringPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		A1C70DA9D5C912188A8215147F2A44F7 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/SQLite/Core/Statement.swift; sourceTree = "<group>"; };
+		A57E12FDB8D5ADF7214B18EE2C97E4FB /* ColumnStringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = ColumnStringPickerPopover.storyboard; path = SwiftyPickerPopover/ColumnStringPickerPopover.storyboard; sourceTree = "<group>"; };
+		A5EFA2D2B0739117FD6B4D0990A47D7E /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = Sources/SQLite/Foundation.swift; sourceTree = "<group>"; };
+		A775FCD4C427F37BAFA09155A687FB56 /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
+		AB14CBD3544813F56620C375CCBCD1EF /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "Sources/SQLiteObjc/include/SQLite-Bridging.h"; sourceTree = "<group>"; };
+		B52594D13E3A87236E2A7E4A51796285 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extension.swift"; path = "SwiftyPickerPopover/DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		BBCD6692B4B9AF1765794A52DD537DDD /* AbstractPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractPickerPopoverViewController.swift; path = SwiftyPickerPopover/AbstractPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		BD4C6CD6D3E2A9CFBAAC1E67A1600A80 /* ColumnStringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopoverViewController.swift; path = SwiftyPickerPopover/ColumnStringPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		BDEEE3F054D28C1560AFA19515E15686 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/SQLite/Helpers.swift; sourceTree = "<group>"; };
+		C7FADA4D8218035709E914E7B807A2D4 /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Sources/SQLite/Core/Blob.swift; sourceTree = "<group>"; };
+		CD0E73B2477307FA28A9615FC885ED6D /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
+		CFA60F3D8EA5D2F74341489476D0EF63 /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
+		D18A1A81F495BBBFA25D458923635A64 /* FSPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageControl.swift; path = Sources/FSPageControl.swift; sourceTree = "<group>"; };
+		D3B4618692B7F4BDA4B51A57EB1CE1C3 /* DatePickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopoverViewController.swift; path = SwiftyPickerPopover/DatePickerPopoverViewController.swift; sourceTree = "<group>"; };
+		D44057715D35308E45C5B6C91C6A6251 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
+		D5F3E641CFCBFF6A0B99AFCEB22F5CCE /* SwiftyPickerPopover-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyPickerPopover-Info.plist"; sourceTree = "<group>"; };
+		D6893E970A519CBF110640C3E86A0877 /* SwiftyPickerPopover.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyPickerPopover.modulemap; sourceTree = "<group>"; };
+		D864975CE6E2D8A56CBD19A5A2348E42 /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = Sources/SQLite/SQLite.h; sourceTree = "<group>"; };
+		D989A5A5C2651BEC3FC2AD059D1480A6 /* AbstractPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractPopover.swift; path = SwiftyPickerPopover/AbstractPopover.swift; sourceTree = "<group>"; };
+		D9C836D0FB6FCD3ACD62117D7E011008 /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewLayoutAttributes.swift; path = Sources/FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		DA0E64351FD47C3B48763CF3C750AE4D /* CollectionType+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionType+Extension.swift"; path = "SwiftyPickerPopover/CollectionType+Extension.swift"; sourceTree = "<group>"; };
+		DDACBEC066681E318EAC8B3E949F4F5F /* SwiftyPickerPopover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyPickerPopover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC4C18ABAAB49E5D43A9E272C6391EE /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "SwiftyPickerPopover/String+Extension.swift"; sourceTree = "<group>"; };
+		E0771D996B9F59FE9164AF828DB9E1F2 /* AbstractPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = AbstractPopover.storyboard; path = SwiftyPickerPopover/AbstractPopover.storyboard; sourceTree = "<group>"; };
+		E1D40DCEE9BA37B20F5706414D7FA104 /* SwiftyPickerPopover-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-prefix.pch"; sourceTree = "<group>"; };
 		E21F7832B90D01954D087AEBF21D7D31 /* Pods-GetGoing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GetGoing-umbrella.h"; sourceTree = "<group>"; };
+		E24042BA7015B587596A488EDBAE379A /* FSPagerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSPagerView.modulemap; sourceTree = "<group>"; };
+		E90AD76F0B0DC67D2C115F720353583E /* SwiftyPickerPopover-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-umbrella.h"; sourceTree = "<group>"; };
 		EBB65CE1DE86DED619D25239AC4BDFFD /* Pods-GetGoing-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GetGoing-frameworks.sh"; sourceTree = "<group>"; };
-		F354FFB73A007687F59AF8A2A5EE0E28 /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerCollectionView.swift; path = Sources/FSPagerCollectionView.swift; sourceTree = "<group>"; };
-		F55B2FEA75628A3E7C02B2D99948E740 /* SwiftyPickerPopover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyPickerPopover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB9DAC53E912586F0EDD316E8F054FF /* StringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopover.swift; path = SwiftyPickerPopover/StringPickerPopover.swift; sourceTree = "<group>"; };
+		EF3B1F860666D03F427C3808D825B945 /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
+		F1C061D1388C4E09370D731EE8176A13 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Sources/SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
+		F39CEFB2A0FA1FDD671980446E2BEFA0 /* RTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RTree.swift; path = Sources/SQLite/Extensions/RTree.swift; sourceTree = "<group>"; };
+		F4E323D4DC75232538F1C33EDD5706CE /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewTransformer.swift; path = Sources/FSPageViewTransformer.swift; sourceTree = "<group>"; };
 		FF4702CBC70736C1F7825C00BA96AD7A /* Pods-GetGoing-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GetGoing-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FFC5FE36B43C293B262DECC1002AF5F4 /* FSPagerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C28BEA47C867C079369D0F32B89396F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21228F0E9BC45732ADF33BE86751DE07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8633409576EEC9D51543F280FB840D06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275D2C944908D0E146906B2ADBF26A52 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACF19306AFCD6982766AD1502D855597 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,25 +218,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B853C1B5AFFC2768312C004787F06B26 /* Frameworks */ = {
+		C1309E6C7566DCED51E1CEFF728676DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E5C62426AF298BB5C6A6B79E62000D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D3DC2357377D15D6929AA206A63AF361 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5C37A6995934A3135C9C1FD3F86A02DE /* Foundation.framework in Frameworks */,
+				68CA3850E3FDBE8656234243285BA1A1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06707D3B4F893EDBD6B23FC08030AD39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E0771D996B9F59FE9164AF828DB9E1F2 /* AbstractPopover.storyboard */,
+				A57E12FDB8D5ADF7214B18EE2C97E4FB /* ColumnStringPickerPopover.storyboard */,
+				0C62540D219A1B83D5BFDF9A7CA2E02B /* CountdownPickerPopover.storyboard */,
+				F480B728058E2D2379723F153124DB5A /* DatePickerPopover.storyboard */,
+				DBF02508C9923938608682E9283CAE39 /* Localizable.strings */,
+				70108E2F3B5B3EC0A23A484C906AE949 /* StringPickerPopover.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		070A28468C010CAA8D734219BAC37F87 /* SwiftyPickerPopover */ = {
+			isa = PBXGroup;
+			children = (
+				BBCD6692B4B9AF1765794A52DD537DDD /* AbstractPickerPopoverViewController.swift */,
+				D989A5A5C2651BEC3FC2AD059D1480A6 /* AbstractPopover.swift */,
+				DA0E64351FD47C3B48763CF3C750AE4D /* CollectionType+Extension.swift */,
+				3B15868E6F152AF29CF8D48E7C17EDF9 /* ColumnStringPickerPopover.swift */,
+				BD4C6CD6D3E2A9CFBAAC1E67A1600A80 /* ColumnStringPickerPopoverViewController.swift */,
+				07C6590E823CCAB6B9A85FFC637D3AE0 /* CountdownPickerPopover.swift */,
+				08C091E753743349E6572CE876E5EBA0 /* CountdownPickerPopoverViewController.swift */,
+				7A27328B4EBEFE3DD708C0B08C297DB1 /* DatePickerPopover.swift */,
+				D3B4618692B7F4BDA4B51A57EB1CE1C3 /* DatePickerPopoverViewController.swift */,
+				B52594D13E3A87236E2A7E4A51796285 /* DispatchQueue+Extension.swift */,
+				DFC4C18ABAAB49E5D43A9E272C6391EE /* String+Extension.swift */,
+				EBB9DAC53E912586F0EDD316E8F054FF /* StringPickerPopover.swift */,
+				2D0535E0947122100CF24DBE3CC34C7F /* StringPickerPopoverViewController.swift */,
+				06707D3B4F893EDBD6B23FC08030AD39 /* Resources */,
+				0B1F7055CF467AD81C48857BABBA25F5 /* Support Files */,
+			);
+			path = SwiftyPickerPopover;
+			sourceTree = "<group>";
+		};
+		0B1F7055CF467AD81C48857BABBA25F5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6893E970A519CBF110640C3E86A0877 /* SwiftyPickerPopover.modulemap */,
+				85EC02E308760BC7A9D0E80BD39A05A5 /* SwiftyPickerPopover.xcconfig */,
+				3EEC210FF602E8C89D477F035DF97638 /* SwiftyPickerPopover-dummy.m */,
+				D5F3E641CFCBFF6A0B99AFCEB22F5CCE /* SwiftyPickerPopover-Info.plist */,
+				E1D40DCEE9BA37B20F5706414D7FA104 /* SwiftyPickerPopover-prefix.pch */,
+				E90AD76F0B0DC67D2C115F720353583E /* SwiftyPickerPopover-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyPickerPopover";
+			sourceTree = "<group>";
+		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,27 +286,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		274D65BF19312C3FCF6F0C28763BB277 /* Pods */ = {
+		42B13A1095ACB782124E519579471418 /* FSPagerView */ = {
 			isa = PBXGroup;
 			children = (
-				F7F843BA931B76FF4E1E08CBCAE20B4F /* FSPagerView */,
-				BDC8C80AAE7E37527E96F5BCAD0DEC1E /* SwiftyPickerPopover */,
+				D18A1A81F495BBBFA25D458923635A64 /* FSPageControl.swift */,
+				0F9BE2EDF20FB374B090E75DDBEC1F1B /* FSPagerCollectionView.swift */,
+				8D1027CF9DAEBE653463B67612AF94F4 /* FSPagerView.swift */,
+				81FD69B2ADEE7DAFDFA0E735D1608683 /* FSPagerViewCell.swift */,
+				D9C836D0FB6FCD3ACD62117D7E011008 /* FSPagerViewLayoutAttributes.swift */,
+				0440E23F604C6B25C83D8973776FE6A9 /* FSPagerViewObjcCompat.h */,
+				404584255D29299D60704D71D730F3DF /* FSPagerViewObjcCompat.m */,
+				188D10DA96429925BAAD81582E2A3ED4 /* FSPageViewLayout.swift */,
+				F4E323D4DC75232538F1C33EDD5706CE /* FSPageViewTransformer.swift */,
+				A664312289AE9E0F8EAAE9CE403DE134 /* Support Files */,
 			);
-			name = Pods;
+			path = FSPagerView;
 			sourceTree = "<group>";
 		};
-		3D3FF182B2CBD6AE8D8BD7BFB52F3331 /* Support Files */ = {
+		4C12E8DDCB97AC280F6C42BCA7013EEE /* SQLite.swift */ = {
 			isa = PBXGroup;
 			children = (
-				B1518654798BD7573EDDA92F3DD5F79A /* SwiftyPickerPopover.modulemap */,
-				05244893E4BCF02B4808973DF745FE89 /* SwiftyPickerPopover.xcconfig */,
-				5326539772EB9AC752881397BD605C0C /* SwiftyPickerPopover-dummy.m */,
-				73C4344A18D3A8A788B29982AAE4C605 /* SwiftyPickerPopover-Info.plist */,
-				46CD100F7C8326983E9697E8089E827C /* SwiftyPickerPopover-prefix.pch */,
-				7EA6862B95941DDF2D6A912A9A08773F /* SwiftyPickerPopover-umbrella.h */,
+				A3678D2DB5A1BEAA33B4B694D582766B /* standard */,
+				81C0C11726A9C918EB19ADA22F8ADFB0 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyPickerPopover";
+			path = SQLite.swift;
 			sourceTree = "<group>";
 		};
 		57073EF1CB0BD3480E664A4B1F8AF2FD /* Targets Support Files */ = {
@@ -193,40 +320,74 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AEBFBD231C29F45F885ADD77B598A929 /* Support Files */ = {
+		81C0C11726A9C918EB19ADA22F8ADFB0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				510181077D209FA270AB216301421434 /* FSPagerView.modulemap */,
-				FFC5FE36B43C293B262DECC1002AF5F4 /* FSPagerView.xcconfig */,
-				8E9870B96BAD9686116C94C6184B0627 /* FSPagerView-dummy.m */,
-				94DAD6A2C16F5A7B22496445B61C71B7 /* FSPagerView-Info.plist */,
-				0072ECD78CC52A7ADBD6C50892E80BA7 /* FSPagerView-prefix.pch */,
-				89E097BC1BBA352B931C73AD5D33E38D /* FSPagerView-umbrella.h */,
+				99F7B007740A5BBEAD0567E56E803851 /* SQLite.swift.modulemap */,
+				769F9BE651F0A244CDDD09D435AB9BFA /* SQLite.swift.xcconfig */,
+				CFA60F3D8EA5D2F74341489476D0EF63 /* SQLite.swift-dummy.m */,
+				2278B3B713C3DF7943AE77DE87342456 /* SQLite.swift-Info.plist */,
+				EF3B1F860666D03F427C3808D825B945 /* SQLite.swift-prefix.pch */,
+				7DEB47431E91ADA84B29AE0C605C296C /* SQLite.swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SQLite.swift";
+			sourceTree = "<group>";
+		};
+		A3678D2DB5A1BEAA33B4B694D582766B /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				7FF460576DFE6C2FF2F15B1EF5B48A06 /* AggregateFunctions.swift */,
+				C7FADA4D8218035709E914E7B807A2D4 /* Blob.swift */,
+				338DFA45C3F12628D928FBB478FC2C2C /* Coding.swift */,
+				31F18F443006E1A7098491B672FFD11A /* Collation.swift */,
+				0FBE726F91C185912BBB40DD7CE56ABD /* Connection.swift */,
+				F1C061D1388C4E09370D731EE8176A13 /* CoreFunctions.swift */,
+				CD0E73B2477307FA28A9615FC885ED6D /* CustomFunctions.swift */,
+				0211006761FD8684F3E07AA1E7FCC62F /* DateAndTimeFunctions.swift */,
+				4239D65BB88D96359D493941602C7939 /* Errors.swift */,
+				D44057715D35308E45C5B6C91C6A6251 /* Expression.swift */,
+				A5EFA2D2B0739117FD6B4D0990A47D7E /* Foundation.swift */,
+				085632C48E01B2F27F06AB5F945C6581 /* fts3_tokenizer.h */,
+				070AFC7E6516097C93B7C9377EE700CA /* FTS4.swift */,
+				A775FCD4C427F37BAFA09155A687FB56 /* FTS5.swift */,
+				BDEEE3F054D28C1560AFA19515E15686 /* Helpers.swift */,
+				7825F4F2B58A8A3B5B86BB58DFC4C9EE /* Operators.swift */,
+				39829101F8156FCB11172D1271B3DD16 /* Query.swift */,
+				F39CEFB2A0FA1FDD671980446E2BEFA0 /* RTree.swift */,
+				027E709C6023786BAAF3C8ACB4B26A76 /* Schema.swift */,
+				9947893E96D9C4B20B2435797050B98D /* Setter.swift */,
+				D864975CE6E2D8A56CBD19A5A2348E42 /* SQLite.h */,
+				AB14CBD3544813F56620C375CCBCD1EF /* SQLite-Bridging.h */,
+				42B976B454BDFD11FBEC968E61B3C601 /* SQLite-Bridging.m */,
+				A1C70DA9D5C912188A8215147F2A44F7 /* Statement.swift */,
+				6AAC0DBE8FD62B728A9DA48F810FE948 /* Value.swift */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		A664312289AE9E0F8EAAE9CE403DE134 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E24042BA7015B587596A488EDBAE379A /* FSPagerView.modulemap */,
+				7598D347FBFD6EE52FED2BDBCE029873 /* FSPagerView.xcconfig */,
+				1C8007D65ED6B8D4EB522CFC2B8BA6A7 /* FSPagerView-dummy.m */,
+				70F9E0ED0F6C4B22440E3ADFCF24C30B /* FSPagerView-Info.plist */,
+				19748A602AB43C9DB1AD973BC1858F14 /* FSPagerView-prefix.pch */,
+				33110CCD5509BE701D8390A7EF1051B5 /* FSPagerView-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FSPagerView";
 			sourceTree = "<group>";
 		};
-		BDC8C80AAE7E37527E96F5BCAD0DEC1E /* SwiftyPickerPopover */ = {
+		B0FDA3E0C3161B6B959C8099B07E29AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5809C9912F7550C68311BD0C9ED878D6 /* AbstractPickerPopoverViewController.swift */,
-				B265CAE2F766FB1F55DB1547158F8139 /* AbstractPopover.swift */,
-				409D1BFC7D6C0A1729E73FC6C9114E1C /* CollectionType+Extension.swift */,
-				BC87E9F420DD1B995B20E9026ED259C7 /* ColumnStringPickerPopover.swift */,
-				DD11041567AD0734B4FA8BDBF12FAB51 /* ColumnStringPickerPopoverViewController.swift */,
-				5EF250A9E51E7638CB9C53038D024678 /* CountdownPickerPopover.swift */,
-				0E5B5F5D0FC0F6062A80449605ED565C /* CountdownPickerPopoverViewController.swift */,
-				A7168F169092785E7343EBB56292729D /* DatePickerPopover.swift */,
-				7E7B8EE4895E361A6AAD596A2AF24E7E /* DatePickerPopoverViewController.swift */,
-				0B96F322C20200FC6406DDE1C10EBF2A /* DispatchQueue+Extension.swift */,
-				996BA8D5FCC7528FEBD5A01A201434F5 /* String+Extension.swift */,
-				650DDF66E9ED5B5AA0401D0BAD00A00C /* StringPickerPopover.swift */,
-				C9323B14D7001FF478C08749B9CF5274 /* StringPickerPopoverViewController.swift */,
-				EB5F7E5449BE766E967C1AD5BBA02CAB /* Resources */,
-				3D3FF182B2CBD6AE8D8BD7BFB52F3331 /* Support Files */,
+				42B13A1095ACB782124E519579471418 /* FSPagerView */,
+				4C12E8DDCB97AC280F6C42BCA7013EEE /* SQLite.swift */,
+				070A28468C010CAA8D734219BAC37F87 /* SwiftyPickerPopover */,
 			);
-			path = SwiftyPickerPopover;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C80F506BC07170E61A84E3D0C99D9CF2 /* Pods-GetGoing */ = {
@@ -251,8 +412,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				274D65BF19312C3FCF6F0C28763BB277 /* Pods */,
-				FACCD939F8222DAD6CE0441611F12BE8 /* Products */,
+				B0FDA3E0C3161B6B959C8099B07E29AD /* Pods */,
+				F503DDC1F38BCA19E098FB428C7CB522 /* Products */,
 				57073EF1CB0BD3480E664A4B1F8AF2FD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -266,42 +427,13 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EB5F7E5449BE766E967C1AD5BBA02CAB /* Resources */ = {
+		F503DDC1F38BCA19E098FB428C7CB522 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD0FB1117A6BC08BE63A0A62E41170E5 /* AbstractPopover.storyboard */,
-				995139CC29CF02247F8B80D56CFE94A1 /* ColumnStringPickerPopover.storyboard */,
-				45723295C30D6D65D8BC616BEAA4FAA1 /* CountdownPickerPopover.storyboard */,
-				FAA2DF2F86E8B54C64944D103629D591 /* DatePickerPopover.storyboard */,
-				76275628EF343FE414973AB9C9FA9BE5 /* Localizable.strings */,
-				B6A6093B4A1775C16871584C870A340B /* StringPickerPopover.storyboard */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		F7F843BA931B76FF4E1E08CBCAE20B4F /* FSPagerView */ = {
-			isa = PBXGroup;
-			children = (
-				90CDC6BEF8906FF51E18040803D8F6E6 /* FSPageControl.swift */,
-				F354FFB73A007687F59AF8A2A5EE0E28 /* FSPagerCollectionView.swift */,
-				804DEFE2F23F3D0FA5DAB63EF003A10D /* FSPagerView.swift */,
-				9433ABD336E210BF610F83EABCF071DE /* FSPagerViewCell.swift */,
-				47755DAA672A876BDEF8522D5C982AA3 /* FSPagerViewLayoutAttributes.swift */,
-				AB3646C0FD02D380FF107EDF28BD55A6 /* FSPagerViewObjcCompat.h */,
-				2B2D2AA45056E9BA53D06A472FD845A5 /* FSPagerViewObjcCompat.m */,
-				BFBC6B1593826E1533C79C6D6F6155CC /* FSPageViewLayout.swift */,
-				C123F761A4F88DF3D88177E36C035278 /* FSPageViewTransformer.swift */,
-				AEBFBD231C29F45F885ADD77B598A929 /* Support Files */,
-			);
-			path = FSPagerView;
-			sourceTree = "<group>";
-		};
-		FACCD939F8222DAD6CE0441611F12BE8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1E993F9899CD2F1320CCF119936C7830 /* FSPagerView.framework */,
-				4D081113645D84E21BC267453118E3D2 /* Pods_GetGoing.framework */,
-				F55B2FEA75628A3E7C02B2D99948E740 /* SwiftyPickerPopover.framework */,
+				1CEA884662D1C1353FE48B6F7F7BA0C9 /* FSPagerView.framework */,
+				1A87359478A97B75ED0C0BF697C992A0 /* Pods_GetGoing.framework */,
+				27276FC93C931157DEE76207F1A5164D /* SQLite.framework */,
+				DDACBEC066681E318EAC8B3E949F4F5F /* SwiftyPickerPopover.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,19 +441,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0A9B8019999EBBD469CB6FD285CCDDA1 /* Headers */ = {
+		9C30BCAEA64FB6A776C6433F5528C0AA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				617F4161A5F46A2A4F16863FD6DB5F1A /* SwiftyPickerPopover-umbrella.h in Headers */,
+				2A2CDB2026A70C8AEAC723B4D85CF67A /* Pods-GetGoing-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F311B6316E59418BF04B2D0AC324170 /* Headers */ = {
+		ABB5760829EC2D52DC5A2171FD517344 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EFA847F463CF9BE2C9F183DD0755154 /* Pods-GetGoing-umbrella.h in Headers */,
+				53A63ACD607E37BC56A35FD03D9149F3 /* SwiftyPickerPopover-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5762814DD93959462701B7FE24D9381 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				985652A21DA0ABB6EE16AF30FF9996FC /* fts3_tokenizer.h in Headers */,
+				E29A1AA9D4A68D72FE8626E5720CCBA6 /* SQLite-Bridging.h in Headers */,
+				021EBF3C2DCCD44A696210D376878560 /* SQLite.h in Headers */,
+				24C058A87968598AD791BBBF8FD211BA /* SQLite.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,44 +480,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		218032EB47A79FF97283A8CBE0E4EE26 /* Pods-GetGoing */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AF1941B584813FCE7E69127FD330EF0 /* Build configuration list for PBXNativeTarget "Pods-GetGoing" */;
-			buildPhases = (
-				7F311B6316E59418BF04B2D0AC324170 /* Headers */,
-				9BA84D96B7FCE63824C7F9728095A54D /* Sources */,
-				D3DC2357377D15D6929AA206A63AF361 /* Frameworks */,
-				9A05EC617034A4FF1330ACBB4525F4BF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A1A42B87E01F1C87BAE1FBC3F6FCAAB /* PBXTargetDependency */,
-				C1F28B5F3826EB4FB5B91045FEE61D19 /* PBXTargetDependency */,
-			);
-			name = "Pods-GetGoing";
-			productName = "Pods-GetGoing";
-			productReference = 4D081113645D84E21BC267453118E3D2 /* Pods_GetGoing.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		2DA7230ACC15282BD3E59B9E1E1001C6 /* SwiftyPickerPopover */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9CF5D7AE2771ADC7F9787446942F704A /* Build configuration list for PBXNativeTarget "SwiftyPickerPopover" */;
-			buildPhases = (
-				0A9B8019999EBBD469CB6FD285CCDDA1 /* Headers */,
-				5CCD4349CEEBF3A5ACB9D17EB7620721 /* Sources */,
-				B853C1B5AFFC2768312C004787F06B26 /* Frameworks */,
-				52E7D6B0004DAD665FED9DEE7982B505 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyPickerPopover;
-			productName = SwiftyPickerPopover;
-			productReference = F55B2FEA75628A3E7C02B2D99948E740 /* SwiftyPickerPopover.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		5CCDAA0C5689BA68365335D3086C30F1 /* FSPagerView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1423927F428951A47295BA7F353F0715 /* Build configuration list for PBXNativeTarget "FSPagerView" */;
@@ -390,7 +495,64 @@
 			);
 			name = FSPagerView;
 			productName = FSPagerView;
-			productReference = 1E993F9899CD2F1320CCF119936C7830 /* FSPagerView.framework */;
+			productReference = 1CEA884662D1C1353FE48B6F7F7BA0C9 /* FSPagerView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6A976B3804D7A6002EA986D0B6B4AEA7 /* SQLite.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1C7A463BA9175EFF054D14CDDDBE71C /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
+			buildPhases = (
+				B5762814DD93959462701B7FE24D9381 /* Headers */,
+				9BF03B3A27B07C4914EB89A427E391E2 /* Sources */,
+				8633409576EEC9D51543F280FB840D06 /* Frameworks */,
+				8A426256E07FB605D27C68C39A9D134E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQLite.swift;
+			productName = SQLite.swift;
+			productReference = 27276FC93C931157DEE76207F1A5164D /* SQLite.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		90A9B8AA42082B0800FFEC00C803234A /* SwiftyPickerPopover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3AA96296E6D8FDF839D08F6C09DA93F /* Build configuration list for PBXNativeTarget "SwiftyPickerPopover" */;
+			buildPhases = (
+				ABB5760829EC2D52DC5A2171FD517344 /* Headers */,
+				83318DA701A0C8564D6EA36AF4A1E8AB /* Sources */,
+				4C28BEA47C867C079369D0F32B89396F /* Frameworks */,
+				31972B9D276A44B5CC3E096FE80C612E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyPickerPopover;
+			productName = SwiftyPickerPopover;
+			productReference = DDACBEC066681E318EAC8B3E949F4F5F /* SwiftyPickerPopover.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E18EDF11771CCF1D8945308FE92E9962 /* Pods-GetGoing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9AB6240BE66E76CAC87F9206195512F /* Build configuration list for PBXNativeTarget "Pods-GetGoing" */;
+			buildPhases = (
+				9C30BCAEA64FB6A776C6433F5528C0AA /* Headers */,
+				FDD25F2EED4C33146A694FCE270B3363 /* Sources */,
+				C1309E6C7566DCED51E1CEFF728676DC /* Frameworks */,
+				E07986D8F8F3869D5993842E72FB15B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F92B853E50A4ECA15F567BC93C461C2 /* PBXTargetDependency */,
+				5A89D806205228FDC2A6437B55B57D7B /* PBXTargetDependency */,
+				6A8898355BF653DBC4370C9CAAEB7FF6 /* PBXTargetDependency */,
+			);
+			name = "Pods-GetGoing";
+			productName = "Pods-GetGoing";
+			productReference = 1A87359478A97B75ED0C0BF697C992A0 /* Pods_GetGoing.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -400,12 +562,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1020;
 				TargetAttributes = {
-					2DA7230ACC15282BD3E59B9E1E1001C6 = {
+					5CCDAA0C5689BA68365335D3086C30F1 = {
 						LastSwiftMigration = 1030;
 					};
-					5CCDAA0C5689BA68365335D3086C30F1 = {
+					90A9B8AA42082B0800FFEC00C803234A = {
 						LastSwiftMigration = 1030;
 					};
 				};
@@ -420,32 +582,33 @@
 				ja,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = FACCD939F8222DAD6CE0441611F12BE8 /* Products */;
+			productRefGroup = F503DDC1F38BCA19E098FB428C7CB522 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5CCDAA0C5689BA68365335D3086C30F1 /* FSPagerView */,
-				218032EB47A79FF97283A8CBE0E4EE26 /* Pods-GetGoing */,
-				2DA7230ACC15282BD3E59B9E1E1001C6 /* SwiftyPickerPopover */,
+				E18EDF11771CCF1D8945308FE92E9962 /* Pods-GetGoing */,
+				6A976B3804D7A6002EA986D0B6B4AEA7 /* SQLite.swift */,
+				90A9B8AA42082B0800FFEC00C803234A /* SwiftyPickerPopover */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		52E7D6B0004DAD665FED9DEE7982B505 /* Resources */ = {
+		31972B9D276A44B5CC3E096FE80C612E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0725F245714C32BC551405EF60218024 /* AbstractPopover.storyboard in Resources */,
-				99798EAF1D6C443C735C5FDD7FE0DE99 /* ColumnStringPickerPopover.storyboard in Resources */,
-				61F9BF19DA18FD099D05B2377FAB8F6A /* CountdownPickerPopover.storyboard in Resources */,
-				604A2BC7DBDA0A7A64838D59622F72EC /* DatePickerPopover.storyboard in Resources */,
-				46C105C9BF4C2A7793294FF4B6E657CE /* Localizable.strings in Resources */,
-				5715C5CE550C8DADAC4595BEA56774D8 /* StringPickerPopover.storyboard in Resources */,
+				C7EF6A96B53250D60B0646E9F03DC7CE /* AbstractPopover.storyboard in Resources */,
+				35AAF80F2770E719C28E3589264FF06B /* ColumnStringPickerPopover.storyboard in Resources */,
+				8A7B7AFBA82063523F28F42008606038 /* CountdownPickerPopover.storyboard in Resources */,
+				E69B32B6064913E5A9FD0029E0BC6EFD /* DatePickerPopover.storyboard in Resources */,
+				E6C4BC2C653B7B0345CDAF1AD3AE09E6 /* Localizable.strings in Resources */,
+				88D0C42FB890F973D597F6EFC29C9CF7 /* StringPickerPopover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9A05EC617034A4FF1330ACBB4525F4BF /* Resources */ = {
+		8A426256E07FB605D27C68C39A9D134E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -459,27 +622,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E07986D8F8F3869D5993842E72FB15B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5CCD4349CEEBF3A5ACB9D17EB7620721 /* Sources */ = {
+		83318DA701A0C8564D6EA36AF4A1E8AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD02C083B6CDDC182F6279BB99AB9C97 /* AbstractPickerPopoverViewController.swift in Sources */,
-				25D9B37EADDF66F184B91D2EEC093103 /* AbstractPopover.swift in Sources */,
-				95414360B2027351B1AF55511DAA911B /* CollectionType+Extension.swift in Sources */,
-				9DD3CF3CDD902725965FE8C89321014C /* ColumnStringPickerPopover.swift in Sources */,
-				F9F6EF076A8A4C9E9EA92074904AB2CB /* ColumnStringPickerPopoverViewController.swift in Sources */,
-				DA5702CBE7450137458FF5E20A9C5DCC /* CountdownPickerPopover.swift in Sources */,
-				3AA8F1C9E48545763AEB711AE243467E /* CountdownPickerPopoverViewController.swift in Sources */,
-				DA4DDBD35C1277CFC5D313F8F6FB9096 /* DatePickerPopover.swift in Sources */,
-				D59D6589FE1259F34517BD5A1F70159E /* DatePickerPopoverViewController.swift in Sources */,
-				CF116930EB6CDFC178D1F9C545CC1FA4 /* DispatchQueue+Extension.swift in Sources */,
-				AAB29170870504BC19EC7C3B23A8B9D6 /* String+Extension.swift in Sources */,
-				5115E0B6715DB22E94D90CC42270D20D /* StringPickerPopover.swift in Sources */,
-				FDD2454D1A94555875F14C0DB655495C /* StringPickerPopoverViewController.swift in Sources */,
-				B3C9F1153E56A8D029114ED80780CAE0 /* SwiftyPickerPopover-dummy.m in Sources */,
+				2FEE471BCDE8D62C55C095F3FAA40C8A /* AbstractPickerPopoverViewController.swift in Sources */,
+				1BF9BF7C2E92327143422BB88A9E204F /* AbstractPopover.swift in Sources */,
+				959231F9C2C96531D4D46BB5BD351089 /* CollectionType+Extension.swift in Sources */,
+				1F3EDB077BE904268DF72EE6BD154091 /* ColumnStringPickerPopover.swift in Sources */,
+				4B38BFE9B069B6A8F2BC9DD5358B4479 /* ColumnStringPickerPopoverViewController.swift in Sources */,
+				14E5C9B852D224EAB869C05F5671F34C /* CountdownPickerPopover.swift in Sources */,
+				CB4429536A4EC12C33981FF386DEB55A /* CountdownPickerPopoverViewController.swift in Sources */,
+				E480B7D90B7DDB6D2A2DC7E2F84381EC /* DatePickerPopover.swift in Sources */,
+				1F55C24E94093395C56877C3BD07BD59 /* DatePickerPopoverViewController.swift in Sources */,
+				0E61EA7FD887825C52279D91DFE68AAE /* DispatchQueue+Extension.swift in Sources */,
+				38ABB7AA41CBC1AD72170F01BE1CE2EC /* String+Extension.swift in Sources */,
+				6F1B2B44FDD48B2BD869CFAD92E50003 /* StringPickerPopover.swift in Sources */,
+				E9A0D00584664A54B0729B6145BF1877 /* StringPickerPopoverViewController.swift in Sources */,
+				1DCC9CF7A8B6E70A6A09F140ADCD1E71 /* SwiftyPickerPopover-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,66 +669,102 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BA84D96B7FCE63824C7F9728095A54D /* Sources */ = {
+		9BF03B3A27B07C4914EB89A427E391E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE0AFEB52B7E480BE728DB901FB929EE /* Pods-GetGoing-dummy.m in Sources */,
+				41E935039EFFDBAD0F12D0546E73A362 /* AggregateFunctions.swift in Sources */,
+				300C69B0194AA13EC584698DD6970536 /* Blob.swift in Sources */,
+				306837AA5FF951C4B0081FBC8871669F /* Coding.swift in Sources */,
+				3F9EE1EC5E940FDCC467DFE9CE2AB853 /* Collation.swift in Sources */,
+				67CF3C33CB361FC0C60D1BC1688C21BD /* Connection.swift in Sources */,
+				D6C4E97937E1E7AFF5D20517D74F8233 /* CoreFunctions.swift in Sources */,
+				26CEC9246685DA78407A9DF7754E0573 /* CustomFunctions.swift in Sources */,
+				9897666489AA067216298AA87F635623 /* DateAndTimeFunctions.swift in Sources */,
+				A983FC504CC7248170C625F460FFDFCB /* Errors.swift in Sources */,
+				BDB01DDDD0AF226DF8E350576C386658 /* Expression.swift in Sources */,
+				9E3878900C9A654B9A5A6AD983C55BED /* Foundation.swift in Sources */,
+				565AC37748CC265EE16D999110503A18 /* FTS4.swift in Sources */,
+				84BFCDB108D1ECCE98C993F28D59D628 /* FTS5.swift in Sources */,
+				F477CCD9280FC44F4CD16F22DC157DCA /* Helpers.swift in Sources */,
+				C476EB5010176255E43640B3BAB0BB96 /* Operators.swift in Sources */,
+				7EEA90100BF1CCD919B7C5004CF8E21F /* Query.swift in Sources */,
+				D398F6CCFBBA85C25AB2473877868FA3 /* RTree.swift in Sources */,
+				543153087D1191A6E06801767A967B2C /* Schema.swift in Sources */,
+				54AE271A381FEFD7B81ECC3186FB5075 /* Setter.swift in Sources */,
+				342FB54209E2D45A04CD74638F66EB39 /* SQLite-Bridging.m in Sources */,
+				606C90F8AB5BD7910D5E892300DA4ABF /* SQLite.swift-dummy.m in Sources */,
+				C790FC9E5F2CE3F3761685A36DB5AFD0 /* Statement.swift in Sources */,
+				80BE83BEC5BEE5894D65B369AD2A859C /* Value.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDD25F2EED4C33146A694FCE270B3363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACEFAF668886DA7D58831111F2FC9E0 /* Pods-GetGoing-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2A1A42B87E01F1C87BAE1FBC3F6FCAAB /* PBXTargetDependency */ = {
+		0F92B853E50A4ECA15F567BC93C461C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FSPagerView;
 			target = 5CCDAA0C5689BA68365335D3086C30F1 /* FSPagerView */;
-			targetProxy = 9921D6142D2A0833B5F3202AA6E19B12 /* PBXContainerItemProxy */;
+			targetProxy = DA958CA6E450D370D2BE8CDAE523BC90 /* PBXContainerItemProxy */;
 		};
-		C1F28B5F3826EB4FB5B91045FEE61D19 /* PBXTargetDependency */ = {
+		5A89D806205228FDC2A6437B55B57D7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLite.swift;
+			target = 6A976B3804D7A6002EA986D0B6B4AEA7 /* SQLite.swift */;
+			targetProxy = 06FC6CB536E7697DD52681F5A591BFC1 /* PBXContainerItemProxy */;
+		};
+		6A8898355BF653DBC4370C9CAAEB7FF6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyPickerPopover;
-			target = 2DA7230ACC15282BD3E59B9E1E1001C6 /* SwiftyPickerPopover */;
-			targetProxy = 03A04543902B55EF1C758091117B6FBC /* PBXContainerItemProxy */;
+			target = 90A9B8AA42082B0800FFEC00C803234A /* SwiftyPickerPopover */;
+			targetProxy = B432F9064F9D0EC20843EAD5DD698368 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		45723295C30D6D65D8BC616BEAA4FAA1 /* CountdownPickerPopover.storyboard */ = {
+		0C62540D219A1B83D5BFDF9A7CA2E02B /* CountdownPickerPopover.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C8FE7348EDC25BDEEBE7D7F01AC0BF0F /* CountdownPickerPopover.storyboard */,
-				6C2655D48B4950311F4C8A52021783AA /* CountdownPickerPopover.strings */,
+				4934A598AFF06B06D528E60AE513CEBD /* CountdownPickerPopover.storyboard */,
+				711D3F8F60C04A927296C7C50840DAE1 /* CountdownPickerPopover.strings */,
 			);
 			name = CountdownPickerPopover.storyboard;
 			path = SwiftyPickerPopover;
 			sourceTree = "<group>";
 		};
-		76275628EF343FE414973AB9C9FA9BE5 /* Localizable.strings */ = {
+		70108E2F3B5B3EC0A23A484C906AE949 /* StringPickerPopover.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8736089E259E7D149B9EFC199286A3F1 /* Localizable.strings */,
-				BDB1C65103AFA7B6986BCEF7EC261A4A /* Localizable.strings */,
-			);
-			name = Localizable.strings;
-			path = SwiftyPickerPopover;
-			sourceTree = "<group>";
-		};
-		B6A6093B4A1775C16871584C870A340B /* StringPickerPopover.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0569F5B4695172636525A48BB7AE803 /* StringPickerPopover.storyboard */,
+				2D5FEE98ED564E05216D7F9179DE8451 /* StringPickerPopover.storyboard */,
 			);
 			name = StringPickerPopover.storyboard;
 			path = SwiftyPickerPopover;
 			sourceTree = "<group>";
 		};
-		FAA2DF2F86E8B54C64944D103629D591 /* DatePickerPopover.storyboard */ = {
+		DBF02508C9923938608682E9283CAE39 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				92F58ABDAB5E74FBB97043C14FDB5F65 /* DatePickerPopover.storyboard */,
-				CB4FB6DD427E9AD5A3D7ACB234A1A2A7 /* DatePickerPopover.strings */,
+				1B93DAE8944C3C11AB22F978735BD847 /* Localizable.strings */,
+				43122723209E43C1CC360D4D6DF0524F /* Localizable.strings */,
+			);
+			name = Localizable.strings;
+			path = SwiftyPickerPopover;
+			sourceTree = "<group>";
+		};
+		F480B728058E2D2379723F153124DB5A /* DatePickerPopover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F947F7A9EE500C4670494B6EFD4F013 /* DatePickerPopover.storyboard */,
+				0255FB2E0C415F142283FCC4FB5AD1AC /* DatePickerPopover.strings */,
 			);
 			name = DatePickerPopover.storyboard;
 			path = SwiftyPickerPopover;
@@ -567,9 +773,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3171F7D7E02ECBA0CBB82D7F8A9B8C10 /* Debug */ = {
+		000B61FE55206511DC4BBE60186D22FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFC5FE36B43C293B262DECC1002AF5F4 /* FSPagerView.xcconfig */;
+			baseConfigurationReference = 769F9BE651F0A244CDDD09D435AB9BFA /* SQLite.swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -580,8 +786,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FSPagerView/FSPagerView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FSPagerView/FSPagerView-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/SQLite.swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -589,51 +795,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/FSPagerView/FSPagerView.modulemap";
-				PRODUCT_MODULE_NAME = FSPagerView;
-				PRODUCT_NAME = FSPagerView;
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				PRODUCT_MODULE_NAME = SQLite;
+				PRODUCT_NAME = SQLite;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4C2B7A05D844E267385E85F04E13B122 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FB6E6813066ED7473ACDD331C08D8E8 /* Pods-GetGoing.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GetGoing/Pods-GetGoing-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GetGoing/Pods-GetGoing.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -641,7 +809,7 @@
 			};
 			name = Release;
 		};
-		5C5B0F5F6B724DA19A41D96E15C9205C /* Debug */ = {
+		22EABCD55940FDCCA00569B9CD3F4DB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04270887AC9A498F983FBED7F957B873 /* Pods-GetGoing.debug.xcconfig */;
 			buildSettings = {
@@ -679,11 +847,116 @@
 			};
 			name = Debug;
 		};
+		3171F7D7E02ECBA0CBB82D7F8A9B8C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7598D347FBFD6EE52FED2BDBCE029873 /* FSPagerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FSPagerView/FSPagerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FSPagerView/FSPagerView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FSPagerView/FSPagerView.modulemap";
+				PRODUCT_MODULE_NAME = FSPagerView;
+				PRODUCT_NAME = FSPagerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		35141929A346D5025F4FE1681F3C1097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 769F9BE651F0A244CDDD09D435AB9BFA /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/SQLite.swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				PRODUCT_MODULE_NAME = SQLite;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A29C7DA81590DB95A2A3A3077D37C52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85EC02E308760BC7A9D0E80BD39A05A5 /* SwiftyPickerPopover.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyPickerPopover;
+				PRODUCT_NAME = SwiftyPickerPopover;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -746,7 +1019,7 @@
 		};
 		79F1D6B6E3EC0C4CA8E84F982AEAF300 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFC5FE36B43C293B262DECC1002AF5F4 /* FSPagerView.xcconfig */;
+			baseConfigurationReference = 7598D347FBFD6EE52FED2BDBCE029873 /* FSPagerView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -780,46 +1053,10 @@
 			};
 			name = Release;
 		};
-		82211C33A579092BE8A3264180C61A2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05244893E4BCF02B4808973DF745FE89 /* SwiftyPickerPopover.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyPickerPopover/SwiftyPickerPopover.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyPickerPopover;
-				PRODUCT_NAME = SwiftyPickerPopover;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		A27713CB74E99AF202AADC23200A32F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -876,9 +1113,9 @@
 			};
 			name = Release;
 		};
-		B3374DBEF37B57809B4C42C29F3C22B9 /* Release */ = {
+		AF880C4F832F9F6933888078AEE4BD85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05244893E4BCF02B4808973DF745FE89 /* SwiftyPickerPopover.xcconfig */;
+			baseConfigurationReference = 85EC02E308760BC7A9D0E80BD39A05A5 /* SwiftyPickerPopover.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -905,6 +1142,44 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4E514296DE69CEF151BB7EF39BF0204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB6E6813066ED7473ACDD331C08D8E8 /* Pods-GetGoing.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetGoing/Pods-GetGoing-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetGoing/Pods-GetGoing.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -933,20 +1208,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AF1941B584813FCE7E69127FD330EF0 /* Build configuration list for PBXNativeTarget "Pods-GetGoing" */ = {
+		C1C7A463BA9175EFF054D14CDDDBE71C /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C5B0F5F6B724DA19A41D96E15C9205C /* Debug */,
-				4C2B7A05D844E267385E85F04E13B122 /* Release */,
+				35141929A346D5025F4FE1681F3C1097 /* Debug */,
+				000B61FE55206511DC4BBE60186D22FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CF5D7AE2771ADC7F9787446942F704A /* Build configuration list for PBXNativeTarget "SwiftyPickerPopover" */ = {
+		E9AB6240BE66E76CAC87F9206195512F /* Build configuration list for PBXNativeTarget "Pods-GetGoing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82211C33A579092BE8A3264180C61A2E /* Debug */,
-				B3374DBEF37B57809B4C42C29F3C22B9 /* Release */,
+				22EABCD55940FDCCA00569B9CD3F4DB3 /* Debug */,
+				F4E514296DE69CEF151BB7EF39BF0204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3AA96296E6D8FDF839D08F6C09DA93F /* Build configuration list for PBXNativeTarget "SwiftyPickerPopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF880C4F832F9F6933888078AEE4BD85 /* Debug */,
+				4A29C7DA81590DB95A2A3A3077D37C52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

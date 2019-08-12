@@ -6,6 +6,7 @@ target 'GetGoing' do
   use_frameworks!
   pod 'FSPagerView'
   pod 'SwiftyPickerPopover'
+  pod 'SQLite.swift'
   # Pods for GetGoing
 
 end

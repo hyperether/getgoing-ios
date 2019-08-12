@@ -1,20 +1,26 @@
 PODS:
   - FSPagerView (0.8.2)
+  - SQLite.swift (0.12.0):
+    - SQLite.swift/standard (= 0.12.0)
+  - SQLite.swift/standard (0.12.0)
   - SwiftyPickerPopover (6.6.5)
 
 DEPENDENCIES:
   - FSPagerView
+  - SQLite.swift
   - SwiftyPickerPopover
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FSPagerView
+    - SQLite.swift
     - SwiftyPickerPopover
 
 SPEC CHECKSUMS:
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
+  SQLite.swift: 7cad9db150a03716336e69469ec9559c85aece5b
   SwiftyPickerPopover: f2975fd0233d04c0a8f8d52d09b6f24b882de6fb
 
-PODFILE CHECKSUM: 9c65a628e42e6231cd199fb1a15427ba82674927
+PODFILE CHECKSUM: 0dd99162403c33629b1f2745533970253498029c
 
 COCOAPODS: 1.6.2
