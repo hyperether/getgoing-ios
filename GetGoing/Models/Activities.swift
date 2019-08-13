@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Activities : NSObject {
     
@@ -17,9 +18,14 @@ class Activities : NSObject {
     var runningDataEntries : [DataEntry] = []
     var bicyclingDataEntries : [DataEntry] = []
     
+    //location info
+    var listOfLocations : [CLLocation] = []
+    
     private override init() {
         super.init()
     }
 
-    
+    func locationCalculator(_ counter : Float,_ newLocation : CLLocation) {
+        
+    }
 }

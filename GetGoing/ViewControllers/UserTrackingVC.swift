@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UserTrackingVC.swift
 //  GetGoing
 //
 //  Created by Milan Vidovic on 8/5/19.
@@ -13,7 +13,7 @@ import Foundation
 
 
 
-class ViewController: UIViewController{
+class UserTrackingVC: UIViewController{
 
     @IBOutlet weak var roundView: UIView!
     @IBOutlet weak var roundViewBehind: UIView!
@@ -33,8 +33,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
     
+    var lm = LocationManager.shared
 
-    var locationManager = CLLocationManager()
     var startButtonIsClicked = false
     
     var chosenStyle : String!
@@ -51,18 +51,32 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lm.delegate = self
+        
         updateDisplay()
-        configureLocationManager()
         configureNavigationBar()
         makeRoundViews()
         mapSetup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkLocationManagerStatus()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        lm.clManager.stopUpdatingLocation()
+    }
+    
     
     @IBAction func onSetYourGoalButtonClick(_ sender: Any) {
-        let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivitiesVC") as! ActivitiesVC
-        destVC.delegate = self
-        navigationController?.pushViewController(destVC, animated: true)
+        if let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivitiesVC") as? ActivitiesVC {
+            destVC.delegate = self
+            navigationController?.pushViewController(destVC, animated: true)
+        }
+        
     }
     
     func updateDisplay(){
@@ -87,20 +101,28 @@ class ViewController: UIViewController{
         roundViewBehind.clipsToBounds = true
     }
     
-    func configureLocationManager(){
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.activityType = .fitness
-        locationManager.distanceFilter = 10
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-    }
-    
     
     func mapSetup(){
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.mapType = .standard
         mapView.userTrackingMode = .follow
+    }
+    
+    func checkLocationManagerStatus(){
+        if let status = lm.clStatus {
+            switch status {
+            case .authorizedWhenInUse, .authorizedAlways:
+                lm.clManager.startUpdatingLocation()
+            case .denied:
+                let alert = UIAlertController.init(title: "Location access denied", message: "You can change access in settings.", preferredStyle: .alert)
+                let okButton = UIAlertAction.init(title: "OK", style: .cancel, handler: nil)
+                self.present(alert,animated: true)
+            default:
+                break
+            }
+        }
+        
     }
   
     
@@ -166,7 +188,7 @@ class ViewController: UIViewController{
 
 }
 
-extension ViewController : MKMapViewDelegate {
+extension UserTrackingVC : MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
@@ -180,50 +202,28 @@ extension ViewController : MKMapViewDelegate {
     
 }
 
-extension ViewController : CLLocationManagerDelegate {
-    
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .authorizedWhenInUse, .authorizedAlways:
-            locationManager.startUpdatingLocation()
-            break
-        default:
-            break
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        for newLocation in locations {
-            let howRecent = newLocation.timestamp.timeIntervalSinceNow
-            if (newLocation.horizontalAccuracy > 20 || abs(howRecent) > 10){
-                continue
-            }
-            if let lastLocation = listOfLocations.last{
-                if (startButtonIsClicked) {
-                    let difference = newLocation.distance(from: lastLocation)
-                    let area = [lastLocation.coordinate,newLocation.coordinate]
-                    let polyline = MKPolyline(coordinates: area, count: area.count)
-                    mapView.addOverlay(polyline)
-                    distanceCovered += difference
-                    calories += Int(difference/10)
-                    routeOverlay?.append(polyline)
-                    distanceLabel.text = String(format: "%.2f", distanceCovered)
-                    speedLabel.text = String(format: "%.2f", (distanceCovered / counter))
-                    caloriesLabel.text = String(calories)
-                }
-                
-            }
-            listOfLocations.append(newLocation)
-        }
-    }
-}
-
-extension ViewController : ActivitiesVCDelegate {
+extension UserTrackingVC : ActivitiesVCDelegate {
     
     func activitiesVCDidSaveGoal() {
         updateDisplay()
     }
+    
+}
+
+extension UserTrackingVC : LocationManagerDelegate {
+    func locationManagerFoundNewLocation(_ difference: Double, _ polyline: MKPolyline,_ speed: Double) {
+        if (startButtonIsClicked){
+            mapView.addOverlay(polyline)
+            distanceCovered += difference
+            calories += Int(difference/10)
+            routeOverlay?.append(polyline)
+            distanceLabel.text = String(format: "%.2f", distanceCovered)
+            speedLabel.text = String(format: "%.2f", (speed))
+            caloriesLabel.text = String(calories)
+        }
+        
+    }
+    
     
 }
 

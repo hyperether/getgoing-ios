@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C50FC6322F82970007B6EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50FC6222F82970007B6EB0 /* AppDelegate.swift */; };
-		4C50FC6522F82970007B6EB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50FC6422F82970007B6EB0 /* ViewController.swift */; };
+		4C50FC6522F82970007B6EB0 /* UserTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50FC6422F82970007B6EB0 /* UserTrackingVC.swift */; };
 		4C50FC6822F82970007B6EB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C50FC6622F82970007B6EB0 /* Main.storyboard */; };
 		4C50FC6A22F82971007B6EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C50FC6922F82971007B6EB0 /* Assets.xcassets */; };
 		4C50FC6D22F82971007B6EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C50FC6B22F82971007B6EB0 /* LaunchScreen.storyboard */; };
@@ -26,6 +26,7 @@
 		4C9BA85622FD700700572261 /* BasicBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84B22FD700700572261 /* BasicBarChart.swift */; };
 		4C9BA85722FD700700572261 /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84C22FD700700572261 /* DataEntry.swift */; };
 		4C9BA85822FD700700572261 /* BasicBarChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84D22FD700700572261 /* BasicBarChartPresenter.swift */; };
+		4CAA70B12302C6F9008459FF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA70B02302C6F9008459FF /* LocationManager.swift */; };
 		4CB06DCE22FAD4DA006C3F2D /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB06DCD22FAD4DA006C3F2D /* Goal.swift */; };
 		4CB06DD022FAE5C1006C3F2D /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB06DCF22FAE5C1006C3F2D /* ActivityVC.swift */; };
 		4CB06DD222FAEA9A006C3F2D /* MKMagneticProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB06DD122FAEA9A006C3F2D /* MKMagneticProgress.swift */; };
@@ -43,7 +44,7 @@
 		410CF80385D870FBCFF6ECA0 /* Pods-GetGoing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetGoing.release.xcconfig"; path = "Target Support Files/Pods-GetGoing/Pods-GetGoing.release.xcconfig"; sourceTree = "<group>"; };
 		4C50FC5F22F82970007B6EB0 /* GetGoing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetGoing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C50FC6222F82970007B6EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C50FC6422F82970007B6EB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C50FC6422F82970007B6EB0 /* UserTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTrackingVC.swift; sourceTree = "<group>"; };
 		4C50FC6722F82970007B6EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C50FC6922F82971007B6EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C50FC6C22F82971007B6EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		4C9BA84B22FD700700572261 /* BasicBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarChart.swift; sourceTree = "<group>"; };
 		4C9BA84C22FD700700572261 /* DataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
 		4C9BA84D22FD700700572261 /* BasicBarChartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarChartPresenter.swift; sourceTree = "<group>"; };
+		4CAA70B02302C6F9008459FF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4CB06DCD22FAD4DA006C3F2D /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		4CB06DCF22FAE5C1006C3F2D /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		4CB06DD122FAEA9A006C3F2D /* MKMagneticProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMagneticProgress.swift; sourceTree = "<group>"; };
@@ -138,7 +140,7 @@
 		4CB06DCB22FACBD7006C3F2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C50FC6422F82970007B6EB0 /* ViewController.swift */,
+				4C50FC6422F82970007B6EB0 /* UserTrackingVC.swift */,
 				4C50FC7422F84D51007B6EB0 /* MainVC.swift */,
 				4C50FC7622F85740007B6EB0 /* ProfileVC.swift */,
 				4C50FC7822F86945007B6EB0 /* ActivitiesVC.swift */,
@@ -159,6 +161,7 @@
 		4CD8A35122F9AE27001C9A6F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4CAA70B02302C6F9008459FF /* LocationManager.swift */,
 				4CD8A35222F9AE4E001C9A6F /* UserProfile.swift */,
 				4CD8A35422F9B4A9001C9A6F /* Run.swift */,
 				4CD8A35622F9B6E7001C9A6F /* Activities.swift */,
@@ -343,7 +346,7 @@
 				4C50FC7722F85740007B6EB0 /* ProfileVC.swift in Sources */,
 				4CD8A35522F9B4A9001C9A6F /* Run.swift in Sources */,
 				4CB06DD222FAEA9A006C3F2D /* MKMagneticProgress.swift in Sources */,
-				4C50FC6522F82970007B6EB0 /* ViewController.swift in Sources */,
+				4C50FC6522F82970007B6EB0 /* UserTrackingVC.swift in Sources */,
 				4C9BA85722FD700700572261 /* DataEntry.swift in Sources */,
 				4C50FC7922F86945007B6EB0 /* ActivitiesVC.swift in Sources */,
 				4CD8A35322F9AE4E001C9A6F /* UserProfile.swift in Sources */,
@@ -360,6 +363,7 @@
 				4C9BA85522FD700700572261 /* BasicBarEntry.swift in Sources */,
 				4C9BA85822FD700700572261 /* BasicBarChartPresenter.swift in Sources */,
 				4C9BA84F22FD700700572261 /* BeautifulBarChart.swift in Sources */,
+				4CAA70B12302C6F9008459FF /* LocationManager.swift in Sources */,
 				4C9BA84E22FD700700572261 /* BeautifulBarEntry.swift in Sources */,
 				4C9BA85222FD700700572261 /* CALayerExtension.swift in Sources */,
 				4C9BA85422FD700700572261 /* ArrayExtension.swift in Sources */,

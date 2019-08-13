@@ -36,6 +36,9 @@ class MainVC : UIViewController {
     
     @IBOutlet weak var pagerView: FSPagerView!
     
+    static let pagerCellIdentifier = "pagerMainCell"
+    static let pagerCellNib = UINib(nibName: "pagerMainCell", bundle: nil)
+    
     
     
     override func viewDidLoad() {
@@ -49,7 +52,8 @@ class MainVC : UIViewController {
     }
     
     func pagerViewConfigure(){
-        pagerView.register(UINib.init(nibName: "pagerMainCell", bundle: nil), forCellWithReuseIdentifier: "pagerMainCell")
+        
+        pagerView.register(MainVC.pagerCellNib, forCellWithReuseIdentifier: MainVC.pagerCellIdentifier)
         pagerView.delegate = self
         pagerView.dataSource = self
         pagerView.transformer = FSPagerViewTransformer(type: .linear)
@@ -117,22 +121,28 @@ class MainVC : UIViewController {
     
  
     @IBAction func onViewAllButtonClick(_ sender: Any) {
-        let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivitiesVC") as! ActivitiesVC
-        navigationController?.pushViewController(destVC, animated: true)
+        if let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivitiesVC") as? ActivitiesVC{
+            navigationController?.pushViewController(destVC, animated: true)
+        }
+        
     }
     
     
     
     @IBAction func onGetReadyButtonClick(_ sender: Any) {
-        let destVC = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        destVC.chosenStyle = self.chosenStyle.lowercased()
-        navigationController?.pushViewController(destVC, animated: true)
+        if let destVC = storyboard?.instantiateViewController(withIdentifier: "UserTrackingVC") as? UserTrackingVC {
+            destVC.chosenStyle = self.chosenStyle.lowercased()
+            navigationController?.pushViewController(destVC, animated: true)
+        }
+        
         
     }
     
     @IBAction func onProfileButtonClick(_ sender: Any) {
-        let destVC = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
-        self.navigationController?.pushViewController(destVC, animated: true)
+        if let destVC = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as? ProfileVC{
+            self.navigationController?.pushViewController(destVC, animated: true)
+        }
+        
     }
     
     
@@ -150,7 +160,7 @@ extension MainVC : FSPagerViewDelegate, FSPagerViewDataSource{
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "pagerMainCell", at: index) as! PagerMainCell
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: MainVC.pagerCellIdentifier, at: index) as! PagerMainCell
        
         if (index == 0){
             cell.styleName = "Walking"

@@ -137,21 +137,27 @@ class ActivitiesVC : UIViewController {
     }
     
     @objc func onWalkingLabelClick(){
-        let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivityVC") as! ActivityVC
-        destVC.style = "walking"
-        navigationController?.pushViewController(destVC, animated: true)
+        if let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivityVC") as? ActivityVC {
+            destVC.style = "walking"
+            navigationController?.pushViewController(destVC, animated: true)
+        }
+        
     }
     
     @objc func onRunningLabelClick(){
-        let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivityVC") as! ActivityVC
-        destVC.style = "running"
-        navigationController?.pushViewController(destVC, animated: true)
+        if let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivityVC") as? ActivityVC {
+            destVC.style = "running"
+            navigationController?.pushViewController(destVC, animated: true)
+        }
+        
     }
     
     @objc func onBicyclingLabelClick(){
-        let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivityVC") as! ActivityVC
-        destVC.style = "bicycling"
-        navigationController?.pushViewController(destVC, animated: true)
+        if let destVC = storyboard?.instantiateViewController(withIdentifier: "ActivityVC") as? ActivityVC {
+            destVC.style = "bicycling"
+            navigationController?.pushViewController(destVC, animated: true)
+        }
+        
     }
     
     

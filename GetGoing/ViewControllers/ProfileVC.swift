@@ -15,6 +15,13 @@ class ProfileVC : UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
     
+    
+    @IBOutlet weak var genderStackView: UIStackView!
+    @IBOutlet weak var ageStackView: UIStackView!
+    @IBOutlet weak var heightStackView: UIStackView!
+    @IBOutlet weak var weightStackView: UIStackView!
+    
+    
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
@@ -57,24 +64,24 @@ class ProfileVC : UIViewController {
     }
     
     func configureLabelGestures(){
-        let ageGesture : UIGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onAgeLabelClick))
-        ageLabel.isUserInteractionEnabled = true
-        ageLabel.addGestureRecognizer(ageGesture)
+        let ageGesture : UIGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onAgeStackViewClick))
+        ageStackView.isUserInteractionEnabled = true
+        ageStackView.addGestureRecognizer(ageGesture)
         
-        let genderGesture : UIGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onGenderLabelClick))
-        genderLabel.isUserInteractionEnabled = true
-        genderLabel.addGestureRecognizer(genderGesture)
+        let genderGesture : UIGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onGenderStackViewClick))
+        genderStackView.isUserInteractionEnabled = true
+        genderStackView.addGestureRecognizer(genderGesture)
         
-        let heightGesture : UIGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onHeightLabelClick))
-        heightLabel.isUserInteractionEnabled = true
-        heightLabel.addGestureRecognizer(heightGesture)
+        let heightGesture : UIGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onHeightStackViewClick))
+        heightStackView.isUserInteractionEnabled = true
+        heightStackView.addGestureRecognizer(heightGesture)
         
-        let weightGesture : UIGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onWeightLabelClick))
-        weightLabel.isUserInteractionEnabled = true
-        weightLabel.addGestureRecognizer(weightGesture)
+        let weightGesture : UIGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(onWeightStackViewClick))
+        weightStackView.isUserInteractionEnabled = true
+        weightStackView.addGestureRecognizer(weightGesture)
     }
     
-    @objc func onAgeLabelClick(){
+    @objc func onAgeStackViewClick(){
         let datePicker = DatePickerPopover(title: "DatePicker")
         let _ = datePicker.setDoneButton(action: { _, selectedDate in
             let dateFormatter = DateFormatter()
@@ -87,13 +94,13 @@ class ProfileVC : UIViewController {
     }
     
     
-    @objc func onHeightLabelClick() {
-        var ages : [String] = []
+    @objc func onHeightStackViewClick() {
+        var heights : [String] = []
         for i in 50...250{
-            ages.append("\(i)")
+            heights.append("\(i)")
         }
-        let stringsPicker = StringPickerPopover(title: "Height", choices: ages)
-        .setSelectedRow((ages.count - 1)/2)
+        let stringsPicker = StringPickerPopover(title: "Height", choices: heights)
+        .setSelectedRow(user.height! - 50)
         .setDoneButton(action: {(popover, selectedRow, selectedString) in
             self.heightLabel.text = selectedString + "cm"
             self.user.height = Int(selectedString)
@@ -101,13 +108,13 @@ class ProfileVC : UIViewController {
         stringsPicker.appear(originView: heightLabel! as UIView, baseViewController: self)
     }
     
-    @objc func onWeightLabelClick() {
+    @objc func onWeightStackViewClick() {
         var weights : [String] = []
         for i in 50...250{
             weights.append("\(i)")
         }
         let stringsPicker = StringPickerPopover(title: "Weight", choices: weights)
-            .setSelectedRow((weights.count - 1)/2)
+            .setSelectedRow(user.weight! - 50)
             .setDoneButton(action: {(popover, selectedRow, selectedString) in
                 self.weightLabel.text = selectedString + "kg"
                 self.user.weight = Int(selectedString)
@@ -117,7 +124,7 @@ class ProfileVC : UIViewController {
     
     
     
-    @objc func onGenderLabelClick() {
+    @objc func onGenderStackViewClick() {
         let alert = UIAlertController(title: "Select gender", message: nil, preferredStyle: .actionSheet)
         let maleButton = UIAlertAction.init(title: "Male", style: .default, handler: {_ in
             self.genderLabel.text = "Male"
