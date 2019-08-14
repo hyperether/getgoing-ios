@@ -185,8 +185,17 @@ class ActivitiesVC : UIViewController {
         if (delegate != nil){
             delegate!.activitiesVCDidSaveGoal()
             navigationController?.popViewController(animated: true)
+        } else {
+            self.showInfoMessage(message: "Goal saved!")
         }
         
+        updateTodayRunGoal()
+        updateProgressBars()
+        
+        
+    }
+    
+    func updateTodayRunGoal(){
         for todayRun in Activities.shared.listOfRuns {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "d.MM"
@@ -195,8 +204,6 @@ class ActivitiesVC : UIViewController {
                 todayRun.goal = Activities.shared.currentGoal
             }
         }
-        updateProgressBars()
-        
     }
     
     @IBAction func onGoalSlideValueChanged(_ sender: Any) {

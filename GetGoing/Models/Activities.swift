@@ -25,7 +25,4 @@ class Activities : NSObject {
         super.init()
     }
 
-    func locationCalculator(_ counter : Float,_ newLocation : CLLocation) {
-        
-    }
 }

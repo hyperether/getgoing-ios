@@ -209,9 +209,44 @@ extension UIViewController {
     }
     
     @objc func popViewController() {
-        self.navigationController?.popViewController(animated: true)
+        if (self is UserTrackingVC){
+            self.showDestructivePrompt(title: "Did you saved you run?", message: "Any unsaved data will be lost!", buttonTitle: "Ok") { _ in
+                self.navigationController?.popViewController(animated: true)
+            }
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
 
+}
+
+//extension for alerts
+extension UIViewController {
+    
+    static var lightBlueColor : UIColor {
+        return UIColor.init(named: "lightBlue")!
+    }
+    
+    func showInfoMessage(message : String){
+        let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.view.tintColor = UIViewController.lightBlueColor
+        alertController.addAction(okButton)
+        self.present(alertController,animated: true)
+    }
+    
+    func showDestructivePrompt(title: String,message: String?, buttonTitle: String, handler: @escaping ((_ action: UIAlertAction) -> ())) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.view.tintColor = UIViewController.lightBlueColor
+        let destroyAction = UIAlertAction(title: buttonTitle, style: .default, handler: handler)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(destroyAction)
+        
+        self.present(alertController, animated: true)
+    }
 }
 
 

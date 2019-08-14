@@ -115,9 +115,7 @@ class UserTrackingVC: UIViewController{
             case .authorizedWhenInUse, .authorizedAlways:
                 lm.clManager.startUpdatingLocation()
             case .denied:
-                let alert = UIAlertController.init(title: "Location access denied", message: "You can change access in settings.", preferredStyle: .alert)
-                let okButton = UIAlertAction.init(title: "OK", style: .cancel, handler: nil)
-                self.present(alert,animated: true)
+                self.showDestructivePrompt(title: "Location access denied", message: "You can change access in settings.", buttonTitle: "Ok", handler: {_ in})
             default:
                 break
             }
@@ -128,9 +126,14 @@ class UserTrackingVC: UIViewController{
     
     @IBAction func onStartButtonClick(_ sender: Any) {
         if (!startButtonIsClicked) {
-            startButtonIsClicked = true
-            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-            playPauseButton.setImage(UIImage.init(named: "pause"), for: .normal)
+            if (Activities.shared.currentGoal == nil){
+                self.showDestructivePrompt(title: "You need to set your goal", message: "Press 'Set your goal button' to set goal", buttonTitle: "Ok", handler: {_ in})
+            } else {
+                startButtonIsClicked = true
+                timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+                playPauseButton.setImage(UIImage.init(named: "pause"), for: .normal)
+            }
+            
         } else {
             startButtonIsClicked = false
             timer.invalidate()
@@ -152,24 +155,24 @@ class UserTrackingVC: UIViewController{
     
     
     @IBAction func onClearButtonClick(_ sender: Any) {
-        let alert = UIAlertController(title: "Clear route data", message: "Clear map and route data", preferredStyle: .alert)
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelButton)
-        let okButton = UIAlertAction(title: "OK", style: .default, handler: {_ in
-            self.routeOverlay = self.mapView.overlays
-            self.mapView.removeOverlays(self.mapView.overlays)
-            self.timer.invalidate()
-            self.counter = 0.0
-            self.distanceCovered = 0.0
-            self.routeOverlay = nil
-            self.distanceLabel.text = "0"
-            self.timeLabel.text = "0:0:0"
-            self.speedLabel.text = "0.00"
-            self.caloriesLabel.text = "0"
-            self.startButtonIsClicked = false
-        })
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
+        self.showDestructivePrompt(title: "Clear route data?", message: "Clear map and route data", buttonTitle: "Ok") { _ in
+            self.resetRunInfo()
+        }
+    }
+    
+    func resetRunInfo(){
+        self.routeOverlay = self.mapView.overlays
+        self.mapView.removeOverlays(self.mapView.overlays)
+        self.timer.invalidate()
+        self.counter = 0.0
+        self.distanceCovered = 0.0
+        self.routeOverlay = nil
+        self.distanceLabel.text = "0"
+        self.timeLabel.text = "0:0:0"
+        self.speedLabel.text = "0.0"
+        self.caloriesLabel.text = "0"
+        self.startButtonIsClicked = false
+        self.playPauseButton.setImage(UIImage.init(named: "play"), for: .normal)
     }
     
 
@@ -179,9 +182,17 @@ class UserTrackingVC: UIViewController{
         guard let goal = Activities.shared.currentGoal else {
             return
         }
-        self.routeOverlay = self.mapView.overlays
-        let runToSave = Run(Date.init(), Float(distanceCovered), routeOverlay!, chosenStyle, Int(counter), calories, Float(distanceCovered/counter), goal)
-        Activities.shared.listOfRuns.append(runToSave)
+        if (distanceCovered > 0.0){
+            self.showDestructivePrompt(title: "Save run?", message: "Saves map and route data", buttonTitle: "Ok") { _ in
+                self.routeOverlay = self.mapView.overlays
+                let runToSave = Run(Date.init(), Float(self.distanceCovered), self.routeOverlay!, self.chosenStyle, Int(self.counter), self.calories, Float(self.distanceCovered/self.counter), goal)
+                Activities.shared.listOfRuns.append(runToSave)
+                self.resetRunInfo()
+            }
+        } else {
+            self.showInfoMessage(message: "No run recorded.")
+        }
+        
     
     }
     
@@ -226,5 +237,3 @@ extension UserTrackingVC : LocationManagerDelegate {
     
     
 }
-
-
