@@ -67,14 +67,14 @@ extension LocationManager : CLLocationManagerDelegate {
                 
                 let timeDifference = abs(newLocation.timestamp.timeIntervalSinceNow - lastLocation.timestamp.timeIntervalSinceNow)
                 let difference = newLocation.distance(from: lastLocation)
-                print("checking new speed")
+                //print("checking new speed")
                 let checkNewLocation = checkSpeed(difference/timeDifference)
                 
                 let area = [lastLocation.coordinate,newLocation.coordinate]
                 let polyline = MKPolyline(coordinates: area, count: area.count)
                 
                 if (checkNewLocation.check){
-                    print("checked new location")
+                    //print("checked new location")
                     delegate?.locationManagerFoundNewLocation(difference, polyline, difference/timeDifference)
                     calculateAverageSpeed(difference/timeDifference)
                     possibleLocation = nil
@@ -87,17 +87,17 @@ extension LocationManager : CLLocationManagerDelegate {
                         
                         let possibleArea = [lastLocation.coordinate,possibleLocation!.coordinate]
                         let possiblePolyline = MKPolyline(coordinates: possibleArea, count: possibleArea.count)
-                        print("possible speed: \(possibleDifference/possibleTimeDifference)")
+                        //print("possible speed: \(possibleDifference/possibleTimeDifference)")
                    
-                        print("checking possible speed")
+                        //print("checking possible speed")
                         let checkPossibleLocation = checkSpeed(possibleDifference/possibleTimeDifference)
                         if (checkNewLocation.error <= checkPossibleLocation.error){
-                            print("checked new location better than possible")
+                            //print("checked new location better than possible")
                             delegate?.locationManagerFoundNewLocation(difference, polyline, difference/timeDifference)
                             calculateAverageSpeed(difference/timeDifference)
                             locationList.append(newLocation)
                         } else {
-                            print("checked possible location better than new")
+                            //print("checked possible location better than new")
                             delegate?.locationManagerFoundNewLocation(possibleDifference, possiblePolyline, possibleDifference/possibleTimeDifference)
                             calculateAverageSpeed(possibleTimeDifference/possibleTimeDifference)
                             locationList.append(possibleLocation!)
@@ -128,7 +128,7 @@ extension LocationManager : CLLocationManagerDelegate {
     func checkSpeed(_ speed : Double) -> (check: Bool,error: Double){
         var check = true
         var error = 0.0
-        print("speed : \(speed)")
+        //print("speed : \(speed)")
         if (speed > upperSpeedBound){
             check = false
             error = speed - upperSpeedBound

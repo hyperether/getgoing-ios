@@ -27,14 +27,15 @@ class ProfileVC : UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     
-    
+    let databaseManager = DatabaseManager.instance
     var user : UserProfile = UserProfile.init(20, "Male", Date.init(), 150, 50)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user.loadFromDB()
-        
+        if let selectedUser = databaseManager.selectUser() {
+            user = selectedUser
+        }
         configureLabelGestures()
         configureNavigationBar()
         updateUser()
@@ -43,7 +44,7 @@ class ProfileVC : UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        user.saveToDB()
+        _ = databaseManager.insertOrUpdateUser(user: user)
     }
     
     
