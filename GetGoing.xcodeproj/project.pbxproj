@@ -15,17 +15,8 @@
 		4C50FC7522F84D51007B6EB0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50FC7422F84D51007B6EB0 /* MainVC.swift */; };
 		4C50FC7722F85740007B6EB0 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50FC7622F85740007B6EB0 /* ProfileVC.swift */; };
 		4C50FC7922F86945007B6EB0 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50FC7822F86945007B6EB0 /* ActivitiesVC.swift */; };
-		4C9BA84E22FD700700572261 /* BeautifulBarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84322FD700600572261 /* BeautifulBarEntry.swift */; };
-		4C9BA84F22FD700700572261 /* BeautifulBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84422FD700600572261 /* BeautifulBarChart.swift */; };
-		4C9BA85022FD700700572261 /* UIBezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84522FD700600572261 /* UIBezierPathExtension.swift */; };
-		4C9BA85122FD700700572261 /* BeautifulBarChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84622FD700600572261 /* BeautifulBarChartPresenter.swift */; };
-		4C9BA85222FD700700572261 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84722FD700700572261 /* CALayerExtension.swift */; };
-		4C9BA85322FD700700572261 /* CustomSegments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84822FD700700572261 /* CustomSegments.swift */; };
-		4C9BA85422FD700700572261 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84922FD700700572261 /* ArrayExtension.swift */; };
-		4C9BA85522FD700700572261 /* BasicBarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84A22FD700700572261 /* BasicBarEntry.swift */; };
-		4C9BA85622FD700700572261 /* BasicBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84B22FD700700572261 /* BasicBarChart.swift */; };
-		4C9BA85722FD700700572261 /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84C22FD700700572261 /* DataEntry.swift */; };
-		4C9BA85822FD700700572261 /* BasicBarChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BA84D22FD700700572261 /* BasicBarChartPresenter.swift */; };
+		4CAA671B23058146002732EE /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA671A23058146002732EE /* ChartCell.swift */; };
+		4CAA671D230584B8002732EE /* ChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA671C230584B8002732EE /* ChartCell.xib */; };
 		4CAA70B12302C6F9008459FF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA70B02302C6F9008459FF /* LocationManager.swift */; };
 		4CB06DCE22FAD4DA006C3F2D /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB06DCD22FAD4DA006C3F2D /* Goal.swift */; };
 		4CB06DD022FAE5C1006C3F2D /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB06DCF22FAE5C1006C3F2D /* ActivityVC.swift */; };
@@ -53,17 +44,8 @@
 		4C50FC7422F84D51007B6EB0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4C50FC7622F85740007B6EB0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		4C50FC7822F86945007B6EB0 /* ActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesVC.swift; sourceTree = "<group>"; };
-		4C9BA84322FD700600572261 /* BeautifulBarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautifulBarEntry.swift; sourceTree = "<group>"; };
-		4C9BA84422FD700600572261 /* BeautifulBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautifulBarChart.swift; sourceTree = "<group>"; };
-		4C9BA84522FD700600572261 /* UIBezierPathExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtension.swift; sourceTree = "<group>"; };
-		4C9BA84622FD700600572261 /* BeautifulBarChartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautifulBarChartPresenter.swift; sourceTree = "<group>"; };
-		4C9BA84722FD700700572261 /* CALayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
-		4C9BA84822FD700700572261 /* CustomSegments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegments.swift; sourceTree = "<group>"; };
-		4C9BA84922FD700700572261 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		4C9BA84A22FD700700572261 /* BasicBarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarEntry.swift; sourceTree = "<group>"; };
-		4C9BA84B22FD700700572261 /* BasicBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarChart.swift; sourceTree = "<group>"; };
-		4C9BA84C22FD700700572261 /* DataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
-		4C9BA84D22FD700700572261 /* BasicBarChartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarChartPresenter.swift; sourceTree = "<group>"; };
+		4CAA671A23058146002732EE /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
+		4CAA671C230584B8002732EE /* ChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartCell.xib; sourceTree = "<group>"; };
 		4CAA70B02302C6F9008459FF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4CB06DCD22FAD4DA006C3F2D /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		4CB06DCF22FAE5C1006C3F2D /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
@@ -109,7 +91,6 @@
 		4C50FC6122F82970007B6EB0 /* GetGoing */ = {
 			isa = PBXGroup;
 			children = (
-				4C9BA84222FD6FE700572261 /* BarChart */,
 				4CFF331E22FC61E00040EBF5 /* CustomComponents */,
 				4CB06DCC22FACBF1006C3F2D /* Storyboards */,
 				4CB06DCB22FACBD7006C3F2D /* ViewControllers */,
@@ -120,24 +101,6 @@
 				4C50FC6E22F82971007B6EB0 /* Info.plist */,
 			);
 			path = GetGoing;
-			sourceTree = "<group>";
-		};
-		4C9BA84222FD6FE700572261 /* BarChart */ = {
-			isa = PBXGroup;
-			children = (
-				4C9BA84922FD700700572261 /* ArrayExtension.swift */,
-				4C9BA84B22FD700700572261 /* BasicBarChart.swift */,
-				4C9BA84D22FD700700572261 /* BasicBarChartPresenter.swift */,
-				4C9BA84A22FD700700572261 /* BasicBarEntry.swift */,
-				4C9BA84422FD700600572261 /* BeautifulBarChart.swift */,
-				4C9BA84622FD700600572261 /* BeautifulBarChartPresenter.swift */,
-				4C9BA84322FD700600572261 /* BeautifulBarEntry.swift */,
-				4C9BA84722FD700700572261 /* CALayerExtension.swift */,
-				4C9BA84822FD700700572261 /* CustomSegments.swift */,
-				4C9BA84C22FD700700572261 /* DataEntry.swift */,
-				4C9BA84522FD700600572261 /* UIBezierPathExtension.swift */,
-			);
-			path = BarChart;
 			sourceTree = "<group>";
 		};
 		4CAA671723056862002732EE /* Managers */ = {
@@ -195,6 +158,7 @@
 			children = (
 				4CFF332322FC641B0040EBF5 /* PagerMainCell.swift */,
 				4CB06DD122FAEA9A006C3F2D /* MKMagneticProgress.swift */,
+				4CAA671A23058146002732EE /* ChartCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -203,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFF332122FC623D0040EBF5 /* pagerMainCell.xib */,
+				4CAA671C230584B8002732EE /* ChartCell.xib */,
 			);
 			path = Nib;
 			sourceTree = "<group>";
@@ -289,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CAA671D230584B8002732EE /* ChartCell.xib in Resources */,
 				4C50FC6D22F82971007B6EB0 /* LaunchScreen.storyboard in Resources */,
 				4C50FC6A22F82971007B6EB0 /* Assets.xcassets in Resources */,
 				4CFF332222FC623D0040EBF5 /* pagerMainCell.xib in Resources */,
@@ -358,27 +324,17 @@
 				4CD8A35522F9B4A9001C9A6F /* Run.swift in Sources */,
 				4CB06DD222FAEA9A006C3F2D /* MKMagneticProgress.swift in Sources */,
 				4C50FC6522F82970007B6EB0 /* UserTrackingVC.swift in Sources */,
-				4C9BA85722FD700700572261 /* DataEntry.swift in Sources */,
 				4C50FC7922F86945007B6EB0 /* ActivitiesVC.swift in Sources */,
 				4CD8A35322F9AE4E001C9A6F /* UserProfile.swift in Sources */,
 				4CC9B10023040F8300E89F36 /* DatabaseManager.swift in Sources */,
-				4C9BA85122FD700700572261 /* BeautifulBarChartPresenter.swift in Sources */,
+				4CAA671B23058146002732EE /* ChartCell.swift in Sources */,
 				4CB06DCE22FAD4DA006C3F2D /* Goal.swift in Sources */,
 				4C50FC7522F84D51007B6EB0 /* MainVC.swift in Sources */,
 				4CB06DD022FAE5C1006C3F2D /* ActivityVC.swift in Sources */,
-				4C9BA85322FD700700572261 /* CustomSegments.swift in Sources */,
 				4CD8A35722F9B6E7001C9A6F /* Activities.swift in Sources */,
 				4CFF332422FC641B0040EBF5 /* PagerMainCell.swift in Sources */,
-				4C9BA85622FD700700572261 /* BasicBarChart.swift in Sources */,
 				4C50FC6322F82970007B6EB0 /* AppDelegate.swift in Sources */,
-				4C9BA85022FD700700572261 /* UIBezierPathExtension.swift in Sources */,
-				4C9BA85522FD700700572261 /* BasicBarEntry.swift in Sources */,
-				4C9BA85822FD700700572261 /* BasicBarChartPresenter.swift in Sources */,
-				4C9BA84F22FD700700572261 /* BeautifulBarChart.swift in Sources */,
 				4CAA70B12302C6F9008459FF /* LocationManager.swift in Sources */,
-				4C9BA84E22FD700700572261 /* BeautifulBarEntry.swift in Sources */,
-				4C9BA85222FD700700572261 /* CALayerExtension.swift in Sources */,
-				4C9BA85422FD700700572261 /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,12 +46,14 @@ class MainVC : UIViewController {
         super.viewDidLoad()
         
         pagerViewConfigure()
+        if let runs = db.selectRuns(){
+            Activities.shared.listOfRuns = runs
+            Activities.shared.configureRunStylesTables()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let runs = db.selectRuns(){
-            Activities.shared.listOfRuns = runs
-        }
+       
         updateDisplay()
         makeRoundViews()
     }
@@ -251,6 +253,12 @@ extension UIViewController {
         alertController.addAction(destroyAction)
         
         self.present(alertController, animated: true)
+    }
+    
+    func getShortStringFromDate(date : Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d.MM"
+        return dateFormatter.string(from: date)
     }
 }
 

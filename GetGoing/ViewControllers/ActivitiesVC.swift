@@ -68,16 +68,15 @@ class ActivitiesVC : UIViewController {
     
     
     func updateProgressBars(){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "d.MM"
-        let date = Date()
-        let today = dateFormatter.string(from: date)
+
+        let today = getShortStringFromDate(date: Date())
         var totalTodayWalkingDistance : Float = 0.0
         var totalTodayRunningDistance : Float = 0.0
         var totalTodayBicyclingDistance : Float = 0.0
         
         for todayRun in Activities.shared.listOfRuns{
-            if (dateFormatter.string(from: todayRun.date!).elementsEqual(today)){
+            let runDate = getShortStringFromDate(date: todayRun.date!)
+            if (runDate.elementsEqual(today)){
                 if let goal = Activities.shared.currentGoal{
                     switch todayRun.style! {
                     case "walking":
@@ -189,7 +188,7 @@ class ActivitiesVC : UIViewController {
             self.showInfoMessage(message: "Goal saved!")
         }
         
-        updateTodayRunGoal()
+//        updateTodayRunGoal()
         updateProgressBars()
         
         
@@ -197,10 +196,10 @@ class ActivitiesVC : UIViewController {
     
     func updateTodayRunGoal(){
         for todayRun in Activities.shared.listOfRuns {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "d.MM"
-            let todayDate = dateFormatter.string(from: Date())
-            if (todayDate.elementsEqual(dateFormatter.string(from: todayRun.date!))) {
+            let todayDate = getShortStringFromDate(date: Date())
+            let runDate = getShortStringFromDate(date: todayRun.date!)
+            
+            if (todayDate.elementsEqual(runDate)) {
                 todayRun.goal = Activities.shared.currentGoal
             }
         }

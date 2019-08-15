@@ -15,9 +15,11 @@ class Activities : NSObject {
     static var shared = Activities.init()
     var listOfRuns : [Run] = []
     var currentGoal : Goal?
-    var walkingDataEntries : [DataEntry] = []
-    var runningDataEntries : [DataEntry] = []
-    var bicyclingDataEntries : [DataEntry] = []
+    
+    
+    var walkingRuns : [Run] = []
+    var runningRuns : [Run] = []
+    var bicyclingRuns : [Run] = []
     
     
     //route info
@@ -27,26 +29,52 @@ class Activities : NSObject {
         super.init()
     }
     
-    public func getDataEntries(style: String) -> [DataEntry]{
-        var list : [DataEntry] = []
-        for run in listOfRuns {
-            if (run.style! == style){
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "d.MM"
-                let todayDateString = dateFormatter.string(from: run.date!)
-                
-                let maxDistance = run.goal!.distance!
-                let runDistance = run.distance! * 100 / maxDistance
-                
-                
-                if (runDistance > maxDistance){
-                    list.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: 1, textValue: "", title: todayDateString))
-                } else {
-                    list.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: runDistance/100, textValue: "", title: todayDateString))
-                }
+    func configureRunStylesTables(){
+        walkingRuns = []
+        runningRuns = []
+        bicyclingRuns = []
+        for run in listOfRuns{
+            switch run.style!{
+            case "walking":
+                walkingRuns.append(run)
+            case "running":
+                runningRuns.append(run)
+            case "bicycling":
+                bicyclingRuns.append(run)
+            default:
+                break
             }
         }
-        return list
+        
     }
+    
+    func returnRunsWithStyle(style : String) -> [Run]{
+        switch style{
+        case "walking":
+            return walkingRuns
+        case "running":
+            return runningRuns
+        case "bicycling":
+            return bicyclingRuns
+        default:
+            return []
+        }
+    }
+    
+    func addRunToLists(run : Run){
+        listOfRuns.append(run)
+        listOfRoutes = []
+        switch run.style!{
+        case "walking":
+            walkingRuns.append(run)
+        case "running":
+            runningRuns.append(run)
+        case "bicycling":
+            bicyclingRuns.append(run)
+        default:
+            break
+        }
+    }
+    
     
 }

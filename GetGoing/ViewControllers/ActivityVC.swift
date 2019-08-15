@@ -24,12 +24,7 @@ class ActivityVC : UIViewController {
     @IBOutlet weak var distanceStackView: UIStackView!
     @IBOutlet weak var mapView: MKMapView!
     
-    
-    
-    //chart
-    @IBOutlet weak var basicBarChart: BasicBarChart!
-    
-    
+        
     
     //labels to update
     @IBOutlet weak var bigDistanceLabel: UILabel!
@@ -37,6 +32,7 @@ class ActivityVC : UIViewController {
     @IBOutlet weak var averageSpeedLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
     
+    @IBOutlet weak var chartCollectionView: UICollectionView!
     
     //constrains
     @IBOutlet weak var mapHeightConstraint: NSLayoutConstraint!
@@ -45,8 +41,15 @@ class ActivityVC : UIViewController {
     
     var lastRunWithStyle : Run?
     
+    let chartCellIdentifier = "ChartCell"
+    let chartCellNib = UINib.init(nibName: "ChartCell", bundle: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chartCollectionView.delegate = self
+        chartCollectionView.dataSource = self
+        chartCollectionView.register(chartCellNib, forCellWithReuseIdentifier: chartCellIdentifier)
         configureNavigationBar()
         expandableView.layer.cornerRadius = 30
         mapView.layer.cornerRadius = 30
@@ -61,7 +64,6 @@ class ActivityVC : UIViewController {
             updateDisplay()
         }
         
-        loadDataEntries()
         
         
     }
@@ -86,12 +88,13 @@ class ActivityVC : UIViewController {
         
     }
     
-    
-    func loadDataEntries(){
-        basicBarChart.updateDataEntries(dataEntries: Activities.shared.getDataEntries(style: style!),animated: true)
-    }
+   
     
     func configureMap(_ route : [MKOverlay]){
+        let overlays = mapView.overlays
+        mapView.removeOverlays(overlays)
+        
+        
         let point = route.first!
         mapView.centerCoordinate = point.coordinate
         let center = CLLocationCoordinate2D(latitude: point.coordinate.latitude, longitude: point.coordinate.longitude)
@@ -164,6 +167,45 @@ extension ActivityVC : MKMapViewDelegate {
         return circleRenderer
        
     }
+    
+    
+}
+
+extension ActivityVC : UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Activities.shared.returnRunsWithStyle(style: style!).count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard  let cell = chartCollectionView.dequeueReusableCell(withReuseIdentifier: chartCellIdentifier, for: indexPath) as? ChartCell else {
+            return UICollectionViewCell()
+        }
+        let runList = Activities.shared.returnRunsWithStyle(style: style!)
+        
+        cell.dateLabel.text = getShortStringFromDate(date: runList[indexPath.item].date!)
+        
+        let maxDistance = runList[indexPath.item].goal!.distance!
+        let runDistance = runList[indexPath.item].distance! * 100 / maxDistance
+        if (runDistance <= maxDistance){
+            cell.barHeightConstraint.constant = CGFloat(runDistance)
+        }
+        
+        cell.barView.layer.cornerRadius = 5
+        
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let runList = Activities.shared.returnRunsWithStyle(style: style!)
+        
+        lastRunWithStyle = runList[indexPath.item]
+        updateDisplay()
+        
+    }
+    
+    
+    
     
     
 }

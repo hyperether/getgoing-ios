@@ -181,11 +181,10 @@ class UserTrackingVC: UIViewController{
         if (distanceCovered > 0.0){
             self.showDestructivePrompt(title: "Save run?", message: "Saves map and route data", buttonTitle: "Ok") { _ in
                 let runToSave = Run(Date.init(), Float(self.distanceCovered), self.chosenStyle, Int(self.counter), self.calories, Float(self.distanceCovered/self.counter), goal, Activities.shared.listOfRoutes)
-                Activities.shared.listOfRuns.append(runToSave)
+                Activities.shared.addRunToLists(run: runToSave)
                 DatabaseManager.instance.saveRunToDb(run: runToSave)
                 self.resetRunInfo()
                 LocationManager.shared.resetLocationManager()
-                Activities.shared.listOfRoutes = []
             }
         } else {
             self.showInfoMessage(message: "No run recorded.")
