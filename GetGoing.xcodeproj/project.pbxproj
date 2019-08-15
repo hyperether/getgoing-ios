@@ -113,6 +113,7 @@
 				4CFF331E22FC61E00040EBF5 /* CustomComponents */,
 				4CB06DCC22FACBF1006C3F2D /* Storyboards */,
 				4CB06DCB22FACBD7006C3F2D /* ViewControllers */,
+				4CAA671723056862002732EE /* Managers */,
 				4CD8A35122F9AE27001C9A6F /* Models */,
 				4C50FC6222F82970007B6EB0 /* AppDelegate.swift */,
 				4C50FC6922F82971007B6EB0 /* Assets.xcassets */,
@@ -139,6 +140,15 @@
 			path = BarChart;
 			sourceTree = "<group>";
 		};
+		4CAA671723056862002732EE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4CAA70B02302C6F9008459FF /* LocationManager.swift */,
+				4CC9B0FF23040F8300E89F36 /* DatabaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		4CB06DCB22FACBD7006C3F2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,12 +173,10 @@
 		4CD8A35122F9AE27001C9A6F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4CAA70B02302C6F9008459FF /* LocationManager.swift */,
 				4CD8A35222F9AE4E001C9A6F /* UserProfile.swift */,
 				4CD8A35422F9B4A9001C9A6F /* Run.swift */,
 				4CD8A35622F9B6E7001C9A6F /* Activities.swift */,
 				4CB06DCD22FAD4DA006C3F2D /* Goal.swift */,
-				4CC9B0FF23040F8300E89F36 /* DatabaseManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

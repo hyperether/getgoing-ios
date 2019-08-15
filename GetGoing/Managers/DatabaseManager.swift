@@ -31,6 +31,7 @@ class DatabaseManager {
     let weight = Expression<Int64>("weight")
     
     //MARK run fields
+    let runId = Expression<Int64>("runId")
     let runDate = Expression<Date>("runDate")
     let runDistance = Expression<Double>("runDistance")
     let runCalories = Expression<Int64>("runCalories")
@@ -40,7 +41,7 @@ class DatabaseManager {
     let runGoalDistance = Expression<Double>("runGoalDistance")
     
     //MARK route fields
-    let routeId = Expression<String>("routeId")
+    let routeId = Expression<Int64>("routeId")
     
     //MARK route part fields
     let routePartId = Expression<String>("routePartId")
@@ -75,14 +76,14 @@ class DatabaseManager {
     
     private func createUserTable(){
         do{
-            try db!.run(user_table.create(ifNotExists: true) { t in   // CREATE TABLE IF NOT EXIST "user"
-                t.column(id, primaryKey: .autoincrement)          //  "userId" INTEGER PRIMARY KEY NOT NULL,
+            try db!.run(user_table.create(ifNotExists: true) { t in
+                t.column(id, primaryKey: .autoincrement)
                 t.column(serverId, unique:true, collate: .rtrim)
-                t.column(age)                                         //  "age" INT,
-                t.column(gender)                                      //  "gender" TEXT,
-                t.column(dateOfBirdth)                                //  "dateOfBirdth" DATE,
-                t.column(height)                                      //  "height" DOUBLE,
-                t.column(weight)                                      //  "weight" DOUBLE
+                t.column(age)
+                t.column(gender)
+                t.column(dateOfBirdth)
+                t.column(height)
+                t.column(weight)
             })
         } catch  {
             Swift.print("createUserTable error! \(error)")
@@ -91,17 +92,15 @@ class DatabaseManager {
     
     private func createRunTable(){
         do{
-            try db!.run(run_table.create(ifNotExists: true) { t in   // CREATE TABLE IF NOT EXIST "user"
-                t.column(id, primaryKey: .autoincrement)          //  "runId" INTEGER PRIMARY KEY NOT NULL,
-                t.column(serverId, collate: .rtrim)
+            try db!.run(run_table.create(ifNotExists: true) { t in
+                t.column(id, primaryKey: .autoincrement)
                 t.column(runStyle)
-                t.column(runDate)                                    //  "runDate" DATE,
-                t.column(runDistance)                                //  "runDistance" DOUBLE,
-                t.column(runCalories)                                //  "runCalories" INT,
-                t.column(runSpeed)                                   //  "runSpeed" DOUBLE,
-                t.column(runTime)                                    //  "runTime" INT,
-                t.column(runGoalDistance)                            //  "runGoalDistance" DOUBLE,
-                t.column(routeId)                                //  "routeId" INT UNIQUE REFERENCES "route"
+                t.column(runDate)
+                t.column(runDistance)
+                t.column(runCalories)
+                t.column(runSpeed)
+                t.column(runTime)
+                t.column(runGoalDistance)
             })
         } catch  {
             Swift.print("createRunTable error! \(error)")
@@ -110,11 +109,11 @@ class DatabaseManager {
     
     private func createRoutePartTable(){
         do{
-            try db!.run(route_part_table.create(ifNotExists: true) { t in   // CREATE TABLE IF NOT EXIST "user"
-                t.column(id, primaryKey: .autoincrement)    //  "routePartId" INTEGER PRIMARY KEY NOT NULL,
-                t.column(serverId, collate: .rtrim)
-                t.column(lon)                                   //  "lon" DOUBLE,
-                t.column(lat)                                   //  "lat" DOUBLE,
+            try db!.run(route_part_table.create(ifNotExists: true) { t in
+                t.column(id, primaryKey: .autoincrement)
+                t.column(routeId)
+                t.column(lon)
+                t.column(lat)
             })
         } catch  {
             Swift.print("createRoutePartTable error! \(error)")
@@ -123,10 +122,9 @@ class DatabaseManager {
     
     private func createRouteTable(){
         do{
-            try db!.run(route_table.create(ifNotExists: true) { t in   // CREATE TABLE IF NOT EXIST "user"
-                t.column(id, primaryKey: .autoincrement)     //  "routePartId" INTEGER PRIMARY KEY NOT NULL,
-                t.column(serverId, collate: .rtrim)
-                t.column(routePartId)                             // "routePartId" INT UNIQUE REFERENCES "route_part"
+            try db!.run(route_table.create(ifNotExists: true) { t in
+                t.column(id, primaryKey: .autoincrement)
+                t.column(runId)
             })
         } catch  {
             Swift.print("createRouteTable error! \(error)")
@@ -156,16 +154,15 @@ class DatabaseManager {
     
     public func insertRun(run : Run){
             do {
-                let insert = run_table.insert(self.serverId <- run.serverId!,
-                                               self.runStyle <- run.style!,
+                let insert = run_table.insert(self.runStyle <- run.style!,
                                                self.runDate <- run.date!,
                                                self.runSpeed <- Double(run.averageSpeed!),
                                                self.runCalories <- Int64(run.calories!),
                                                self.runTime <- Int64(run.timeInSeconds!),
                                                self.runDistance <- Double(run.distance!),
-                                               self.runGoalDistance <- Double(run.goal!.distance!),
-                                               self.routeId <- run.serverId!)
-                try self.db!.run(insert)
+                                               self.runGoalDistance <- Double(run.goal!.distance!))
+                let id = try self.db!.run(insert)
+                run.id = id
             } catch {
                 Swift.print("insertRun  \(error)")
                 
@@ -173,22 +170,22 @@ class DatabaseManager {
         
     }
     
-    //uraditi inserte za sve
-    public func insertRoute(run : Run, routePartId : String){
+    public func insertRoute(run : Run) -> Int64?{
+        var routeId : Int64? = nil
         do {
-            let insert = route_table.insert(self.routePartId <- routePartId,
-                                            self.serverId <- run.serverId!)
+            let insert = route_table.insert(self.runId <- run.id!)
             
-            try self.db!.run(insert)
+            routeId = try self.db!.run(insert)
         } catch {
             Swift.print("insertRoute  \(error)")
             
         }
+        return routeId
     }
     
-    public func insertRoutePart(lon : Double, lat : Double, serverId : String){
+    public func insertRoutePart(lon : Double, lat : Double, routeId : Int64){
         do {
-            let insert = route_part_table.insert(self.serverId <- serverId,
+            let insert = route_part_table.insert(self.routeId <- routeId,
                                             self.lon <- lon,
                                             self.lat <- lat)
             
@@ -201,22 +198,12 @@ class DatabaseManager {
     
     func saveRunToDb(run : Run){
         insertRun(run: run)
-        for (i,route) in run.listOfRouteParts!.enumerated(){
-            insertRoute(run: run, routePartId: (run.serverId! + String(i)) )
-            for routePart in route{
-                insertRoutePart(lon: routePart.coordinate.longitude, lat: routePart.coordinate.latitude, serverId: (run.serverId! + String(i)))
+        for route in run.listOfRouteParts!{
+            guard let routeId = insertRoute(run: run) else {
+                break
             }
-        }
-    }
-    
-    func saveRunsToDb(){
-        for run in Activities.shared.listOfRuns{
-            insertRun(run: run)
-            for (i,route) in run.listOfRouteParts!.enumerated(){
-                insertRoute(run: run, routePartId: (run.serverId! + String(i)) )
-                for routePart in route{
-                    insertRoutePart(lon: routePart.coordinate.longitude, lat: routePart.coordinate.latitude, serverId: (run.serverId! + String(i)))
-                }
+            for routePart in route{
+                insertRoutePart(lon: routePart.coordinate.longitude, lat: routePart.coordinate.latitude,routeId: routeId)
             }
         }
     }
@@ -233,10 +220,10 @@ class DatabaseManager {
         return user
     }
     
-    public func selectRoutePart(serverIdValue : String) -> [CLLocation]? {
+    public func selectRoutePart(serverIdValue : Int64) -> [CLLocation]? {
         var list : [CLLocation] = []
         do {
-            for routePart in try db!.prepare(route_part_table.filter(serverId==serverIdValue)) {
+            for routePart in try db!.prepare(route_part_table.filter(routeId==serverIdValue)) {
                 list.append(CLLocation.init(latitude: routePart[lat], longitude: routePart[lon]))
             }
         } catch {
@@ -253,7 +240,7 @@ class DatabaseManager {
         var list : [Run] = []
         do {
             for runRow in try db!.prepare(run_table) {
-                if let locationList = selectRoute(serverIdValue: runRow[routeId]){
+                if let locationList = selectRoute(serverIdValue: runRow[id]){
                     list.append(Run(runRow[runDate], Float(runRow[runDistance]), runRow[runStyle], Int(runRow[runTime]), Int(runRow[runCalories]), Float(runRow[runSpeed]), Goal.init(distance: Float(runRow[runGoalDistance])), locationList))
                 }
                 
@@ -268,11 +255,11 @@ class DatabaseManager {
         }
     }
     
-    public func selectRoute(serverIdValue : String) -> [[CLLocation]]?{
+    public func selectRoute(serverIdValue : Int64) -> [[CLLocation]]?{
         var list : [[CLLocation]] = []
         do {
-            for route in try db!.prepare(route_table.filter(serverId==serverIdValue)) {
-                if let data = selectRoutePart(serverIdValue: route[routePartId]){
+            for route in try db!.prepare(route_table.filter(runId==serverIdValue)) {
+                if let data = selectRoutePart(serverIdValue: route[id]){
                     list.append(data)
                 }
             }

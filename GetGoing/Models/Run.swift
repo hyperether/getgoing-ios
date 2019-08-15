@@ -11,8 +11,7 @@ import MapKit
 
 class Run : NSObject {
     
-    var serverId : String?
-    
+    var id : Int64?
     var date : Date?
     var distance : Float?
     var route : [MKOverlay]?
@@ -34,7 +33,6 @@ class Run : NSObject {
         self.calories = calories
         self.averageSpeed = averageSpeed
         self.goal = goal
-        self.serverId = String(Activities.shared.serverIdCounter)
         self.listOfRouteParts = listOfLocations
     }
     

@@ -67,97 +67,28 @@ class ActivityVC : UIViewController {
     }
     
     
-    func generateRandomDataEntries() -> [DataEntry] {
-        var result: [DataEntry] = []
-        for i in 0..<10 {
-            let value = (arc4random() % 90) + 10
-            let height: Float = Float(value) / 100.0
-            
-            let formatter = DateFormatter()
-            formatter.dateFormat = "d.MM"
-            var date = Date()
-            date.addTimeInterval(TimeInterval(24*60*60*i))
-            result.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: height, textValue: "", title: formatter.string(from: date)))
-        }
-        return result
-    }
-    
     func updateDisplay(){
         
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateFormat = "d.MM"
-        let date = Date()
-        let today = dateFormatter.string(from: date)
-        var listOfRoutes : [[MKOverlay]] = []
-        var totalAverageSpeed : [Float] = []
-        var totalCalories : Int = 0
-        var totalDistance : Float = 0.0
-        for todayRun in Activities.shared.listOfRuns{
-            if (dateFormatter.string(from: todayRun.date!).elementsEqual(today) && todayRun.style!.elementsEqual(self.style!)){
-                totalDistance += todayRun.distance!
-                totalAverageSpeed.append(todayRun.averageSpeed!)
-                totalCalories += todayRun.calories!
-                listOfRoutes.append(todayRun.route!)
-                let maxDistance = todayRun.goal!.distance!
-                let runDistance = totalDistance * 100 / maxDistance
-                if (runDistance > maxDistance){
-                    roundProgress.setProgress(progress: 1)
-                } else {
-                    roundProgress.setProgress(progress: CGFloat(runDistance/100))
-                }
-                bigDistanceLabel.text = String(Int(totalDistance))
-                smallDistanceLabel.text = String(Int(totalDistance/1000))
-                averageSpeedLabel.text = String(format: "%.1f",totalAverageSpeed.reduce(0, +)/Float(totalAverageSpeed.count))
-                caloriesLabel.text = String(totalCalories)
+        if let lastRun = lastRunWithStyle{
+            let maxDistance = lastRun.goal!.distance!
+            let runDistance = lastRun.distance! * 100 / maxDistance
+            if (runDistance > maxDistance){
+                roundProgress.setProgress(progress: 1)
+            } else {
+                roundProgress.setProgress(progress: CGFloat(runDistance/100))
             }
+            bigDistanceLabel.text = String(Int(lastRun.distance!))
+            smallDistanceLabel.text = String(Int(lastRun.distance!/1000))
+            averageSpeedLabel.text = String(format: "%.1f",lastRun.averageSpeed!)
+            caloriesLabel.text = String(lastRun.calories!)
+            configureMap(lastRun.route!)
         }
-        
-        saveDataEntries(today)
-        
-        for route in listOfRoutes {
-            configureMap(route)
-        }
-        
         
     }
     
-    func saveDataEntries(_ title: String){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "d.MM"
-        let todayDateString = dateFormatter.string(from: Date())
-        switch style {
-        case "walking":
-            if (title.elementsEqual(todayDateString) && (Activities.shared.walkingDataEntries.count > 0)){
-                Activities.shared.walkingDataEntries.removeLast()
-            }
-            Activities.shared.walkingDataEntries.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: Float(roundProgress.progress), textValue: "", title: title))
-        case "running":
-            if (title.elementsEqual(todayDateString) && (Activities.shared.runningDataEntries.count > 0)){
-                Activities.shared.runningDataEntries.removeLast()
-            }
-            Activities.shared.runningDataEntries.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: Float(roundProgress.progress), textValue: "", title: title))
-        case "bicycling":
-            if (title.elementsEqual(todayDateString) && (Activities.shared.bicyclingDataEntries.count > 0)){
-                Activities.shared.bicyclingDataEntries.removeLast()
-            }
-            Activities.shared.bicyclingDataEntries.append(DataEntry(color: UIColor.init(named: "lightBlue")!, height: Float(roundProgress.progress), textValue: "", title: title))
-        default:
-            break
-        }
-    }
     
     func loadDataEntries(){
-        switch style {
-        case "walking":
-            basicBarChart.updateDataEntries(dataEntries: Activities.shared.walkingDataEntries, animated: true)
-        case "running":
-            basicBarChart.updateDataEntries(dataEntries: Activities.shared.runningDataEntries, animated: true)
-        case "bicycling":
-            basicBarChart.updateDataEntries(dataEntries: Activities.shared.bicyclingDataEntries, animated: true)
-        default:
-            break
-        }
+        basicBarChart.updateDataEntries(dataEntries: Activities.shared.getDataEntries(style: style!),animated: true)
     }
     
     func configureMap(_ route : [MKOverlay]){
