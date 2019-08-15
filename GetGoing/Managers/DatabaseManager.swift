@@ -273,4 +273,21 @@ class DatabaseManager {
         }
     }
     
+    public func deleteRun(run : Run){
+        do {
+            let runFromTable = run_table.filter(id == run.id!)
+            let routes = route_table.filter(runId == run.id!)
+            for route in try db!.prepare(routes){
+                let routeParts = route_part_table.filter(routeId == route[id])
+                try db!.run(routeParts.delete())
+            }
+            try db!.run(routes.delete())
+            try db!.run(runFromTable.delete())
+        } catch {
+            Swift.print("deleteRun failed  \(error)")
+            
+        }
+    }
+
+    
 }

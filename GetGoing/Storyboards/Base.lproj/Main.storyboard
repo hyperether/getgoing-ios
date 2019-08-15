@@ -975,12 +975,12 @@
                         <viewLayoutGuide key="safeArea" id="M8X-2D-hAD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="o1v-KT-WaZ">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="trash" id="L88-FF-wmQ">
-                                <color key="tintColor" name="lightBlue"/>
-                            </barButtonItem>
-                            <barButtonItem title="Item" id="5mX-QS-Jf4"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="L88-FF-wmQ">
+                            <color key="tintColor" name="lightBlue"/>
+                            <connections>
+                                <action selector="onTrashButtonClick:" destination="DLQ-4s-zQZ" id="rZm-rv-pWf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="averageSpeedLabel" destination="ILe-Py-mH9" id="V79-AQ-4Ec"/>

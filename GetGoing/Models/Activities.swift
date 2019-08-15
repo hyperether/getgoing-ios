@@ -76,5 +76,37 @@ class Activities : NSObject {
         }
     }
     
+    func removeRun(runToDelete: Run){
+        let style = runToDelete.style!
+        
+        switch style {
+        case "walking":
+            for (i,run) in Activities.shared.walkingRuns.enumerated(){
+                if (runToDelete === run){
+                    Activities.shared.walkingRuns.remove(at: i)
+                }
+            }
+        case "running":
+            for (i,run) in Activities.shared.runningRuns.enumerated(){
+                if (runToDelete === run){
+                    Activities.shared.runningRuns.remove(at: i)
+                }
+            }
+        case "bicycling":
+            for (i,run) in Activities.shared.bicyclingRuns.enumerated(){
+                if (runToDelete === run){
+                    Activities.shared.bicyclingRuns.remove(at: i)
+                }
+            }
+        default:
+            break
+        }
+        
+        for (i,run) in Activities.shared.listOfRuns.enumerated(){
+            if (runToDelete === run){
+                Activities.shared.listOfRuns.remove(at: i)
+            }
+        }
+    }
     
 }

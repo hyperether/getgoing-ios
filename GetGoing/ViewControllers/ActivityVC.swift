@@ -34,6 +34,7 @@ class ActivityVC : UIViewController {
     
     @IBOutlet weak var chartCollectionView: UICollectionView!
     
+    
     //constrains
     @IBOutlet weak var mapHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var expandableViewHeightConstraint: NSLayoutConstraint!
@@ -54,15 +55,9 @@ class ActivityVC : UIViewController {
         expandableView.layer.cornerRadius = 30
         mapView.layer.cornerRadius = 30
         mapView.delegate = self
+        lastRunWithStyle = Activities.shared.returnRunsWithStyle(style: style!).last
+        updateDisplay()
         
-        for run in Activities.shared.listOfRuns{
-            if (run.style!.lowercased().elementsEqual(style!)){
-                lastRunWithStyle = run
-            }
-        }
-        if (lastRunWithStyle != nil){
-            updateDisplay()
-        }
         
         
         
@@ -84,8 +79,20 @@ class ActivityVC : UIViewController {
             averageSpeedLabel.text = String(format: "%.1f",lastRun.averageSpeed!)
             caloriesLabel.text = String(lastRun.calories!)
             configureMap(lastRun.route!)
+        } else {
+            resetDisplay()
         }
         
+    }
+    
+    func resetDisplay(){
+        roundProgress.setProgress(progress: 0)
+        bigDistanceLabel.text = String(0.0)
+        smallDistanceLabel.text = String(0.0)
+        averageSpeedLabel.text = String(0.0)
+        caloriesLabel.text = String(0)
+        let overlays = mapView.overlays
+        mapView.removeOverlays(overlays)
     }
     
    
@@ -144,6 +151,19 @@ class ActivityVC : UIViewController {
         }
         
     }
+    
+    @IBAction func onTrashButtonClick(_ sender: Any) {
+        guard let runToDelete = lastRunWithStyle else {
+            return
+        }
+        DatabaseManager.instance.deleteRun(run: runToDelete)
+        Activities.shared.removeRun(runToDelete: runToDelete)
+        showInfoMessage(message: "Run removed")
+        lastRunWithStyle = Activities.shared.returnRunsWithStyle(style: style!).last
+        chartCollectionView.reloadData()
+        updateDisplay()
+    }
+    
     
     
 }
