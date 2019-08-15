@@ -42,6 +42,17 @@ class LocationManager : NSObject {
         clManager.requestAlwaysAuthorization()
     }
     
+    func resetLocationManager(){
+        locationList = []
+        possibleLocation = nil
+        possibleLocationTimeDifference = 0.0
+        averageSpeed = 0.0
+    }
+    
+    func addRoute(){
+        Activities.shared.listOfRoutes.append(locationList)
+    }
+    
 }
 
 extension LocationManager : CLLocationManagerDelegate {

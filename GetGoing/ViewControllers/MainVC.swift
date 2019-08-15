@@ -13,6 +13,7 @@ class MainVC : UIViewController {
     
     var chosenStyle : String = "Walking"
     @IBOutlet weak var movingStyleLabel: UILabel!
+    let db = DatabaseManager.instance
     
     //round views
     @IBOutlet weak var rearRoundView: UIView!
@@ -43,10 +44,14 @@ class MainVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         pagerViewConfigure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if let runs = db.selectRuns(){
+            Activities.shared.listOfRuns = runs
+        }
         updateDisplay()
         makeRoundViews()
     }

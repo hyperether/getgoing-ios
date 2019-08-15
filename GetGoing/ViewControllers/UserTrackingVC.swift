@@ -44,9 +44,7 @@ class UserTrackingVC: UIViewController{
     var counter = 0.0
     
     //Route info
-    var listOfLocations : [CLLocation] = []
     var distanceCovered = 0.0
-    var routeOverlay : [MKOverlay]?
     var calories = 0
     
     override func viewDidLoad() {
@@ -132,13 +130,14 @@ class UserTrackingVC: UIViewController{
                 startButtonIsClicked = true
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
                 playPauseButton.setImage(UIImage.init(named: "pause"), for: .normal)
+                LocationManager.shared.resetLocationManager()
             }
             
         } else {
             startButtonIsClicked = false
             timer.invalidate()
             playPauseButton.setImage(UIImage.init(named: "play"), for: .normal)
-
+            LocationManager.shared.addRoute()
         }
     }
     
@@ -161,12 +160,10 @@ class UserTrackingVC: UIViewController{
     }
     
     func resetRunInfo(){
-        self.routeOverlay = self.mapView.overlays
         self.mapView.removeOverlays(self.mapView.overlays)
         self.timer.invalidate()
         self.counter = 0.0
         self.distanceCovered = 0.0
-        self.routeOverlay = nil
         self.distanceLabel.text = "0"
         self.timeLabel.text = "0:0:0"
         self.speedLabel.text = "0.0"
@@ -178,16 +175,19 @@ class UserTrackingVC: UIViewController{
 
     
     @IBAction func onSaveButtonClick(_ sender: Any) {
-        //add alert, cover critical cases
         guard let goal = Activities.shared.currentGoal else {
             return
         }
         if (distanceCovered > 0.0){
             self.showDestructivePrompt(title: "Save run?", message: "Saves map and route data", buttonTitle: "Ok") { _ in
-                self.routeOverlay = self.mapView.overlays
-                let runToSave = Run(Date.init(), Float(self.distanceCovered), self.routeOverlay!, self.chosenStyle, Int(self.counter), self.calories, Float(self.distanceCovered/self.counter), goal)
+                let runToSave = Run(Date.init(), Float(self.distanceCovered), self.chosenStyle, Int(self.counter), self.calories, Float(self.distanceCovered/self.counter), goal, Activities.shared.listOfRoutes)
+                print("runtosave id \(runToSave.serverId!)")
                 Activities.shared.listOfRuns.append(runToSave)
+                DatabaseManager.instance.saveRunToDb(run: runToSave)
+                Activities.shared.serverIdCounter += 1
                 self.resetRunInfo()
+                LocationManager.shared.resetLocationManager()
+             //   DatabaseManager.instance.saveRunsToDb()
             }
         } else {
             self.showInfoMessage(message: "No run recorded.")
@@ -227,7 +227,6 @@ extension UserTrackingVC : LocationManagerDelegate {
             mapView.addOverlay(polyline)
             distanceCovered += difference
             calories += Int(difference/10)
-            routeOverlay?.append(polyline)
             distanceLabel.text = String(format: "%.2f", distanceCovered)
             speedLabel.text = String(format: "%.2f", (speed))
             caloriesLabel.text = String(calories)

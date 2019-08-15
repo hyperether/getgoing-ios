@@ -18,11 +18,13 @@ class Activities : NSObject {
     var runningDataEntries : [DataEntry] = []
     var bicyclingDataEntries : [DataEntry] = []
     
-    //location info
-    var listOfLocations : [CLLocation] = []
+    var serverIdCounter = 0
+    
+    //route info
+    var listOfRoutes : [[CLLocation]] = []
     
     private override init() {
         super.init()
     }
-
+    
 }

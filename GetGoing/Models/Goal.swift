@@ -30,4 +30,13 @@ class Goal : NSObject {
         self.bicyclingTime = bicyclingTime
     }
     
+    init(distance : Float) {
+        self.distance = distance
+        self.calories = Int(distance)/10
+        self.difficulty = "low"
+        self.walkingTime = Int(distance)/50
+        self.runningTime = Int(distance)/70
+        self.bicyclingTime = Int(distance)/100
+    }
+    
 }
