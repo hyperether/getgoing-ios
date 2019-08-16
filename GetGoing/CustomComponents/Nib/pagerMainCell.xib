@@ -19,9 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="85" height="77"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="running2" translatesAutoresizingMaskIntoConstraints="NO" id="6SK-55-gLf">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walking (2)" translatesAutoresizingMaskIntoConstraints="NO" id="6SK-55-gLf">
                         <rect key="frame" x="12.5" y="8.5" width="60" height="60"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="WCb-m7-Iug"/>
                             <constraint firstAttribute="height" constant="60" id="YJp-hd-5Xz"/>
@@ -29,6 +30,7 @@
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6SK-55-gLf" firstAttribute="centerY" secondItem="euO-Zc-9Jg" secondAttribute="centerY" id="ax2-Sf-y5b"/>
                 <constraint firstItem="6SK-55-gLf" firstAttribute="centerX" secondItem="euO-Zc-9Jg" secondAttribute="centerX" id="dBH-OE-ci9"/>
@@ -42,6 +44,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="running2" width="14" height="17"/>
+        <image name="walking (2)" width="47" height="72"/>
     </resources>
 </document>

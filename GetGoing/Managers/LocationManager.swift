@@ -40,6 +40,7 @@ class LocationManager : NSObject {
         clManager.distanceFilter = 10
         clManager.delegate = self
         clManager.requestAlwaysAuthorization()
+        clManager.allowsBackgroundLocationUpdates = true
     }
     
     func resetLocationManager(){

@@ -21,7 +21,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-0r-Uzl">
-                        <rect key="frame" x="56" y="22" width="10" height="100"/>
+                        <rect key="frame" x="56" y="32" width="10" height="100"/>
                         <color key="backgroundColor" name="lightBlue"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="10" id="clH-J2-zzu"/>
@@ -30,8 +30,8 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zn-SB-ho5">
                         <rect key="frame" x="0.0" y="132" width="122" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" name="lightBlue"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -40,7 +40,7 @@
                 <constraint firstItem="5zn-SB-ho5" firstAttribute="leading" secondItem="X9l-Nn-Y2T" secondAttribute="leading" id="1q6-ae-EnL"/>
                 <constraint firstAttribute="bottom" secondItem="5zn-SB-ho5" secondAttribute="bottom" id="XLz-Wf-Hd5"/>
                 <constraint firstItem="Cm7-0r-Uzl" firstAttribute="centerX" secondItem="X9l-Nn-Y2T" secondAttribute="centerX" id="kRu-bM-enQ"/>
-                <constraint firstItem="5zn-SB-ho5" firstAttribute="top" secondItem="Cm7-0r-Uzl" secondAttribute="bottom" constant="10" id="kxX-Ko-UXp"/>
+                <constraint firstItem="5zn-SB-ho5" firstAttribute="top" secondItem="Cm7-0r-Uzl" secondAttribute="bottom" id="kxX-Ko-UXp"/>
                 <constraint firstAttribute="trailing" secondItem="5zn-SB-ho5" secondAttribute="trailing" id="wsr-9l-MgV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="8hN-GV-hU6"/>

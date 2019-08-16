@@ -48,10 +48,9 @@ class ActivityVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        chartCollectionView.delegate = self
-        chartCollectionView.dataSource = self
-        chartCollectionView.register(chartCellNib, forCellWithReuseIdentifier: chartCellIdentifier)
         configureNavigationBar()
+        navigationItem.title = style!.uppercased()
+        configureChartCollectionView()
         expandableView.layer.cornerRadius = 30
         mapView.layer.cornerRadius = 30
         mapView.delegate = self
@@ -95,7 +94,11 @@ class ActivityVC : UIViewController {
         mapView.removeOverlays(overlays)
     }
     
-   
+    func configureChartCollectionView(){
+        chartCollectionView.delegate = self
+        chartCollectionView.dataSource = self
+        chartCollectionView.register(chartCellNib, forCellWithReuseIdentifier: chartCellIdentifier)
+    }
     
     func configureMap(_ route : [MKOverlay]){
         let overlays = mapView.overlays
@@ -138,6 +141,7 @@ class ActivityVC : UIViewController {
             expandButton.setImage(UIImage.init(named: "chevron-up"), for: .normal)
             UIView.animate(withDuration: 1) {
                 self.expandableViewHeightConstraint.constant = 220
+                self.mapView.bounds.size.height = 0
                 self.mapHeightConstraint.constant = 0
                 self.roundProgress.alpha = 1
                 self.trophyImage.alpha = 1
@@ -156,12 +160,15 @@ class ActivityVC : UIViewController {
         guard let runToDelete = lastRunWithStyle else {
             return
         }
-        DatabaseManager.instance.deleteRun(run: runToDelete)
-        Activities.shared.removeRun(runToDelete: runToDelete)
-        showInfoMessage(message: "Run removed")
-        lastRunWithStyle = Activities.shared.returnRunsWithStyle(style: style!).last
-        chartCollectionView.reloadData()
-        updateDisplay()
+        self.showDestructivePrompt(title: "Delete selected run?", message: "Selected run data will be deleted", buttonTitle: "Ok") { _ in
+            DatabaseManager.instance.deleteRun(run: runToDelete)
+            Activities.shared.removeRun(runToDelete: runToDelete)
+            self.showInfoMessage(message: "Run removed")
+            self.lastRunWithStyle = Activities.shared.returnRunsWithStyle(style: self.style!).last
+            self.chartCollectionView.reloadData()
+            self.updateDisplay()
+        }
+        
     }
     
     

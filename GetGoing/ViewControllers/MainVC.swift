@@ -19,8 +19,6 @@ class MainVC : UIViewController {
     @IBOutlet weak var rearRoundView: UIView!
     @IBOutlet weak var frontRoundView: UIView!
     
-    
-    
     //last run info
     @IBOutlet weak var lastStyleImageView: UIImageView!
     @IBOutlet weak var lastDistanceLabel: UILabel!
@@ -56,6 +54,7 @@ class MainVC : UIViewController {
        
         updateDisplay()
         makeRoundViews()
+        updateGoal()
     }
     
     func pagerViewConfigure(){
@@ -65,6 +64,10 @@ class MainVC : UIViewController {
         pagerView.dataSource = self
         pagerView.transformer = FSPagerViewTransformer(type: .linear)
         pagerView.isInfinite = true
+        pagerView.decelerationDistance = 1
+        if let cell = pagerView.cellForItem(at: 0) as? PagerMainCell{
+            cell.styleImageVIew.image = UIImage.init(named: "walking (2)")
+        }
     }
     
     func makeRoundViews(){
@@ -105,22 +108,43 @@ class MainVC : UIViewController {
                 
             }
         } else {
-            circularProgress.setProgress(progress: 0.0)
-            circularProgress.setProgress(progress: 0.5)
+            resetDisplay()
+        }
+    
+    }
+    
+    func updateGoal(){
+        if (Activities.shared.currentGoal == nil){
+            if let lastRun = Activities.shared.listOfRuns.last{
+                let todayDate = getShortStringFromDate(date: Date())
+                if (todayDate.elementsEqual(getShortStringFromDate(date: lastRun.date!))){
+                    Activities.shared.currentGoal = lastRun.goal
+                }
+            }
         }
         
-        
+    }
+    
+    func resetDisplay(){
+        circularProgress.setProgress(progress: 0.5)
+        circularProgress.setProgress(progress: 0.0)
+        changeLastRunImage("walking")
+        lastDistanceLabel.text = "0.0km"
+        lastStyleLabel.text = "Walking"
+        lastCaloriesLabel.text = "0"
+        lastTimeNumberLabel.text = "0"
+        lastTimeTextLabel.text = "sec"
     }
     
     
     func changeLastRunImage(_ style : String) {
         switch style {
         case "walking":
-            lastStyleImageView.image = UIImage.init(named: "walking")
+            lastStyleImageView.image = UIImage.init(named: "walking (3)")
         case "running":
-            lastStyleImageView.image = UIImage.init(named: "running1")
+            lastStyleImageView.image = UIImage.init(named: "running (3)")
         case "bicycling":
-            lastStyleImageView.image = UIImage.init(named: "man-cycling")
+            lastStyleImageView.image = UIImage.init(named: "solid (3)")
         default:
             break
         }
@@ -167,24 +191,25 @@ extension MainVC : FSPagerViewDelegate, FSPagerViewDataSource{
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: MainVC.pagerCellIdentifier, at: index) as! PagerMainCell
+        guard let cell = pagerView.dequeueReusableCell(withReuseIdentifier: MainVC.pagerCellIdentifier, at: index) as? PagerMainCell else {
+            return PagerMainCell()
+        }
        
+        cell.contentMode = .center
         if (index == 0){
             cell.styleName = "Walking"
-            cell.styleImageVIew.image = UIImage.init(named: "walking")
-            cell.contentMode = .center
-         
-            
+            if (pagerView.cellForItem(at: 1) == nil){
+                cell.styleImageVIew.image = UIImage.init(named: "walking (2)")
+            } else {
+                cell.styleImageVIew.image = UIImage.init(named: "walking (1)")
+            }
         } else if (index == 1){
             cell.styleName = "Running"
-            cell.styleImageVIew.image = UIImage.init(named: "running2")
-            cell.contentMode = .center
+            cell.styleImageVIew.image = UIImage.init(named: "running (2)")
         } else {
             cell.styleName = "Bicycling"
-            cell.styleImageVIew.image = UIImage.init(named: "man-cycling")
-            cell.contentMode = .center
+            cell.styleImageVIew.image = UIImage.init(named: "solid (2)")
         }
-        
         return cell
     }
     
@@ -198,6 +223,36 @@ extension MainVC : FSPagerViewDelegate, FSPagerViewDataSource{
             changeStyle("Running")
         case 2:
             changeStyle("Bicycling")
+        default:
+            break
+        }
+        updateCellImages(mainCellIndex: targetIndex)
+        
+    }
+    
+    func updateCellImages(mainCellIndex : Int){
+        guard let walkingCell = pagerView.cellForItem(at: 0) as? PagerMainCell,
+              let runningCell = pagerView.cellForItem(at: 1) as? PagerMainCell,
+              let bicyclingCell = pagerView.cellForItem(at: 2) as? PagerMainCell
+        else {
+            return
+        }
+        
+        
+       
+        switch mainCellIndex {
+        case 0:
+            walkingCell.styleImageVIew.image = UIImage.init(named: "walking (2)")
+            runningCell.styleImageVIew.image = UIImage.init(named: "running (2)")
+            bicyclingCell.styleImageVIew.image = UIImage.init(named: "solid (2)")
+        case 1:
+            walkingCell.styleImageVIew.image = UIImage.init(named: "walking (1)")
+            runningCell.styleImageVIew.image = UIImage.init(named: "running (1)")
+            bicyclingCell.styleImageVIew.image = UIImage.init(named: "solid (2)")
+        case 2:
+            walkingCell.styleImageVIew.image = UIImage.init(named: "walking (1)")
+            runningCell.styleImageVIew.image = UIImage.init(named: "running (2)")
+            bicyclingCell.styleImageVIew.image = UIImage.init(named: "solid (1)")
         default:
             break
         }

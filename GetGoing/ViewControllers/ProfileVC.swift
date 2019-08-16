@@ -83,8 +83,10 @@ class ProfileVC : UIViewController {
     }
     
     @objc func onAgeStackViewClick(){
-        let datePicker = DatePickerPopover(title: "DatePicker")
-        let _ = datePicker.setDoneButton(action: { _, selectedDate in
+        let datePicker = DatePickerPopover(title: "Date")
+            .setSelectedDate(user.dateOfBirth!)
+            .setCancelButton(title: "Cancel", font: nil, color: UIViewController.lightBlueColor, action:nil)
+        _ = datePicker.setDoneButton(title: "Done", font: nil, color: UIViewController.lightBlueColor, action: { _, selectedDate in
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd.MM.YYYY"
             self.user.dateOfBirth = selectedDate
@@ -101,8 +103,9 @@ class ProfileVC : UIViewController {
             heights.append("\(i)")
         }
         let stringsPicker = StringPickerPopover(title: "Height", choices: heights)
+        .setCancelButton(title: "Cancel", font: nil, color: UIViewController.lightBlueColor, action:nil)
         .setSelectedRow(user.height! - 50)
-        .setDoneButton(action: {(popover, selectedRow, selectedString) in
+        .setDoneButton(title: "Done", font: nil, color: UIViewController.lightBlueColor, action: {(popover, selectedRow, selectedString) in
             self.heightLabel.text = selectedString + "cm"
             self.user.height = Int(selectedString)
         })
@@ -115,8 +118,9 @@ class ProfileVC : UIViewController {
             weights.append("\(i)")
         }
         let stringsPicker = StringPickerPopover(title: "Weight", choices: weights)
+            .setCancelButton(title: "Cancel", font: nil, color: UIViewController.lightBlueColor, action:nil)
             .setSelectedRow(user.weight! - 50)
-            .setDoneButton(action: {(popover, selectedRow, selectedString) in
+            .setDoneButton(title: "Done", font: nil, color: UIViewController.lightBlueColor, action: {(popover, selectedRow, selectedString) in
                 self.weightLabel.text = selectedString + "kg"
                 self.user.weight = Int(selectedString)
             })
@@ -126,18 +130,20 @@ class ProfileVC : UIViewController {
     
     
     @objc func onGenderStackViewClick() {
-        let alert = UIAlertController(title: "Select gender", message: nil, preferredStyle: .actionSheet)
-        let maleButton = UIAlertAction.init(title: "Male", style: .default, handler: {_ in
-            self.genderLabel.text = "Male"
-            self.user.gender = "Male"
+        let gender : [String] = ["Male","Female"]
+        let stringsPicker = StringPickerPopover(title: "Gender", choices: gender)
+        .setCancelButton(title: "Cancel", font: nil, color: UIViewController.lightBlueColor, action:nil)
+        if (user.gender! == "Male"){
+            _ = stringsPicker.setSelectedRow(0)
+        } else {
+            _ = stringsPicker.setSelectedRow(1)
+        }
+        _ = stringsPicker.setDoneButton(title: "Done", font: nil, color: UIViewController.lightBlueColor, action: {(popover, selectedRow, selectedString) in
+            self.genderLabel.text = selectedString
+            self.user.gender = selectedString
         })
-        alert.addAction(maleButton)
-        let femaleButton = UIAlertAction.init(title: "Female", style: .default, handler: {_ in
-            self.genderLabel.text = "Female"
-            self.user.gender = "Female"
-        })
-        alert.addAction(femaleButton)
-        self.present(alert, animated: true, completion: nil)
+        stringsPicker.appear(originView: genderLabel! as UIView, baseViewController: self)
+        
     }
     
     func updateDisplay(){

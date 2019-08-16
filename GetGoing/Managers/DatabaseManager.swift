@@ -19,7 +19,6 @@ class DatabaseManager {
     let route_part_table = Table("routePart")
     
     //MARK field
-    let serverId = Expression<String>("serverId")
     let id = Expression<Int64>("id")
     
     //MARK user fields
@@ -54,7 +53,7 @@ class DatabaseManager {
     
     
     private init() {
-        Swift.print("DatabaseManager init")
+        //Swift.print("DatabaseManager init")
         do {
             let path = NSSearchPathForDirectoriesInDomains(
                 .documentDirectory, .userDomainMask, true
@@ -78,7 +77,6 @@ class DatabaseManager {
         do{
             try db!.run(user_table.create(ifNotExists: true) { t in
                 t.column(id, primaryKey: .autoincrement)
-                t.column(serverId, unique:true, collate: .rtrim)
                 t.column(age)
                 t.column(gender)
                 t.column(dateOfBirdth)
@@ -241,7 +239,9 @@ class DatabaseManager {
         do {
             for runRow in try db!.prepare(run_table) {
                 if let locationList = selectRoute(serverIdValue: runRow[id]){
-                    list.append(Run(runRow[runDate], Float(runRow[runDistance]), runRow[runStyle], Int(runRow[runTime]), Int(runRow[runCalories]), Float(runRow[runSpeed]), Goal.init(distance: Float(runRow[runGoalDistance])), locationList))
+                    let run = Run(runRow[runDate], Float(runRow[runDistance]), runRow[runStyle], Int(runRow[runTime]), Int(runRow[runCalories]), Float(runRow[runSpeed]), Goal.init(distance: Float(runRow[runGoalDistance])), locationList)
+                    run.id = runRow[id]
+                    list.append(run)
                 }
                 
             }

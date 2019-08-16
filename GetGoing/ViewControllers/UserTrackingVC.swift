@@ -51,6 +51,7 @@ class UserTrackingVC: UIViewController{
         super.viewDidLoad()
         
         lm.delegate = self
+        lm.upperSpeedBound = setSpeedLimit()
         
         updateDisplay()
         configureNavigationBar()
@@ -90,6 +91,19 @@ class UserTrackingVC: UIViewController{
         }
     }
     
+    func setSpeedLimit() -> Double{
+        switch chosenStyle {
+        case "walking":
+            return 3
+        case "running":
+            return 5
+        case "bicycling":
+            return 15
+        default:
+            return 15
+        }
+    }
+    
     
     func makeRoundViews(){
         roundView.layer.cornerRadius = roundView.frame.size.width/2
@@ -113,7 +127,10 @@ class UserTrackingVC: UIViewController{
             case .authorizedWhenInUse, .authorizedAlways:
                 lm.clManager.startUpdatingLocation()
             case .denied:
-                self.showDestructivePrompt(title: "Location access denied", message: "You can change access in settings.", buttonTitle: "Ok", handler: {_ in})
+                self.showDestructivePrompt(title: "Location access denied", message: "You can change access in settings.", buttonTitle: "Ok", handler: {_ in
+                    self.navigationController?.popViewController()
+                })
+                
             default:
                 break
             }
@@ -125,7 +142,7 @@ class UserTrackingVC: UIViewController{
     @IBAction func onStartButtonClick(_ sender: Any) {
         if (!startButtonIsClicked) {
             if (Activities.shared.currentGoal == nil){
-                self.showDestructivePrompt(title: "You need to set your goal", message: "Press 'Set your goal button' to set goal", buttonTitle: "Ok", handler: {_ in})
+                self.showInfoMessage(message: "You need to set goal in order to start run")
             } else {
                 startButtonIsClicked = true
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
@@ -178,16 +195,20 @@ class UserTrackingVC: UIViewController{
         guard let goal = Activities.shared.currentGoal else {
             return
         }
-        if (distanceCovered > 0.0){
-            self.showDestructivePrompt(title: "Save run?", message: "Saves map and route data", buttonTitle: "Ok") { _ in
+        if (startButtonIsClicked){
+            self.showInfoMessage(message: "You need to pause your run in order to save it")
+        }else {
+            if (distanceCovered > 0.0){
+                self.showDestructivePrompt(title: "Save run?", message: "Saves map and route data", buttonTitle: "Ok") { _ in
                 let runToSave = Run(Date.init(), Float(self.distanceCovered), self.chosenStyle, Int(self.counter), self.calories, Float(self.distanceCovered/self.counter), goal, Activities.shared.listOfRoutes)
-                Activities.shared.addRunToLists(run: runToSave)
                 DatabaseManager.instance.saveRunToDb(run: runToSave)
+                Activities.shared.addRunToLists(run: runToSave)
                 self.resetRunInfo()
                 LocationManager.shared.resetLocationManager()
+                }
+            } else {
+                self.showInfoMessage(message: "No run recorded.")
             }
-        } else {
-            self.showInfoMessage(message: "No run recorded.")
         }
         
     

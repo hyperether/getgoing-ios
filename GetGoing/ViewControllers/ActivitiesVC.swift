@@ -50,9 +50,13 @@ class ActivitiesVC : UIViewController {
         super.viewDidLoad()
         configureNavigationBar()
         configureProgressViews()
-        updateProgressBars()
+        
         configureLabelGestures()
         updateDisplay()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateProgressBars()
     }
     
     func updateDisplay(){
@@ -63,6 +67,7 @@ class ActivitiesVC : UIViewController {
             goalRunningLabel.text = String(goal.runningTime!) + "min"
             goalBicycling.text = String(goal.bicyclingTime!) + "min"
             goalSlider.value = goal.distance!
+            changeDifficultyTextColor()
         }
     }
     
@@ -74,6 +79,10 @@ class ActivitiesVC : UIViewController {
         var totalTodayRunningDistance : Float = 0.0
         var totalTodayBicyclingDistance : Float = 0.0
         
+        walkingProgressView.setProgress(0, animated: false)
+        runningProgressView.setProgress(0, animated: false)
+        bicyclingProgressView.setProgress(0, animated: false)
+        
         for todayRun in Activities.shared.listOfRuns{
             let runDate = getShortStringFromDate(date: todayRun.date!)
             if (runDate.elementsEqual(today)){
@@ -84,27 +93,27 @@ class ActivitiesVC : UIViewController {
                         let maxDistance = goal.distance!
                         let runDistance = totalTodayWalkingDistance * 100 / maxDistance
                         if (runDistance > maxDistance){
-                            walkingProgressView.setProgress(1, animated: true)
+                            walkingProgressView.setProgress(1, animated: false)
                         } else {
-                            walkingProgressView.setProgress(Float(runDistance/100), animated: true)
+                            walkingProgressView.setProgress(Float(runDistance/100), animated: false)
                         }
                     case "running":
                         totalTodayRunningDistance += todayRun.distance!
                         let maxDistance = goal.distance!
                         let runDistance = totalTodayRunningDistance * 100 / maxDistance
                         if (runDistance > maxDistance){
-                            runningProgressView.setProgress(1, animated: true)
+                            runningProgressView.setProgress(1, animated: false)
                         } else {
-                            runningProgressView.setProgress(Float(runDistance/100), animated: true)
+                            runningProgressView.setProgress(Float(runDistance/100), animated: false)
                         }
                     case "bicycling":
                         totalTodayBicyclingDistance += todayRun.distance!
                         let maxDistance = goal.distance!
                         let runDistance = totalTodayBicyclingDistance * 100 / maxDistance
                         if (runDistance > maxDistance){
-                            bicyclingProgressView.setProgress(1, animated: true)
+                            bicyclingProgressView.setProgress(1, animated: false)
                         } else {
-                            bicyclingProgressView.setProgress(Float(runDistance/100), animated: true)
+                            bicyclingProgressView.setProgress(Float(runDistance/100), animated: false)
                         }
                     default:
                         break
@@ -187,47 +196,39 @@ class ActivitiesVC : UIViewController {
         } else {
             self.showInfoMessage(message: "Goal saved!")
         }
-        
-//        updateTodayRunGoal()
         updateProgressBars()
         
         
     }
     
-    func updateTodayRunGoal(){
-        for todayRun in Activities.shared.listOfRuns {
-            let todayDate = getShortStringFromDate(date: Date())
-            let runDate = getShortStringFromDate(date: todayRun.date!)
-            
-            if (todayDate.elementsEqual(runDate)) {
-                todayRun.goal = Activities.shared.currentGoal
-            }
-        }
-    }
     
     @IBAction func onGoalSlideValueChanged(_ sender: Any) {
-        if (goalSlider.value < LOW_BORDER){
-            goalLowLabel.textColor = UIColor.init(named: "lightBlue")
-            goalMediumLabel.textColor = .black
-            goalHighLabel.textColor = .black
-            difficulty = "low"
-        } else if (goalSlider.value > LOW_BORDER && goalSlider.value < MEDIUM_BORDER){
-            goalMediumLabel.textColor = UIColor.init(named: "lightBlue")
-            goalLowLabel.textColor = .black
-            goalHighLabel.textColor = .black
-            difficulty = "medium"
-        } else {
-            goalHighLabel.textColor = UIColor.init(named: "lightBlue")
-            goalMediumLabel.textColor = .black
-            goalLowLabel.textColor = .black
-            difficulty = "high"
-        }
+        changeDifficultyTextColor()
         goalDistanceLabel.text = String(Int(goalSlider.value))
         goalCaloriesLabel.text = "About " + String(Int(goalSlider.value)/10) + " kcal"
         
         goalWalkingLabel.text = String(Int(goalSlider.value)/50) + "min"
         goalRunningLabel.text = String(Int(goalSlider.value)/70) + "min"
         goalBicycling.text = String(Int(goalSlider.value)/100) + "min"
+    }
+    
+    func changeDifficultyTextColor(){
+        if (goalSlider.value < LOW_BORDER){
+            goalLowLabel.textColor = UIViewController.lightBlueColor
+            goalMediumLabel.textColor = .black
+            goalHighLabel.textColor = .black
+            difficulty = "low"
+        } else if (goalSlider.value > LOW_BORDER && goalSlider.value < MEDIUM_BORDER){
+            goalMediumLabel.textColor = UIViewController.lightBlueColor
+            goalLowLabel.textColor = .black
+            goalHighLabel.textColor = .black
+            difficulty = "medium"
+        } else {
+            goalHighLabel.textColor = UIViewController.lightBlueColor
+            goalMediumLabel.textColor = .black
+            goalLowLabel.textColor = .black
+            difficulty = "high"
+        }
     }
     
     
