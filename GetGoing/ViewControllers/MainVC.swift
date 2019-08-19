@@ -83,11 +83,11 @@ class MainVC : UIViewController {
         movingStyleLabel.text = chosenStyle
         if let lastRun = Activities.shared.listOfRuns.last {
             if let goal = lastRun.goal{
-                let maxDistance = goal.distance!
-                let runDistance = lastRun.distance! * 100 / maxDistance
-                if (runDistance > maxDistance) {
+                if (lastRun.distance! >= goal.distance!) {
                    circularProgress.setProgress(progress: 1)
                 } else {
+                    let maxDistance = goal.distance!
+                    let runDistance = lastRun.distance! * 100 / maxDistance
                     circularProgress.setProgress(progress: CGFloat(runDistance/100))
                 }
                 changeLastRunImage(lastRun.style!)

@@ -66,11 +66,11 @@ class ActivityVC : UIViewController {
     func updateDisplay(){
         
         if let lastRun = lastRunWithStyle{
-            let maxDistance = lastRun.goal!.distance!
-            let runDistance = lastRun.distance! * 100 / maxDistance
-            if (runDistance > maxDistance){
+            if (lastRun.distance! >= lastRun.goal!.distance!){
                 roundProgress.setProgress(progress: 1)
             } else {
+                let maxDistance = lastRun.goal!.distance!
+                let runDistance = lastRun.distance! * 100 / maxDistance
                 roundProgress.setProgress(progress: CGFloat(runDistance/100))
             }
             bigDistanceLabel.text = String(Int(lastRun.distance!))
@@ -213,7 +213,7 @@ extension ActivityVC : UICollectionViewDataSource, UICollectionViewDelegate {
         
         let maxDistance = runList[indexPath.item].goal!.distance!
         let runDistance = runList[indexPath.item].distance! * 100 / maxDistance
-        if (runDistance <= maxDistance){
+        if (runList[indexPath.item].distance! <= maxDistance){
             cell.barHeightConstraint.constant = CGFloat(runDistance)
         }
         

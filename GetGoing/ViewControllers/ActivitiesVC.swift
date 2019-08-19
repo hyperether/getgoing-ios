@@ -90,29 +90,29 @@ class ActivitiesVC : UIViewController {
                     switch todayRun.style! {
                     case "walking":
                         totalTodayWalkingDistance += todayRun.distance!
-                        let maxDistance = goal.distance!
-                        let runDistance = totalTodayWalkingDistance * 100 / maxDistance
-                        if (runDistance > maxDistance){
+                        if (totalTodayWalkingDistance >= goal.distance!){
                             walkingProgressView.setProgress(1, animated: false)
                         } else {
+                            let maxDistance = goal.distance!
+                            let runDistance = totalTodayWalkingDistance * 100 / maxDistance
                             walkingProgressView.setProgress(Float(runDistance/100), animated: false)
                         }
                     case "running":
                         totalTodayRunningDistance += todayRun.distance!
-                        let maxDistance = goal.distance!
-                        let runDistance = totalTodayRunningDistance * 100 / maxDistance
-                        if (runDistance > maxDistance){
+                        if (totalTodayRunningDistance >= goal.distance!){
                             runningProgressView.setProgress(1, animated: false)
                         } else {
+                            let maxDistance = goal.distance!
+                            let runDistance = totalTodayRunningDistance * 100 / maxDistance
                             runningProgressView.setProgress(Float(runDistance/100), animated: false)
                         }
                     case "bicycling":
                         totalTodayBicyclingDistance += todayRun.distance!
-                        let maxDistance = goal.distance!
-                        let runDistance = totalTodayBicyclingDistance * 100 / maxDistance
-                        if (runDistance > maxDistance){
+                        if (totalTodayBicyclingDistance >= goal.distance!){
                             bicyclingProgressView.setProgress(1, animated: false)
                         } else {
+                            let maxDistance = goal.distance!
+                            let runDistance = totalTodayBicyclingDistance * 100 / maxDistance
                             bicyclingProgressView.setProgress(Float(runDistance/100), animated: false)
                         }
                     default:
