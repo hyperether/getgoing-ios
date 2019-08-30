@@ -130,7 +130,7 @@ class ActivityVC : UIViewController {
                 self.trophyImage.alpha = 0
                 self.distanceStackView.alpha = 0
                 self.roundProgressBottomConstraint.constant = 0.0
-                self.expandableViewHeightConstraint.constant = self.view.frame.height*2/3 + 50
+                self.expandableViewHeightConstraint.constant = self.view.frame.height*2/3 + 40
                 self.mapHeightConstraint.constant = self.mapView.frame.width
                 self.view.layoutIfNeeded()
             }
