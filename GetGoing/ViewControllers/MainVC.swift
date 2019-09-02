@@ -96,7 +96,9 @@ class MainVC : UIViewController {
                 }
                 changeLastRunImage(lastRun.style!)
                 lastDistanceLabel.text = String(format: "%.1f", lastRun.distance! / 1000) + "km"
-                lastStyleLabel.text = lastRun.style
+                var lastRunStyle = lastRun.style!
+                lastRunStyle = lastRunStyle.prefix(1).capitalized + lastRunStyle.dropFirst()
+                lastStyleLabel.text = lastRunStyle
                 lastCaloriesLabel.text = String(lastRun.calories!)
                 let time = secondsToHoursMinutesSeconds(seconds: lastRun.timeInSeconds!)
                 if (time.0 != 0){
