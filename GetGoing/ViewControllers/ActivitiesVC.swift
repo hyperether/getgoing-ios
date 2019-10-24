@@ -71,6 +71,14 @@ class ActivitiesVC : UIViewController {
             goalSlider.value = goal.distance!
             changeDifficultyTextColor()
         }
+        else {
+            goalDistanceLabel.text = String(10000)
+            goalCaloriesLabel.text = "About " + String(Int(Double(goalSlider.value) * 0.00112 * Double((DatabaseManager.instance.selectUser()?.weight!)!))) + " kcal"
+            goalWalkingLabel.text = String(Int( goalSlider.value / (1.5 * 60) )) + "min"
+            goalRunningLabel.text = String(Int( goalSlider.value / (2.5 * 60) )) + "min"
+            goalBicycling.text = String(Int(goalSlider.value / (5 * 60) )) + "min"
+            goalSlider.value = 10000
+        }
     }
     
     
