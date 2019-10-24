@@ -38,6 +38,7 @@ class UserTrackingVC: UIViewController{
     var startButtonIsClicked = false
     
     var chosenStyle : String!
+    var chosenWeight = DatabaseManager.instance.selectUser()?.weight
     
     //Time count
     var timer = Timer()
@@ -136,6 +137,51 @@ class UserTrackingVC: UIViewController{
             }
         }
         
+    }
+    
+    public func calculateCalories(dis: Double, vel: Double, weight: Double) -> Double {
+        let kcalMatrix = [[0.89, 0.00078],
+                          [1.12, 0.00074],
+                          [1.34, 0.00073],
+                          [1.56, 0.00071],
+                          [1.79, 0.00078],
+                          [2.01, 0.00087],
+                          [2.23, 0.00099],
+                          [2.68, 0.00104],
+                          [3.13, 0.00102],
+                          [3.58, 0.00105],
+                          [4.02, 0.00104],
+                          [4.47, 0.00112]]
+        
+        var energySpent: Double = 0
+         
+        switch chosenStyle {
+        case "walking","running":
+            if vel < kcalMatrix[0][0] {// if the measured speed is lower than the
+                // first entry use the first entry
+                energySpent = dis * (kcalMatrix[0][1] * weight)
+            } else if vel > kcalMatrix[11][0] {// if the measured speed is higher
+                // than the last entry use the
+                // last entry
+                energySpent = dis * (kcalMatrix[11][1] * weight);
+            } else {
+                for i in 1...12 {
+                    if (vel < kcalMatrix[i][0]) { // take the next higher value
+                        energySpent = dis * (kcalMatrix[i][1] * weight)
+                        break
+                    }
+                }
+            }
+        case "bicycling":
+            if (vel < 4.47) {
+                energySpent = dis * (0.000779 * weight);    // riding velocity lower than 16 km/h
+            } else {
+                energySpent = dis * (0.001071 * weight);    // riding velocity higher than 16 km/h
+            }
+        default: break
+        }
+        
+        return energySpent
     }
   
     
@@ -244,10 +290,12 @@ extension UserTrackingVC : LocationManagerDelegate {
         if (startButtonIsClicked){
             mapView.addOverlay(polyline)
             distanceCovered += difference
-            calories += Int(difference/10)
+            //calories += Int(difference/10)
             distanceLabel.text = String(format: "%.2f", distanceCovered)
             speedLabel.text = String(format: "%.2f", (speed))
-            caloriesLabel.text = String(calories)
+            calories = Int(calculateCalories(dis: distanceCovered, vel: speed, weight: Double(chosenWeight!)))
+            caloriesLabel.text = String(format: "%.2f", calculateCalories(dis: distanceCovered, vel: speed, weight: Double(chosenWeight!)))
+            
         }
         
     }

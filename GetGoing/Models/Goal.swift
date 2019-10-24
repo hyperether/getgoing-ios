@@ -32,11 +32,11 @@ class Goal : NSObject {
     
     init(distance : Float) {
         self.distance = distance
-        self.calories = Int(distance)/10
+        self.calories = Int(Double(distance) * 0.00112 * Double((DatabaseManager.instance.selectUser()?.weight!)!))//Int(distance)/10
         self.difficulty = "low"
-        self.walkingTime = Int(distance)/50
-        self.runningTime = Int(distance)/70
-        self.bicyclingTime = Int(distance)/100
+        self.walkingTime = Int(distance / (1.5 * 60))//Int(distance)/50
+        self.runningTime = Int(distance / (2.5 * 60))//Int(distance)/7
+        self.bicyclingTime = Int(distance / (5 * 60))//Int(distance)/100
     }
     
 }

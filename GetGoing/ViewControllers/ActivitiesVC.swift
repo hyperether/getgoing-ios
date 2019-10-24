@@ -42,6 +42,8 @@ class ActivitiesVC : UIViewController {
     var delegate : ActivitiesVCDelegate?
     var difficulty : String? = "low"
     
+    var runStyle: String?
+    let step: Float = 50
     //border values
     let LOW_BORDER : Float = 6500.0
     let MEDIUM_BORDER : Float = 13000.0
@@ -189,7 +191,7 @@ class ActivitiesVC : UIViewController {
     }
     
     @IBAction func onSaveChangesButtonClick(_ sender: Any) {
-        Activities.shared.currentGoal = Goal.init(goalSlider.value, Int(goalSlider.value)/10, difficulty!, Int(goalSlider.value)/50, Int(goalSlider.value)/70, Int(goalSlider.value)/100)
+        Activities.shared.currentGoal = Goal.init(goalSlider.value, Int(Double(goalSlider.value) * 0.00112 * Double((DatabaseManager.instance.selectUser()?.weight!)!)), difficulty!, Int( goalSlider.value / (1.5 * 60) ), Int( goalSlider.value / (2.5 * 60) ), Int( goalSlider.value / (5 * 60) ))
         if (delegate != nil){
             delegate!.activitiesVCDidSaveGoal()
             navigationController?.popViewController(animated: true)
@@ -204,12 +206,14 @@ class ActivitiesVC : UIViewController {
     
     @IBAction func onGoalSlideValueChanged(_ sender: Any) {
         changeDifficultyTextColor()
+        let roundedValue = round(goalSlider.value / step) * step
+        goalSlider.value = roundedValue
         goalDistanceLabel.text = String(Int(goalSlider.value))
-        goalCaloriesLabel.text = "About " + String(Int(goalSlider.value)/10) + " kcal"
+        goalCaloriesLabel.text = "About " + String(Int(Double(goalSlider.value) * 0.00112 * Double((DatabaseManager.instance.selectUser()?.weight!)!))) + " kcal"
         
-        goalWalkingLabel.text = String(Int(goalSlider.value)/50) + "min"
-        goalRunningLabel.text = String(Int(goalSlider.value)/70) + "min"
-        goalBicycling.text = String(Int(goalSlider.value)/100) + "min"
+        goalWalkingLabel.text = String(Int( goalSlider.value / (1.5 * 60) )) + "min"
+        goalRunningLabel.text = String(Int( goalSlider.value / (2.5 * 60) )) + "min"
+        goalBicycling.text = String(Int( goalSlider.value / (5 * 60) )) + "min"
     }
     
     func changeDifficultyTextColor(){
