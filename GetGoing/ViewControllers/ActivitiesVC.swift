@@ -43,7 +43,7 @@ class ActivitiesVC : UIViewController {
     var difficulty : String? = "low"
     
     var runStyle: String?
-    let step: Float = 50
+    let step: Float = 100
     //border values
     let LOW_BORDER : Float = 6500.0
     let MEDIUM_BORDER : Float = 13000.0
