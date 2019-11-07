@@ -20,12 +20,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>GetGoing app wants to use your present location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>GetGoing app wants to use your present location</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>GetGoing app wants to use your present location</string>
+	<string>GetGoing app wants to use your location to provide you tracking feature of your walk, run or ride and to calculate calories burned with your activities.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
