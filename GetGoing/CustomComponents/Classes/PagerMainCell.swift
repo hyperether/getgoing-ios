@@ -3,7 +3,7 @@
 //  GetGoing
 //
 //  Created by Milan Vidovic on 8/8/19.
-//  Copyright © 2019 Milan Vidovic. All rights reserved.
+//  Copyright © 2019 Hyperether LLC. All rights reserved.
 //
 
 import Foundation

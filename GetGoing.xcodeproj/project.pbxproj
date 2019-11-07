@@ -219,7 +219,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
-				ORGANIZATIONNAME = "Milan Vidovic";
+				ORGANIZATIONNAME = "Hyperether LLC";
 				TargetAttributes = {
 					4C50FC5E22F82970007B6EB0 = {
 						CreatedOnToolsVersion = 10.3;
@@ -232,7 +232,7 @@
 				};
 			};
 			buildConfigurationList = 4C50FC5A22F82970007B6EB0 /* Build configuration list for PBXProject "GetGoing" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
