@@ -50,6 +50,7 @@ class ActivitiesVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "My Activities"
         configureNavigationBar()
         configureProgressViews()
         
