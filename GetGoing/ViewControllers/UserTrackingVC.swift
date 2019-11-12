@@ -128,10 +128,13 @@ class UserTrackingVC: UIViewController{
             case .authorizedWhenInUse, .authorizedAlways:
                 lm.clManager.startUpdatingLocation()
             case .denied:
-                self.showDestructivePrompt(title: "Location access denied", message: "You can change access in settings.", buttonTitle: "Ok", handler: {_ in
-                    self.navigationController?.popViewController()
+                lm.clManager.stopUpdatingLocation()
+                self.showDestructiveInfoMessage(message: "Please enable location access in settings in order to continue.", handler: {[weak self] _ in
+                    guard let self = self else {return}
+                    if self.lm.clStatus == nil || self.lm.clStatus == .denied {
+                        self.navigationController?.popViewController(animated: true)
+                    }
                 })
-                
             default:
                 break
             }
@@ -298,6 +301,10 @@ extension UserTrackingVC : LocationManagerDelegate {
             
         }
         
+    }
+    
+    func locationManagerChangedStatus() {
+        checkLocationManagerStatus()
     }
     
     

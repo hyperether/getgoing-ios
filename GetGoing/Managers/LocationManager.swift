@@ -12,6 +12,7 @@ import MapKit
 
 protocol LocationManagerDelegate : AnyObject {
     func locationManagerFoundNewLocation(_ difference : Double,_ polyline: MKPolyline,_ speed: Double)
+    func locationManagerChangedStatus()
 }
 
 class LocationManager : NSObject {
@@ -60,6 +61,7 @@ extension LocationManager : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         clStatus = status
+        delegate?.locationManagerChangedStatus()
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
             clManager.startUpdatingLocation()

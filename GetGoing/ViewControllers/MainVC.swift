@@ -15,6 +15,7 @@ class MainVC : UIViewController {
     @IBOutlet weak var movingStyleLabel: UILabel!
     let db = DatabaseManager.instance
     var user : UserProfile = UserProfile.init(20, "Male", Date.init(), 150, 50)
+    var lm = LocationManager.shared
     
     //round views
     @IBOutlet weak var rearRoundView: UIView!
@@ -300,6 +301,14 @@ extension UIViewController {
     func showInfoMessage(message : String){
         let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
         let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.view.tintColor = UIViewController.lightBlueColor
+        alertController.addAction(okButton)
+        self.present(alertController,animated: true)
+    }
+    
+    func showDestructiveInfoMessage(message : String, handler: @escaping ((_ action: UIAlertAction) -> ())){
+        let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: handler)
         alertController.view.tintColor = UIViewController.lightBlueColor
         alertController.addAction(okButton)
         self.present(alertController,animated: true)
