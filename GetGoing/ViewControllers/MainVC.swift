@@ -314,6 +314,20 @@ extension UIViewController {
         self.present(alertController,animated: true)
     }
     
+    func showMessageToOpenLocationSettings(message : String, handler: @escaping ((_ action: UIAlertAction) -> ())){
+        let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: handler)
+        let settingsButton = UIAlertAction(title: "Settings", style: .default) { (_) in
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url)
+            }
+        }
+        alertController.view.tintColor = UIViewController.lightBlueColor
+        alertController.addAction(cancelButton)
+        alertController.addAction(settingsButton)
+        self.present(alertController,animated: true)
+    }
+    
     func showDestructivePrompt(title: String,message: String?, buttonTitle: String, handler: @escaping ((_ action: UIAlertAction) -> ())) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.view.tintColor = UIViewController.lightBlueColor
