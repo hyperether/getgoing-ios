@@ -44,7 +44,12 @@ class MainVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        db.insertOrUpdateUser(user: user)
+        
+        if let selectedUser = db.selectUser() {
+            user = selectedUser
+        } else {
+            db.insertOrUpdateUser(user: user)
+        }
         pagerViewConfigure()
         if let runs = db.selectRuns(){
             Activities.shared.listOfRuns = runs
